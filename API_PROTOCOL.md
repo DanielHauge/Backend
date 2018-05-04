@@ -122,36 +122,29 @@ Used for the autocomplete feature
 
 ```json
 [
-  {
-    "authorId": 12345,
-    "authorName": "Some Author"
-  },
-  {
-    "authorId": 12346,
-    "authorName": "Some Other"
-  },
-  {..}
+  "Author One",
+  "Author Two",
+  ...
 ]
 ```
 
 ### Request - get all books by an author
 
-`GET: /api/books/byauthor/{authorId}`
+`GET: /api/books/byauthor/{authorName}`
 
 #### Response
 
 ```json
 {
-  "authorId": 12345,
   "authorName": "Shakespeare",
   "books": [
     {
       "bookId": 123,
-      "bookName": "Book 1",
+      "bookTitle": "Book 1",
     },
     {
       "bookId": 124,
-      "bookName": "Book 2",
+      "bookTitle": "Book 2",
     },
     {..}
   ]
