@@ -15,7 +15,7 @@ public class Main {
             DA = new Neo4jDataAccessor();
         }
         */
-        
+
         SpringApplication.run(SpringBootController.class, new String[]{});
     }
 
