@@ -195,17 +195,33 @@ Used for the autocomplete feature
   {
     "cityName": "Copenhagen",
     "latitude": 1.213312,
-    "longitude": 1.21321
+    "longitude": 1.21321,
+    "books": [
+      {
+        "bookId": 123,
+        "bookTitle": "Book 1",
+      },
+      {
+        "bookId": 124,
+        "bookTitle": "Book 2",
+      },
+      {..}
+  ]
   },
   {
     "cityName": "Brodnby",
     "latitude": 1.213312,
-    "longitude": 1.21321
-  },
-  {
-    "cityName": "Amager",
-    "latitude": 1.213312,
-    "longitude": 1.21321
+    "longitude": 1.21321,
+        "books": [
+      {
+        "bookId": 123,
+        "bookTitle": "Book 1",
+      },
+      {
+        "bookId": 124,
+        "bookTitle": "Book 2",
+      },
+      {..}
   },
   {..}
 ]
