@@ -16,7 +16,9 @@ public class SpringBootController {
     @RequestMapping(value="/api/cities", produces = {"application/json"})
     @ResponseBody
     String AllCities(){
+        long now = System.currentTimeMillis();
         DataObject result = DA.GetAllCities();
+        System.out.println(System.currentTimeMillis()-now);
         return result.SerializeToJson();
     }
 
@@ -32,7 +34,6 @@ public class SpringBootController {
     String AllBooks(){
         DataObject allbooks = DA.GetAllBooks();
         return allbooks.SerializeToJson();
-
     }
 
     @RequestMapping(value="/api/cities/bybook/{bookId}", produces = {"application/json"})
@@ -61,13 +62,12 @@ public class SpringBootController {
     String CitiesByBookWithExtra(@PathVariable("bookId") int id){
         DataObject CityByBookWithExtra = DA.GetCityBybook(id);
         return CityByBookWithExtra.SerializeToJson();
-
     }
 
     @RequestMapping(value="/api/books/bylocation/{longitude}/{latitude}", produces = {"application/json"})
     @ResponseBody
     String BooksByLocation(@PathVariable("longitude") double longitude, @PathVariable("latitude") double latitude){
-        DataObject BooksByVicenety = DA.GetBooksInVicenety(latitude, longitude, 50);
+        DataObject BooksByVicenety = DA.GetBooksInVicenety(latitude, longitude, 20);
         return BooksByVicenety.SerializeToJson();
     }
 

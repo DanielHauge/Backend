@@ -1,6 +1,7 @@
 package DataObjects;
 
 import Interfaces.DataObject;
+import com.google.gson.Gson;
 
 public class CityWithCords implements DataObject {
 
@@ -16,6 +17,6 @@ public class CityWithCords implements DataObject {
 
     @Override
     public String SerializeToJson() {
-        return null;
+        return new Gson().toJson(this);
     }
 }

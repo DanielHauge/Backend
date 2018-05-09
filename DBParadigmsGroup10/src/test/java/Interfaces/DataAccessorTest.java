@@ -1,18 +1,24 @@
 package Interfaces;
 
+import DataAcessors.RedisDataAcessor;
 import DataObjects.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.Matchers.lessThan;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
 class DataAccessorTest {
 
+    long Expectedtime = 2000;
     DataAccessor DA;
 
     @BeforeEach
     void setUp() {
+        DA = new RedisDataAcessor();
 
     }
 
@@ -23,8 +29,8 @@ class DataAccessorTest {
         AllCities a =  DA.GetAllCities();
         time = System.currentTimeMillis()-time;
         System.out.println(time);
-        assertTrue(time< 2000);
-        assertTrue(a.Allcities.length==48377);
+        assertThat(time, is(lessThan(Expectedtime)));
+        assertThat(a.Allcities.length,is(48377));
     }
 
     @Test
@@ -34,8 +40,8 @@ class DataAccessorTest {
         BooksByCity booksByCity = DA.GetBooksByCity(2624341);
         time = System.currentTimeMillis()-time;
         System.out.println(time);
-        assertTrue(time< 2000);
-        assertTrue(booksByCity.All.length==1); // TEST SENERE FORDI DEN ER NOK FORKERT!
+        assertThat(time, is(lessThan(Expectedtime)));
+        assertThat(booksByCity.All.length,is(1)); // TEST SENERE FORDI DEN ER NOK FORKERT!
     }
 
     @Test
@@ -45,8 +51,8 @@ class DataAccessorTest {
         AllBooks all = DA.GetAllBooks();
         time = System.currentTimeMillis()-time;
         System.out.println(time);
-        assertTrue(time< 2000);
-        assertTrue(all.AllBooks.length==37227);
+        assertThat(time, is(lessThan(Expectedtime)));
+        assertThat(all.AllBooks.length, is(37227));
     }
 
     @Test
@@ -56,8 +62,8 @@ class DataAccessorTest {
         ManyCitiesWithCords Manycities = DA.GetCitiesBybook(1);
         time = System.currentTimeMillis()-time;
         System.out.println(time);
-        assertTrue(time< 2000);
-        assertTrue(Manycities.Cities.length==94);
+        assertThat(time, is(lessThan(Expectedtime)));
+        assertThat(Manycities.Cities.length,is(94));
     }
 
     @Test
@@ -67,8 +73,8 @@ class DataAccessorTest {
         AllAuthors allAuthors = DA.GetAllAuthors();
         time = System.currentTimeMillis()-time;
         System.out.println(time);
-        assertTrue(time< 2000);
-        assertTrue(allAuthors.allAuthors.length==14569); //// TEST SENERE, FORDI DEN ER NOK FORKERT!!!
+        assertThat(time, is(lessThan(Expectedtime)));
+        assertThat(allAuthors.allAuthors.length,is(14569)); //// TEST SENERE, FORDI DEN ER NOK FORKERT!!!
     }
 
     @Test
@@ -78,8 +84,8 @@ class DataAccessorTest {
         BooksByAuthor booksByAuthor = DA.GetBookByAuthor("William Shakespeare");
         time = System.currentTimeMillis()-time;
         System.out.println(time);
-        assertTrue(time< 2000);
-        assertTrue(booksByAuthor.books.length==21);  //// TEST SENERE, FORDI DEN ER NOK FORKERT!!!
+        assertThat(time, is(lessThan(Expectedtime)));
+        assertThat(booksByAuthor.books.length,is(21)); //// TEST SENERE, FORDI DEN ER NOK FORKERT!!!
     }
 
     @Test
@@ -89,8 +95,8 @@ class DataAccessorTest {
         CityByBook cityByBook = DA.GetCityBybook(1);
         time = System.currentTimeMillis()-time;
         System.out.println(time);
-        assertTrue(time< 2000);
-        assertTrue(cityByBook.cities.length==94); /////// TEST SENERE! FORDI DEN ER NOK FORKERT!
+        assertThat(time, is(lessThan(Expectedtime)));
+        assertThat(cityByBook.cities.length, is(94)); /////// TEST SENERE! FORDI DEN ER NOK FORKERT!
 
     }
 
@@ -98,32 +104,32 @@ class DataAccessorTest {
     void getBooksInVicenety1() {
         long time = System.currentTimeMillis();
         System.out.println(time);
-        BooksByVicenety vicenety = DA.GetBooksInVicenety(11.47, 52.38, 100);
+        BooksByVicenety vicenety = DA.GetBooksInVicenety(52.38, 11.47, 100);
         time = System.currentTimeMillis()-time;
         System.out.println(time);
-        assertTrue(time< 2000);
-        assertTrue(vicenety.AllInVicenety.length==112);
+        assertThat(time, is(lessThan(Expectedtime)));
+        assertThat(vicenety.AllInVicenety.length, is(112));
     }
 
     @Test
     void getBooksInVicenety2() {
         long time = System.currentTimeMillis();
         System.out.println(time);
-        BooksByVicenety vicenety = DA.GetBooksInVicenety(11.47, 52.38, 50);
+        BooksByVicenety vicenety = DA.GetBooksInVicenety(52.38, 11.47, 50);
         time = System.currentTimeMillis()-time;
         System.out.println(time);
-        assertTrue(time< 2000);
-        assertTrue(vicenety.AllInVicenety.length==25);
+        assertThat(time, is(lessThan(Expectedtime)));
+        assertThat(vicenety.AllInVicenety.length, is(25));
     }
 
     @Test
     void getBooksInVicenety3() {
         long time = System.currentTimeMillis();
         System.out.println(time);
-        BooksByVicenety vicenety = DA.GetBooksInVicenety(11.47, 52.38, 20);
+        BooksByVicenety vicenety = DA.GetBooksInVicenety(52.38, 11.47, 20);
         time = System.currentTimeMillis()-time;
         System.out.println(time);
-        assertTrue(time< 2000);
-        assertTrue(vicenety.AllInVicenety.length==5);
+        assertThat(time, is(lessThan(Expectedtime)));
+        assertThat(vicenety.AllInVicenety.length, is(3));
     }
 }

@@ -1,5 +1,6 @@
 package Main;
 
+import DataAcessors.RedisDataAcessor;
 import Interfaces.DataAccessor;
 import org.springframework.boot.SpringApplication;
 
@@ -15,6 +16,8 @@ public class Main {
             DA = new Neo4jDataAccessor();
         }
         */
+
+        DA = new RedisDataAcessor();
 
         SpringApplication.run(SpringBootController.class, new String[]{});
     }

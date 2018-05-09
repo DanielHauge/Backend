@@ -1,6 +1,7 @@
 package DataObjects;
 
 import Interfaces.DataObject;
+import com.google.gson.Gson;
 
 public class CityByBook implements DataObject {
 
@@ -17,6 +18,6 @@ public class CityByBook implements DataObject {
 
     @Override
     public String SerializeToJson() {
-        return null;
+        return new Gson().toJson(this);
     }
 }
