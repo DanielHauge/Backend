@@ -12,6 +12,7 @@ public class MyStepdefs {
     @Given("^a user picks \"([^\"]*)\" as a city$")
     public void aUserPicksAsACity(String arg0) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
+
         System.out.println(arg0);
     }
 

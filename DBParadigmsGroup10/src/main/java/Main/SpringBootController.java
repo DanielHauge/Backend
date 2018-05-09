@@ -1,12 +1,12 @@
 package Main;
 
-import Interfaces.JsonMachine;
+import Interfaces.DataObject;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import static Main.Main.DA;
 
 @Controller
 @EnableAutoConfiguration
@@ -16,134 +16,59 @@ public class SpringBootController {
     @RequestMapping(value="/api/cities", produces = {"application/json"})
     @ResponseBody
     String AllCities(){
-        return "[" +
-                "  {" +
-                "    \"id\": 12345," +
-                "    \"cityName\": \"Copenhagen\"" +
-                "  }," +
-                "  {" +
-                "    \"id\": 12346," +
-                "    \"cityName\": \"Helsingor\"" +
-                "  }," +
-                "  {" +
-                "    \"id\": 12347," +
-                "    \"cityName\": \"Aarhus\"" +
-                "  }" +
-                "]";
+        DataObject result = DA.GetAllCities();
+        return result.SerializeToJson();
     }
 
     @RequestMapping(value="/api/books/bycity/{CityId}", produces = {"application/json"})
     @ResponseBody
     String ByCity(@PathVariable("CityId") int id){
-        return "[\n" +
-                "  {\n" +
-                "    \"bookTitle\": \"some book\", \n" +
-                "    \"author\": \"James Someone\",\n" +
-                "    \"mentionCount\": 3\n" +
-                "  },\n" +
-                "  {\n" +
-                "    \"bookTitle\": \"some book\", \n" +
-                "    \"author\": \"James Someone\",\n" +
-                "    \"mentionCount\": 4\n" +
-                "  },\n" +
-                "  {\n" +
-                "    \"bookTitle\": \"some book\", \n" +
-                "    \"author\": \"James Someone\",\n" +
-                "    \"mentionCount\": "+id+"\n" +
-                "  }\n" +
-                "]";
+        DataObject result = DA.GetBooksByCity(id);
+        return result.SerializeToJson();
     }
 
     @RequestMapping(value="/api/books", produces = {"application/json"})
     @ResponseBody
     String AllBooks(){
-        return "[\n" +
-                "  {\n" +
-                "    \"bookId\": 12345,\n" +
-                "    \"bookTitle\": \"Some book 1\"\n" +
-                "  },\n" +
-                "  {\n" +
-                "    \"bookId\": 12346,\n" +
-                "    \"bookTitle\": \"Some book 2\"\n" +
-                "  },\n" +
-                "  {\n" +
-                "    \"bookId\": 12347,\n" +
-                "    \"bookTitle\": \"Some book 3\"\n" +
-                "  }\n" +
-                "]";
+        DataObject allbooks = DA.GetAllBooks();
+        return allbooks.SerializeToJson();
+
     }
 
     @RequestMapping(value="/api/cities/bybook/{bookId}", produces = {"application/json"})
     @ResponseBody
     String CitiesByBook(@PathVariable("bookId") int bookId){
-
-        return "[\n" +
-                "  {\n" +
-                "    \"cityName\": \"Copenhagen\",\n" +
-                "    \"latitude\": 1.213312,\n" +
-                "    \"longitude\": 1.21321\n" +
-                "  },\n" +
-                "  {\n" +
-                "    \"cityName\": \"Stockholm\",\n" +
-                "    \"latitude\": 1.213312,\n" +
-                "    \"longitude\": 1.21321\n" +
-                "  },\n" +
-                "  {\n" +
-                "    \"cityName\": \"Amsterdam\",\n" +
-                "    \"latitude\": 1.213312,\n" +
-                "    \"longitude\": 1.21321\n" +
-                "  }\n" + bookId +
-                "]";
+        DataObject CityBybook = DA.GetCitiesBybook(bookId);
+        return CityBybook.SerializeToJson();
     }
 
     @RequestMapping(value="/api/authors", produces = {"application/json"})
     @ResponseBody
     String allauthors(){
-        return "[\n" +
-                "  \"Author One\",\n" +
-                "  \"Author Two\"\n" +
-                "]";
+        DataObject Authors = DA.GetAllAuthors();
+        return Authors.SerializeToJson();
     }
 
     @RequestMapping(value = "/api/books/byauthor/{authorName}", produces = {"application/json"})
     @ResponseBody
     String BooksByauthor(@PathVariable("authorName") String author){
+        DataObject BooksByAuthor = DA.GetBookByAuthor(author);
+        return BooksByAuthor.SerializeToJson();
+    }
 
-        return "{\n" +
-                "  \"authorName\": \""+author+"\",\n" +
-                "  \"books\": [\n" +
-                "    {\n" +
-                "      \"bookId\": 123,\n" +
-                "      \"bookTitle\": \"Book 1\",\n" +
-                "    },\n" +
-                "    {\n" +
-                "      \"bookId\": 124,\n" +
-                "      \"bookTitle\": \"Book 2\",\n" +
-                "    }\n" +
-                "  ]\n" +
-                "}";
+    @RequestMapping(value = "/api/citiesv/bybook/{bookId}", produces = {"application/json"})
+    @ResponseBody
+    String CitiesByBookWithExtra(@PathVariable("bookId") int id){
+        DataObject CityByBookWithExtra = DA.GetCityBybook(id);
+        return CityByBookWithExtra.SerializeToJson();
+
     }
 
     @RequestMapping(value="/api/books/bylocation/{longitude}/{latitude}", produces = {"application/json"})
     @ResponseBody
     String BooksByLocation(@PathVariable("longitude") double longitude, @PathVariable("latitude") double latitude){
-        return "[\n" +
-                "  {\n" +
-                "    \"cityName\": \"Copenhagen\",\n" +
-                "    \"latitude\": "+latitude+",\n" +
-                "    \"longitude\": "+longitude+"\n" +
-                "  },\n" +
-                "  {\n" +
-                "    \"cityName\": \"Brodnby\",\n" +
-                "    \"latitude\": "+latitude+",\n" +
-                "    \"longitude\": "+longitude+"\n" +
-                "  },\n" +
-                "  {\n" +
-                "    \"cityName\": \"Amager\",\n" +
-                "    \"latitude\": "+latitude+",\n" +
-                "    \"longitude\": "+longitude+"\n" +
-                "  }\n" +
-                "]";
+        DataObject BooksByVicenety = DA.GetBooksInVicenety(latitude, longitude, 50);
+        return BooksByVicenety.SerializeToJson();
     }
 
 

@@ -1,62 +1,31 @@
 package Interfaces;
 
+import DataObjects.*;
+
 public interface DataAccessor {
 
+        // User story 1
+        public AllCities GetAllCities();
 
-    /**
-     * @param city
-     * @return
-     */
-    Book[] GetBooksByCityMention(String city);
+        public BooksByCity GetBooksByCity(int cityid);
 
-    /**
-     *
-     * @param title
-     * @return
-     */
-    Book[] GetBooksByTitle(String title);
 
-    /**
-     *
-     * @param title
-     * @return
-     */
-    Book[] GetBooksByAuthor(String title);
+        // User story 2
+        public AllBooks GetAllBooks();
 
-    /**
-     *
-     * @param title
-     * @return
-     */
-    MapData MapDataByTittle(String title);
+        public ManyCitiesWithCords GetCitiesBybook(int bookid);
 
-    /**
-     *
-     * @param author
-     * @return
-     */
-    MapData MapDataByAuthor(String author);
 
-    /**
-     *
-     * @param p
-     * @return
-     */
-    Book[] GetBooksByVicinety(Point p);
+        // User story 3
+        public AllAuthors GetAllAuthors();
 
-    /**
-     *
-     * @param city
-     * @return
-     */
-    int GetMentionsInAllBooks(String city);
+        public BooksByAuthor GetBookByAuthor(String author);
 
-    /**
-     *
-     * @return
-     */
-    MapData GetMapPlotWithAmountOfMentionsForAllBooks();
+        public CityByBook GetCityBybook(int bookid);
 
+
+        // User story 4
+        public BooksByVicenety GetBooksInVicenety(double lat, double lon, int km);
 
 
 
