@@ -30,7 +30,11 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: mvn dependency:go-offline
+      - run: 
+            name: dependencies
+            command: mvn dependency:go-offline
+            shell: /bin/bash
+            working_directory: ~/repo/DBParadigmsGroup10
 
       - save_cache:
           paths:
@@ -38,5 +42,9 @@ jobs:
           key: v1-dependencies-{{ checksum "DBParadigmsGroup10/pom.xml" }}
         
       # run tests!
-      - run: mvn integration-test
+      - run: 
+            name: dependencies
+            command: mvn exec:java
+            shell: /bin/bash
+            working_directory: ~/repo/DBParadigmsGroup10
 
