@@ -11,7 +11,8 @@ Used for the autocomplete feature
 ### Response 1
 
 ```json
-[
+{
+"Allcities":[
   {
     "id": 12345,
     "cityName": "Copenhagen"
@@ -26,6 +27,7 @@ Used for the autocomplete feature
   },
   {..}
 ]
+}
 ```
 
 ### Request - get all book titles for a city
