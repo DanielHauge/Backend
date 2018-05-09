@@ -9,7 +9,7 @@ public class Main {
     public static DataAccessor DA;
     public static DBConnection Conn;
 
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args){
 
         /*
         if (args[0] == "neo4j"){
@@ -19,7 +19,7 @@ public class Main {
 
         DA = new RedisDataAcessor();
 
-        SpringApplication.run(SpringBootController.class, new String[]{});
+        SpringApplication.run(SpringBootController.class);
     }
 
 

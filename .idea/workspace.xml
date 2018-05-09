@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="8" />
+    <option name="CUSTOM_SCOPE_NAME" value="Module 'DBParadigmsGroup10'" />
+  </component>
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Main/Main.java" line="21" />
-    <bookmark url="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataAcessors/RedisDataAcessor.java" line="110" />
+    <bookmark url="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataAcessors/RedisDataAcessor.java" line="105" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8bfb606e-dbb7-4f60-ad95-b0dcd4f6c5b2" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.circleci/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_cucumber_junit_2_3_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBParadigmsGroup10/DBParadigmsGroup10.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DBParadigmsGroup10/DBParadigmsGroup10.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBParadigmsGroup10/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DBParadigmsGroup10/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataAcessors/RedisDataAcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataAcessors/RedisDataAcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Interfaces/DataAccessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Interfaces/DataAccessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Interfaces/DataObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Interfaces/DataObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Main/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DBParadigmsGroup10/src/test/java/Interfaces/DataAccessorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBParadigmsGroup10/src/test/java/Interfaces/DataAccessorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBParadigmsGroup10/target/test-classes/Interfaces/DataAccessorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBParadigmsGroup10/target/test-classes/Interfaces/DataAccessorTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBParadigmsGroup10/target/test-classes/MyStepdefs.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBParadigmsGroup10/target/test-classes/MyStepdefs.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBParadigmsGroup10/src/test/java/MyStepdefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBParadigmsGroup10/src/test/java/MyStepdefs.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/DBParadigmsGroup10/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,82 +33,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Book.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataObjects/Book.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AllCities.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataObjects/AllCities.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#285#286#0" expanded="true" />
-                <element signature="e#331#332#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Main/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AllBooks.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataObjects/AllBooks.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AllAuthors.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataObjects/AllAuthors.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="RedisDataAcessor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataAcessors/RedisDataAcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1720">
-              <caret line="97" column="57" selection-start-line="97" selection-start-column="57" selection-end-line="97" selection-end-column="57" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DataAccessorTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/test/java/Interfaces/DataAccessorTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="99" column="50" selection-start-line="99" selection-start-column="50" selection-end-line="99" selection-end-column="50" />
+            <state relative-caret-position="444">
+              <caret line="40" column="5" lean-forward="true" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -114,11 +45,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyStepdefs.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/test/java/MyStepdefs.java">
+      <file leaf-file-name="Book.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataObjects/Book.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+            <state relative-caret-position="260">
+              <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DataAccessorTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/test/java/Interfaces/DataAccessorTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="19" lean-forward="true" selection-start-column="19" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -129,17 +72,74 @@
       <file leaf-file-name="DataAccessor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Interfaces/DataAccessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+            <state relative-caret-position="540">
+              <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/pom.xml">
+      <file leaf-file-name="DataObject.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Interfaces/DataObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="70" column="36" selection-start-line="70" selection-start-column="36" selection-end-line="70" selection-end-column="36" />
+            <state relative-caret-position="120">
+              <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StubbedDataAccessor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataAcessors/StubbedDataAccessor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AllAuthors.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataObjects/AllAuthors.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Main/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyStepdefs.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/test/java/MyStepdefs.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DBConnection.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Main/DBConnection.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -150,8 +150,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -161,9 +161,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/DBParadigmsGroup10/src/test/java/resources/Userstory2.feature" />
-        <option value="$PROJECT_DIR$/DBParadigmsGroup10/src/test/java/resources/Userstory1.feature" />
-        <option value="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Interfaces/DataObject.java" />
         <option value="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Interfaces/DataObjectImpl.java" />
         <option value="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Interfaces/AllCities.java" />
         <option value="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Interfaces/book.java" />
@@ -188,13 +185,10 @@
         <option value="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Interfaces/CityAndBooks.java" />
         <option value="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Interfaces/BooksByVicenety.java" />
         <option value="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Implementations/BooksByVicenety.java" />
-        <option value="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Interfaces/DataAccessor.java" />
-        <option value="$PROJECT_DIR$/DBParadigmsGroup10/src/test/java/MyStepdefs.java" />
         <option value="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataAcessors/Neo4jDataAcessor.java" />
         <option value="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataAcessors/PostgresDataAcessor.java" />
         <option value="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataAcessors/MongoDataAcessor.java" />
         <option value="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataObjects/AllCities.java" />
-        <option value="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Main/Main.java" />
         <option value="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataObjects/AllBooks.java" />
         <option value="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataObjects/AllAuthors.java" />
         <option value="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataObjects/Book.java" />
@@ -207,11 +201,17 @@
         <option value="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataObjects/CityByBook.java" />
         <option value="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataObjects/CityWithCords.java" />
         <option value="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataObjects/ManyCitiesWithCords.java" />
-        <option value="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataAcessors/RedisDataAcessor.java" />
         <option value="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Main/SpringBootController.java" />
         <option value="$PROJECT_DIR$/DBParadigmsGroup10/src/test/java/Interfaces/DataAccessorTestdsa.java" />
         <option value="$PROJECT_DIR$/DBParadigmsGroup10/pom.xml" />
+        <option value="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Interfaces/StubbedDataAccessor.java" />
+        <option value="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataAcessors/StubbedDataAccessor.java" />
+        <option value="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Interfaces/DataAccessor.java" />
+        <option value="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Interfaces/DataObject.java" />
         <option value="$PROJECT_DIR$/DBParadigmsGroup10/src/test/java/Interfaces/DataAccessorTest.java" />
+        <option value="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataAcessors/RedisDataAcessor.java" />
+        <option value="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Main/Main.java" />
+        <option value="$PROJECT_DIR$/DBParadigmsGroup10/src/test/java/MyStepdefs.java" />
       </list>
     </option>
   </component>
@@ -336,6 +336,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
@@ -343,8 +344,8 @@
       <recent name="Interfaces" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
-      <recent name="DataAcessors" />
       <recent name="Interfaces" />
+      <recent name="DataAcessors" />
       <recent name="Implementations" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -553,12 +554,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DataAccessorTest - 2018.05.09 at 23h 31m 52s.xml">
-      <configuration name="DataAccessorTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DataAccessorTest - 2018.05.09 at 23h 32m 29s.xml">
-      <configuration name="DataAccessorTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="DataAccessorTest - 2018.05.09 at 23h 33m 18s.xml">
       <configuration name="DataAccessorTest" configurationId="JUnit" />
     </history-entry>
@@ -583,39 +578,47 @@
     <history-entry file="All_in_DBParadigmsGroup10_(2) - 2018.05.10 at 00h 54m 49s.xml">
       <configuration name="All in DBParadigmsGroup10 (2)" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="All_in_DBParadigmsGroup10_(2) - 2018.05.10 at 00h 55m 13s.xml">
+      <configuration name="All in DBParadigmsGroup10 (2)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_DBParadigmsGroup10_(2) - 2018.05.10 at 00h 55m 25s.xml">
+      <configuration name="All in DBParadigmsGroup10 (2)" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="bottom" id="Dependency Viewer" weight="0.32974634" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
+      <window_info active="true" anchor="bottom" id="Inspection Results" visible="true" weight="0.3289777" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39969254" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="SBT Console" order="7" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.3289777" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.36740968" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.36740968" />
       <window_info anchor="right" id="Coverage" side_tool="true" weight="0.3296875" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="Designer" order="2" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1875" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="2" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3289777" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39969254" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3289777" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -627,13 +630,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Main/DBConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Interfaces/DataAccessor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -750,53 +746,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataAcessors/Neo4jDataAcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="20" />
-          <folding>
-            <element signature="e#184#185#0" expanded="true" />
-            <element signature="e#211#212#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataAcessors/MongoDataAcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="7" column="13" lean-forward="true" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="19" />
-          <folding>
-            <element signature="e#184#185#0" expanded="true" />
-            <element signature="e#211#212#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataAcessors/PostgresDataAcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="20" />
-          <folding>
-            <element signature="e#187#188#0" expanded="true" />
-            <element signature="e#214#215#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Interfaces/DataObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Main/DBConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataObjects/City.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -831,16 +780,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataObjects/BooksByAuthor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -894,22 +833,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataObjects/BooksByCity.java">
+    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/test/java/Interfaces/DataAccessorTestdsa.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+        <state relative-caret-position="80">
+          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="70" column="36" selection-start-line="70" selection-start-column="36" selection-end-line="70" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataAcessors/PostgresDataAcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="20" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#187#188#0" expanded="true" />
+            <element signature="e#214#215#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataObjects/Book.java">
+    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataAcessors/Neo4jDataAcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+        <state relative-caret-position="140">
+          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="20" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#184#185#0" expanded="true" />
+            <element signature="e#211#212#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataAcessors/MongoDataAcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="7" column="13" lean-forward="true" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="19" />
+          <folding>
+            <element signature="e#184#185#0" expanded="true" />
+            <element signature="e#211#212#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -936,7 +902,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataObjects/AllAuthors.java">
+    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataObjects/BooksByAuthor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataObjects/BooksByCity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
@@ -946,58 +922,91 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataAcessors/RedisDataAcessor.java">
+    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Main/DBConnection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1720">
-          <caret line="97" column="57" selection-start-line="97" selection-start-column="57" selection-end-line="97" selection-end-column="57" />
+        <state relative-caret-position="160">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Main/Main.java">
+    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataAcessors/StubbedDataAccessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+        <state relative-caret-position="100">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/test/java/Interfaces/DataAccessorTestdsa.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Interfaces/DataAccessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+        <state relative-caret-position="540">
+          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/test/java/MyStepdefs.java">
+    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Interfaces/DataObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+        <state relative-caret-position="120">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataObjects/Book.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/pom.xml">
+    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="70" column="36" selection-start-line="70" selection-start-column="36" selection-end-line="70" selection-end-column="36" />
+        <state relative-caret-position="360">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataAcessors/RedisDataAcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="40" column="5" lean-forward="true" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/test/java/Interfaces/DataAccessorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="99" column="50" selection-start-line="99" selection-start-column="50" selection-end-line="99" selection-end-column="50" />
+        <state>
+          <caret column="19" lean-forward="true" selection-start-column="19" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/test/java/MyStepdefs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataObjects/AllAuthors.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1021,7 +1030,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited />
+          <last-edited>No facets are configured</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1081,7 +1090,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited />
+          <last-edited>Maven: ch.qos.logback:logback-classic:1.2.3</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

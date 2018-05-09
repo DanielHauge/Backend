@@ -4,6 +4,6 @@ public interface DataObject {
 
 
 
-    public String SerializeToJson();
+    String SerializeToJson();
 
 }

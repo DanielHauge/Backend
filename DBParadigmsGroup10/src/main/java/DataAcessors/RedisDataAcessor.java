@@ -8,7 +8,6 @@ import redis.clients.jedis.GeoUnit;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.params.geo.GeoRadiusParam;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -37,9 +36,8 @@ public class RedisDataAcessor implements DataAccessor {
             cities.add(new City(id, cityname));
         }
         City[] allcits = cities.toArray(new City[0]);
-        AllCities res = new AllCities(allcits);
 
-        return res;
+        return new AllCities(allcits);
     }
 
     @Override
@@ -52,8 +50,8 @@ public class RedisDataAcessor implements DataAccessor {
             String author = jedis.get("book_author:"+split[0]);
             res.add(new BookWithMentions(title,author, Integer.parseInt(split[1])));
         }
-        BooksByCity ret = new BooksByCity(res.toArray(new BookWithMentions[0]));
-        return ret;
+
+        return new BooksByCity(res.toArray(new BookWithMentions[0]));
     }
 
     @Override
@@ -67,8 +65,7 @@ public class RedisDataAcessor implements DataAccessor {
             }catch (Exception e){System.out.println(book + " Was the problem");}
 
         }
-        AllBooks ret = new AllBooks(res.toArray(new Book[0]));
-        return ret;
+        return new AllBooks(res.toArray(new Book[0]));
     }
 
     @Override
@@ -84,8 +81,7 @@ public class RedisDataAcessor implements DataAccessor {
             res.add(new CityWithCords(cityname,place.get(0).getLatitude(), place.get(0).getLongitude()));
         }
 
-        ManyCitiesWithCords ret = new ManyCitiesWithCords(res.toArray(new CityWithCords[0]));
-        return ret;
+        return new ManyCitiesWithCords(res.toArray(new CityWithCords[0]));
     }
 
     @Override
@@ -102,8 +98,7 @@ public class RedisDataAcessor implements DataAccessor {
             int id = Integer.parseInt(bookid);
             res.add(new Book(id, jedis.get("book_title:"+id)));
         }
-        BooksByAuthor ret = new BooksByAuthor(author, res.toArray(new Book[0]));
-        return ret;
+        return new BooksByAuthor(author, res.toArray(new Book[0]));
     }
 
     @Override
@@ -118,8 +113,7 @@ public class RedisDataAcessor implements DataAccessor {
             res.add(new CityWithCords(jedis.get("city_name:"+cityid),place.get(0).getLatitude(), place.get(0).getLongitude()));
         }
 
-        CityByBook ret = new CityByBook(bookid, booktitle, res.toArray(new CityWithCords[0]));
-        return ret;
+        return new CityByBook(bookid, booktitle, res.toArray(new CityWithCords[0]));
     }
 
     @Override
@@ -147,10 +141,9 @@ public class RedisDataAcessor implements DataAccessor {
             }
         }
 
-        BooksByVicenety ret = new BooksByVicenety(res.toArray(new CityAndBooks[0]));
 
         jedis.zrem("geospartial", "tempplace");
 
-        return ret;
+        return new BooksByVicenety(res.toArray(new CityAndBooks[0]));
     }
 }
