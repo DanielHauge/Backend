@@ -2,6 +2,7 @@ package Interfaces;
 
 import DataAcessors.RedisDataAcessor;
 import DataObjects.*;
+import Interfaces.DataAccessor;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

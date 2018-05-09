@@ -41,9 +41,14 @@ jobs:
             - ~/.m2
           key: v1-dependencies-{{ checksum "DBParadigmsGroup10/pom.xml" }}
         
+      - run:
+            name: tests
+            command: mvn test
+            shell: /bin/bash
+            working_directory: ~/repo/DBParadigmsGroup10
       # run tests!
       - run: 
-            name: dependencies
+            name: run
             command: mvn exec:java
             shell: /bin/bash
             working_directory: ~/repo/DBParadigmsGroup10
