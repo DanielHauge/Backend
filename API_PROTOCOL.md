@@ -153,7 +153,7 @@ Used for the autocomplete feature
 
 ### Request - get all cities mentioned in a book
 
-`GET: /api/cities/bybook/{bookId}`
+`GET: /api/citiesv/bybook/{bookId}`
 
 #### Response
 
