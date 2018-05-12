@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class Neo4jDataAcessor implements DataAccessor {
 
-    Driver driver;
+    private final Driver driver;
 
     public Neo4jDataAcessor(Driver driver){
         this.driver = driver;

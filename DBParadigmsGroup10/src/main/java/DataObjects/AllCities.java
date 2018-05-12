@@ -1,19 +1,14 @@
 package DataObjects;
 
 import Interfaces.DataObject;
-import com.google.gson.Gson;
+import DataObjects.Json.DataSerializer;
 
-public class AllCities implements DataObject {
+public class AllCities extends DataSerializer implements DataObject {
 
-    public City[] Allcities;
+    public final City[] AllCities;
 
     public AllCities(City[] all){
-        this.Allcities = all;
+        this.AllCities = all;
     }
 
-    @Override
-    public String SerializeToJson()
-    {
-        return new Gson().toJson(this);
-    }
 }

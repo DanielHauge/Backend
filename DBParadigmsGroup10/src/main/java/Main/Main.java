@@ -17,7 +17,7 @@ public class Main {
         }
         */
 
-        DA = new RedisDataAcessor();
+        DA = new RedisDataAcessor(System.getenv("DBIP"));
 
         SpringApplication.run(SpringBootController.class);
     }

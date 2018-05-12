@@ -1,18 +1,14 @@
 package DataObjects;
 
 import Interfaces.DataObject;
-import com.google.gson.Gson;
+import DataObjects.Json.DataSerializer;
 
-public class AllAuthors implements DataObject {
+public class AllAuthors extends DataSerializer implements DataObject {
 
-    public String[] allAuthors;
+    public final String[] AllAuthors;
 
     public AllAuthors(String[] a){
-        this.allAuthors = a;
+        this.AllAuthors = a;
     }
 
-    @Override
-    public String SerializeToJson() {
-        return new Gson().toJson(this);
-    }
 }

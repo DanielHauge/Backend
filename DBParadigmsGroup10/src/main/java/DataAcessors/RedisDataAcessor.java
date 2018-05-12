@@ -14,10 +14,10 @@ import java.util.Set;
 
 public class RedisDataAcessor implements DataAccessor {
 
-    Jedis jedis;
+    private final Jedis jedis;
 
-    public RedisDataAcessor(){
-        this.jedis = new Jedis("192.168.33.11");
+    public RedisDataAcessor(String IP){
+        this.jedis = new Jedis(IP);
         System.out.println(jedis.ping());
     }
 

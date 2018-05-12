@@ -1,18 +1,15 @@
 package DataObjects;
 
 import Interfaces.DataObject;
-import com.google.gson.Gson;
+import DataObjects.Json.DataSerializer;
 
-public class BooksByCity implements DataObject {
 
-    public BookWithMentions[] All;
+public class BooksByCity extends DataSerializer implements DataObject {
 
-    public BooksByCity(BookWithMentions[] all){
-        this.All = all;
+    public final BookWithMentions[] books;
+
+    public BooksByCity(BookWithMentions[] books){
+        this.books = books;
     }
 
-    @Override
-    public String SerializeToJson() {
-        return new Gson().toJson(this);
-    }
 }

@@ -10,7 +10,7 @@ import static Main.Main.DA;
 
 @Controller
 @EnableAutoConfiguration
-public class SpringBootController {
+class SpringBootController {
 
 
     @RequestMapping(value="/api/cities", produces = {"application/json"})
