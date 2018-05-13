@@ -54,7 +54,7 @@ class SingleDataAccessorTest {
         time = System.currentTimeMillis()-time;
         System.out.println(time+"ms");
         assertThat(time, is(lessThan(Expectedtime)));
-        assertThat(all.AllBooks.length, is(37228));
+        assertThat(all.AllBooks.length, is(37227));
     }
 
     @Test
@@ -74,7 +74,7 @@ class SingleDataAccessorTest {
         time = System.currentTimeMillis()-time;
         System.out.println(time+"ms");
         assertThat(time, is(lessThan(Expectedtime)));
-        assertThat(allAuthors.AllAuthors.length,is(14567)); //// TEST SENERE, FORDI DEN ER NOK FORKERT!!!
+        assertThat(allAuthors.AllAuthors.length,is(14569)); //// TEST SENERE, FORDI DEN ER NOK FORKERT!!!
     }
 
     @Test

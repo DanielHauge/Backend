@@ -1,11 +1,18 @@
 package Main;
 
+import DataAcessors.Neo4jDataAcessor;
+import DataAcessors.PostgresDataAcessor;
+import DataAcessors.RedisDataAcessor;
 import Interfaces.DataObject;
+import org.neo4j.driver.v1.AuthTokens;
+import org.neo4j.driver.v1.GraphDatabase;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
 import static Main.Main.DA;
 
 @Controller
@@ -69,6 +76,28 @@ class SpringBootController {
     String BooksByLocation(@PathVariable("longitude") double longitude, @PathVariable("latitude") double latitude){
         DataObject BooksByVicenety = DA.GetBooksInVicenety(latitude, longitude, 20);
         return BooksByVicenety.SerializeToJson();
+    }
+
+    @RequestMapping(value = "/api/setdb/{dbtype}/{ip}")
+    @ResponseBody
+    String SetDB(@PathVariable("dbtype") String dbtype, @PathVariable("ip") String ip){
+        DA.close();
+        String reply = "succes";
+        try {
+            switch (dbtype) {
+                case "neo4j":
+                    DA = new Neo4jDataAcessor(GraphDatabase.driver("bolt://" + System.getenv("DBIP") + ":7687", AuthTokens.basic("neo4j", "class")));
+                case "postgres":
+                    DA = new PostgresDataAcessor("jdbc:postgresql://" + System.getenv("DBIP") + ":5432/postgres", "postgres", "");
+                case "redis":
+                    DA = new RedisDataAcessor(System.getenv("DBIP"));
+                    default:
+                        DA = new RedisDataAcessor(System.getenv("DBIP"));
+            }
+        } catch (Exception e){return "error";}
+
+        return reply;
+
     }
 
 
