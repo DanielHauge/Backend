@@ -4,7 +4,5 @@ Feature: Userstory 3
 
   Scenario: William Shakespeare Example
     Given a User gives a author name "William Shakespeare"
-    When the user ask for all books by that author
-    And the user ask for all cities mentioned in those books
-    And the user ask for all those cities plotted on a map
+    When the user ask for all cities which is mentioned in books by that author
     Then the user will get a map with all cities mentioned in those books plotted on that map.
