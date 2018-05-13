@@ -1,5 +1,6 @@
 package Interfaces;
 
+import DataAcessors.PostgresDataAcessor;
 import DataAcessors.RedisDataAcessor;
 import DataObjects.*;
 import org.junit.jupiter.api.AfterAll;
@@ -23,7 +24,8 @@ class SingleDataAccessorTest {
 
     @BeforeAll
     static void setUp() {
-        DA = new RedisDataAcessor(System.getenv("DBIP"));
+        //DA = new RedisDataAcessor(System.getenv("DBIP"));
+        DA = new PostgresDataAcessor("jdbc:postgresql://"+"192.168.33.11"+":5432/postgres", "postgres", "");
     }
 
 
