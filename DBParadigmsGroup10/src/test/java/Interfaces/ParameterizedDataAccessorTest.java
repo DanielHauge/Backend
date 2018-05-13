@@ -1,6 +1,7 @@
 package Interfaces;
 
 import DataAcessors.Neo4jDataAcessor;
+import DataAcessors.PostgresDataAcessor;
 import DataAcessors.RedisDataAcessor;
 import DataObjects.*;
 import org.junit.AfterClass;
@@ -22,7 +23,11 @@ public class ParameterizedDataAccessorTest {
 
     @Parameterized.Parameters
     public static Collection input() {
-        return Arrays.asList(new RedisDataAcessor(System.getenv("DBIP")), new Neo4jDataAcessor(GraphDatabase.driver("bolt://"+System.getenv("DBIP")+":7687", AuthTokens.basic("neo4j","class"))));
+        return Arrays.asList(
+                new RedisDataAcessor(System.getenv("DBIP")),
+                new Neo4jDataAcessor(GraphDatabase.driver("bolt://"+System.getenv("DBIP")+":7687", AuthTokens.basic("neo4j","class"))),
+                new PostgresDataAcessor("jdbc:postgresql://"+System.getenv("DBIP")+":5432/postgres", "postgres", "")
+        );
     }
 
 
