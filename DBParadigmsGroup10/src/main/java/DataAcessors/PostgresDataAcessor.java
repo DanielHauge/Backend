@@ -173,8 +173,8 @@ public class PostgresDataAcessor implements DataAccessor {
     public BooksByVicenety GetBooksInVicenety(double lat, double lon, int km) {
         BooksByVicenety booksByVicenety = null;
         try {
-            //ArrayList<CityAndBooks> cityAndBooks = new ArrayList<>();
-            CityAndBooks[] cityAndBooks = new CityAndBooks[0];
+            ArrayList<CityAndBooks> cityAndBooks = new ArrayList<>();
+            //CityAndBooks[] cityAndBooks = new CityAndBooks[0];
             Statement stmt = conn.createStatement();
             /*
             ResultSet result = stmt.executeQuery("CREATE OR REPLACE FUNCTION public.geodistance(alat double precision, alng double precision, blat double precision, blng double precision)\n" +
@@ -189,26 +189,52 @@ public class PostgresDataAcessor implements DataAccessor {
                     "    join books on (mentions.bookid = books.id)\n" +
                     "    where geodistance(latitude, longitude, " + lat + ", " + lon + ") < " + km + ";");
 
-            /*
+            boolean doesExist = false;
             while (result.next())
             {
                 CityWithCords tc = new CityWithCords(result.getString("name"), result.getDouble("latitude"), result.getDouble("longitude"));
                 Book bc = new Book(result.getInt("id"),result.getString("title"));
-                boolean doesExist = false;
-                for (int i = 0; i < cityAndBooks.length; i++) {
-                    if (cityAndBooks[i].cityName == tc.cityName)
+                doesExist = false;
+                for (CityAndBooks CaB: cityAndBooks
+                     ) {
+                    if (CaB.cityName.equals(tc.cityName))
                     {
-                        cityAndBooks[i].books[cityAndBooks[i].books.length+1] = bc;
+                        System.out.print("Entered the logic");
+                        Book[] tb = new Book[CaB.books.length+1];
+                        for (int j = 0; j < CaB.books.length; j++) {
+                            tb[j] = CaB.books[j];
+                        }
+                        tb[tb.length-1] = bc;
+                        CaB.books = tb;
+                        doesExist = true;
+                    }
+                    else
+                    {
+                        //System.out.print("'"+tc.cityName + "' Didn't exist cause it wasn't = '" + CaB.cityName + "' for some reason \n");
+                    }
+                }
+                /*
+                for (int i = 0; i < cityAndBooks.size(); i++) {
+                    if (cityAndBooks.get(i).cityName.contains(tc.cityName))
+                    {
+                        Book[] tb = new Book[cityAndBooks.get(i).books.length+1];
+                        for (int j = 0; j < cityAndBooks.get(i).books.length; j++) {
+                            tb[j] = cityAndBooks.get(i).books[j];
+                        }
+                        tb[tb.length] = bc;
+                        cityAndBooks.get(i).books = tb;
                         doesExist = true;
                     }
                 }
+                */
                 if (!doesExist)
                 {
-                    cityAndBooks[cityAndBooks.length+1] = new CityAndBooks(tc.cityName, tc.latitude, tc.longitude,new Book[0]);
+                    System.out.print("'"+tc.cityName + "' Didn't exist\n");
+                    cityAndBooks.add(new CityAndBooks(tc.cityName, tc.latitude, tc.longitude,new Book[0]));
                 }
             }
-            */
-            booksByVicenety = new BooksByVicenety(cityAndBooks);
+
+            booksByVicenety = new BooksByVicenety(cityAndBooks.toArray(new CityAndBooks[0]));
         } catch (SQLException e) {
             e.printStackTrace();
         }

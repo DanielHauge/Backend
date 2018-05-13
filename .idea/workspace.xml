@@ -5,19 +5,78 @@
     <option name="CUSTOM_SCOPE_NAME" value="Module 'DBParadigmsGroup10'" />
   </component>
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Main/Main.java" line="20" />
+    <bookmark url="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Main/Main.java" line="21" />
     <bookmark url="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataAcessors/RedisDataAcessor.java" line="105" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8bfb606e-dbb7-4f60-ad95-b0dcd4f6c5b2" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_books_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_all_1_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_3_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_3_4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_9_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_9_5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_9_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_9_5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_9_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_9_5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__info_cukes_cucumber_html_0_2_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__info_cukes_cucumber_html_0_2_6.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_cucumber_core_2_4_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_cucumber_core_2_4_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_cucumber_java_2_4_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_cucumber_java_2_4_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_cucumber_jvm_deps_1_0_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_cucumber_jvm_deps_1_0_6.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_gherkin_5_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_gherkin_5_0_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_tag_expressions_1_1_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_tag_expressions_1_1_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_3_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_3_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_2_0_1_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_2_0_1_Final.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_pool2_2_5_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_pool2_2_5_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_10_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_10_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_10_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_10_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_8_5_29.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_8_5_29.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_8_5_29.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_8_5_29.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_5_29.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_5_29.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_all_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_all_1_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_0_9_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_0_9_Final.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_2_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_2_Final.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_neo4j_driver_neo4j_java_driver_1_4_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_neo4j_driver_neo4j_java_driver_1_4_4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_0_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_25.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_25.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_0_1_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_0_1_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_0_1_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_0_1_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_0_1_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_0_1_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_0_1_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_0_1_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_0_1_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_0_1_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_0_1_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_0_1_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_0_1_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_0_1_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_0_5_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_0_5_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_0_5_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_0_5_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_0_5_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_0_5_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_0_5_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_0_5_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_0_5_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_0_5_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_0_5_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_0_5_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_0_5_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_0_5_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_0_5_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_0_5_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_19.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_19.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__redis_clients_jedis_2_9_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__redis_clients_jedis_2_9_0.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DBParadigmsGroup10/DBParadigmsGroup10.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DBParadigmsGroup10/DBParadigmsGroup10.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DBParadigmsGroup10/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DBParadigmsGroup10/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Main/DBConnection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataAcessors/PostgresDataAcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataAcessors/PostgresDataAcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataObjects/CityAndBooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataObjects/CityAndBooks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataObjects/CityWithCords.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataObjects/CityWithCords.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Main/SpringBootController.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Main/SpringBootController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBParadigmsGroup10/src/test/java/Interfaces/ParameterizedDataAccessorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBParadigmsGroup10/src/test/java/Interfaces/ParameterizedDataAccessorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBParadigmsGroup10/src/test/java/Interfaces/SingleDataAccessorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBParadigmsGroup10/src/test/java/Interfaces/SingleDataAccessorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBParadigmsGroup10/target/classes/DataAcessors/PostgresDataAcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBParadigmsGroup10/target/classes/DataAcessors/PostgresDataAcessor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBParadigmsGroup10/target/classes/DataObjects/CityAndBooks.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBParadigmsGroup10/target/classes/DataObjects/CityAndBooks.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBParadigmsGroup10/target/classes/DataObjects/CityWithCords.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBParadigmsGroup10/target/classes/DataObjects/CityWithCords.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBParadigmsGroup10/target/classes/Main/DBConnection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBParadigmsGroup10/target/classes/Main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBParadigmsGroup10/target/classes/Main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBParadigmsGroup10/target/test-classes/Interfaces/ParameterizedDataAccessorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBParadigmsGroup10/target/test-classes/Interfaces/ParameterizedDataAccessorTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBParadigmsGroup10/target/test-classes/Interfaces/SingleDataAccessorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBParadigmsGroup10/target/test-classes/Interfaces/SingleDataAccessorTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/DBParadigmsGroup10/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,6 +87,10 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Backend$ParameterizedDataAccessorTest.ic" NAME="ParameterizedDataAccessorTest Coverage Results" MODIFIED="1526163444978" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>DataObjects.Json.*</FILTER>
+      <FILTER>DataAcessors.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/Backend$ParameterizedDataAccessorTest.exec" NAME="ParameterizedDataAccessorTest Coverage Results" MODIFIED="1526163417183" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="jacoco" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>DataObjects.Json.*</FILTER>
       <FILTER>DataAcessors.*</FILTER>
@@ -35,31 +98,15 @@
     <SUITE FILE_PATH="coverage/Backend$DataAccessorTest.ic" NAME="DataAccessorTest Coverage Results" MODIFIED="1525905748764" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Interfaces.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Backend$ParameterizedDataAccessorTest.ic" NAME="ParameterizedDataAccessorTest Coverage Results" MODIFIED="1526163444978" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>DataObjects.Json.*</FILTER>
-      <FILTER>DataAcessors.*</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/Backend$All_in_DBParadigmsGroup10__1_.ic" NAME="All in DBParadigmsGroup10 (1) Coverage Results" MODIFIED="1525905811591" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SpringBootController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Main/SpringBootController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1093">
-              <caret line="73" selection-start-line="73" selection-end-line="73" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+            <state relative-caret-position="196">
+              <caret line="14" column="32" lean-forward="true" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -67,32 +114,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Neo4jDataAcessor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataAcessors/Neo4jDataAcessor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PostgresDataAcessor.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PostgresDataAcessor.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataAcessors/PostgresDataAcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="73" />
+            <state relative-caret-position="207">
+              <caret line="190" lean-forward="true" selection-start-line="190" selection-end-line="190" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ParameterizedDataAccessorTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/test/java/Interfaces/ParameterizedDataAccessorTest.java">
+      <file leaf-file-name="CityAndBooks.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataObjects/CityAndBooks.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1000">
-              <caret line="26" column="60" lean-forward="true" selection-start-line="26" selection-start-column="60" selection-end-line="26" selection-end-column="60" />
+            <state relative-caret-position="153">
+              <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -100,50 +135,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataSerializerTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/test/java/DataObjects/Json/DataSerializerTest.java">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+            <state relative-caret-position="485">
+              <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Userstory1.feature" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/test/java/resources/Userstory1.feature">
+      <file leaf-file-name="SingleDataAccessorTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/test/java/Interfaces/SingleDataAccessorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="12" column="113" lean-forward="true" selection-start-line="12" selection-start-column="113" selection-end-line="12" selection-end-column="117" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyStepdefs.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/test/java/MyStepdefs.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Book.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataObjects/Book.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BooksByAuthor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataObjects/BooksByAuthor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+            <state relative-caret-position="281">
+              <caret line="120" column="5" lean-forward="true" selection-start-line="120" selection-start-column="5" selection-end-line="120" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -166,7 +171,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Implementations/AllAuthors.java" />
         <option value="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Interfaces/AllBooksWithMentions.java" />
         <option value="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Implementations/AllBooksWithMentions.java" />
         <option value="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Implementations/BooksByCity.java" />
@@ -212,11 +216,12 @@
         <option value="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataObjects/CityByBook.java" />
         <option value="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataObjects/ManyCitiesWithCords.java" />
         <option value="$PROJECT_DIR$/DBParadigmsGroup10/src/test/java/DataObjects/Json/DataSerializerTest.java" />
-        <option value="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataAcessors/PostgresDataAcessor.java" />
-        <option value="$PROJECT_DIR$/DBParadigmsGroup10/pom.xml" />
         <option value="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Main/SpringBootController.java" />
         <option value="$PROJECT_DIR$/DBParadigmsGroup10/src/test/java/Interfaces/ParameterizedDataAccessorTest.java" />
+        <option value="$PROJECT_DIR$/DBParadigmsGroup10/src/test/java/Interfaces/SingleDataAccessorTest.java" />
+        <option value="$PROJECT_DIR$/DBParadigmsGroup10/pom.xml" />
         <option value="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Main/Main.java" />
+        <option value="$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataAcessors/PostgresDataAcessor.java" />
       </list>
     </option>
   </component>
@@ -228,8 +233,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="443" />
-    <option name="y" value="-9" />
+    <option name="x" value="101" />
+    <option name="y" value="-8" />
     <option name="width" value="1448" />
     <option name="height" value="1077" />
   </component>
@@ -238,6 +243,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -363,9 +371,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -413,12 +418,12 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ParameterizedDataAccessorTest">
+  <component name="RunManager" selected="JUnit.SingleDataAccessorTest.getBooksInVicenety2">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main.Main" />
       <module name="DBParadigmsGroup10" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <extension name="coverage" runner="jacoco">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Main.*" />
           <option name="ENABLED" value="true" />
@@ -427,60 +432,6 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-    </configuration>
-    <configuration name="DataAccessorTest.getAllCities" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="DBParadigmsGroup10" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="DataObjects.Json.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="Interfaces" />
-      <option name="MAIN_CLASS_NAME" value="Interfaces.DataAccessorTest" />
-      <option name="METHOD_NAME" value="getAllCities(Interfaces.DataAccessor)" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="ParameterizedDataAccessorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="DBParadigmsGroup10" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="DataObjects.Json.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-        <pattern>
-          <option name="PATTERN" value="*" />
-          <option name="ENABLED" value="false" />
-        </pattern>
-        <pattern>
-          <option name="PATTERN" value="DataAcessors.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="Interfaces" />
-      <option name="MAIN_CLASS_NAME" value="Interfaces.ParameterizedDataAccessorTest" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
     </configuration>
     <configuration name="SingleDataAccessorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DBParadigmsGroup10" />
@@ -505,11 +456,11 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="SingleDataAccessorTest.getAllCities" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SingleDataAccessorTest.getBooksInVicenety1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DBParadigmsGroup10" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="DataObjects.Json.*" />
+          <option name="PATTERN" value="Interfaces.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -517,7 +468,53 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="Interfaces" />
       <option name="MAIN_CLASS_NAME" value="Interfaces.SingleDataAccessorTest" />
-      <option name="METHOD_NAME" value="getAllCities" />
+      <option name="METHOD_NAME" value="getBooksInVicenety1" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="SingleDataAccessorTest.getBooksInVicenety2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DBParadigmsGroup10" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Interfaces.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="Interfaces" />
+      <option name="MAIN_CLASS_NAME" value="Interfaces.SingleDataAccessorTest" />
+      <option name="METHOD_NAME" value="getBooksInVicenety2" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="SingleDataAccessorTest.getBooksInVicenety3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DBParadigmsGroup10" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Interfaces.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="Interfaces" />
+      <option name="MAIN_CLASS_NAME" value="Interfaces.SingleDataAccessorTest" />
+      <option name="METHOD_NAME" value="getBooksInVicenety3" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -592,18 +589,19 @@
     </configuration>
     <list>
       <item itemvalue="Maven.Unnamed" />
-      <item itemvalue="JUnit.DataAccessorTest.getAllCities" />
-      <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.SingleDataAccessorTest" />
-      <item itemvalue="JUnit.SingleDataAccessorTest.getAllCities" />
-      <item itemvalue="JUnit.ParameterizedDataAccessorTest" />
+      <item itemvalue="JUnit.SingleDataAccessorTest.getBooksInVicenety1" />
+      <item itemvalue="JUnit.SingleDataAccessorTest.getBooksInVicenety2" />
+      <item itemvalue="JUnit.SingleDataAccessorTest.getBooksInVicenety3" />
+      <item itemvalue="Application.Main" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ParameterizedDataAccessorTest" />
+        <item itemvalue="JUnit.SingleDataAccessorTest.getBooksInVicenety2" />
+        <item itemvalue="JUnit.SingleDataAccessorTest.getBooksInVicenety3" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.SingleDataAccessorTest.getBooksInVicenety1" />
         <item itemvalue="JUnit.SingleDataAccessorTest" />
-        <item itemvalue="JUnit.SingleDataAccessorTest.getAllCities" />
       </list>
     </recent_temporary>
   </component>
@@ -621,73 +619,73 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ParameterizedDataAccessorTest - 2018.05.13 at 00h 01m 56s.xml">
-      <configuration name="ParameterizedDataAccessorTest" configurationId="JUnit" />
+    <history-entry file="SingleDataAccessorTest_getBooksInVicenety3 - 2018.05.13 at 18h 16m 26s.xml">
+      <configuration name="SingleDataAccessorTest.getBooksInVicenety3" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ParameterizedDataAccessorTest - 2018.05.13 at 00h 02m 46s.xml">
-      <configuration name="ParameterizedDataAccessorTest" configurationId="JUnit" />
+    <history-entry file="SingleDataAccessorTest_getBooksInVicenety3 - 2018.05.13 at 18h 17m 14s.xml">
+      <configuration name="SingleDataAccessorTest.getBooksInVicenety3" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ParameterizedDataAccessorTest - 2018.05.13 at 00h 04m 41s.xml">
-      <configuration name="ParameterizedDataAccessorTest" configurationId="JUnit" />
+    <history-entry file="SingleDataAccessorTest_getBooksInVicenety3 - 2018.05.13 at 18h 19m 12s.xml">
+      <configuration name="SingleDataAccessorTest.getBooksInVicenety3" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ParameterizedDataAccessorTest - 2018.05.13 at 00h 15m 15s.xml">
-      <configuration name="ParameterizedDataAccessorTest" configurationId="JUnit" />
+    <history-entry file="SingleDataAccessorTest_getBooksInVicenety3 - 2018.05.13 at 18h 20m 09s.xml">
+      <configuration name="SingleDataAccessorTest.getBooksInVicenety3" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ParameterizedDataAccessorTest - 2018.05.13 at 00h 16m 03s.xml">
-      <configuration name="ParameterizedDataAccessorTest" configurationId="JUnit" />
+    <history-entry file="SingleDataAccessorTest_getBooksInVicenety3 - 2018.05.13 at 18h 21m 28s.xml">
+      <configuration name="SingleDataAccessorTest.getBooksInVicenety3" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ParameterizedDataAccessorTest - 2018.05.13 at 00h 16m 49s.xml">
-      <configuration name="ParameterizedDataAccessorTest" configurationId="JUnit" />
+    <history-entry file="SingleDataAccessorTest_getBooksInVicenety3 - 2018.05.13 at 18h 22m 19s.xml">
+      <configuration name="SingleDataAccessorTest.getBooksInVicenety3" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ParameterizedDataAccessorTest - 2018.05.13 at 00h 16m 57s.xml">
-      <configuration name="ParameterizedDataAccessorTest" configurationId="JUnit" />
+    <history-entry file="SingleDataAccessorTest_getBooksInVicenety3 - 2018.05.13 at 18h 22m 43s.xml">
+      <configuration name="SingleDataAccessorTest.getBooksInVicenety3" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ParameterizedDataAccessorTest - 2018.05.13 at 00h 17m 34s.xml">
-      <configuration name="ParameterizedDataAccessorTest" configurationId="JUnit" />
+    <history-entry file="SingleDataAccessorTest_getBooksInVicenety3 - 2018.05.13 at 18h 25m 45s.xml">
+      <configuration name="SingleDataAccessorTest.getBooksInVicenety3" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ParameterizedDataAccessorTest - 2018.05.13 at 00h 23m 03s.xml">
-      <configuration name="ParameterizedDataAccessorTest" configurationId="JUnit" />
+    <history-entry file="SingleDataAccessorTest_getBooksInVicenety3 - 2018.05.13 at 18h 26m 03s.xml">
+      <configuration name="SingleDataAccessorTest.getBooksInVicenety3" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ParameterizedDataAccessorTest - 2018.05.13 at 00h 26m 03s.xml">
-      <configuration name="ParameterizedDataAccessorTest" configurationId="JUnit" />
+    <history-entry file="SingleDataAccessorTest_getBooksInVicenety2 - 2018.05.13 at 18h 28m 53s.xml">
+      <configuration name="SingleDataAccessorTest.getBooksInVicenety2" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="SBT Console" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Messages" order="15" weight="0.3289777" />
+      <window_info anchor="right" id="Palette&#9;" order="9" />
+      <window_info id="Image Layers" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.36740968" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info id="Capture Tool" order="2" />
+      <window_info anchor="right" id="Maven Projects" order="5" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.36648044" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info id="Capture Tool" order="5" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2171875" />
-      <window_info anchor="bottom" id="Run with VisualVM" order="8" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3289777" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2260128" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="UI Designer" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39969254" />
-      <window_info anchor="bottom" id="Debug with VisualVM" order="8" />
-      <window_info anchor="bottom" id="Dependency Viewer" order="8" weight="0.45042276" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.3289777" />
+      <window_info anchor="bottom" id="Dependency Viewer" order="11" weight="0.45042276" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="Inspection Results" order="8" weight="0.3289777" />
-      <window_info anchor="right" id="Module Dependencies" order="4" sideWeight="0.49942726" visible="true" weight="0.3296875" />
+      <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.3289777" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3289777" />
+      <window_info anchor="right" id="Module Dependencies" order="7" sideWeight="0.49942726" visible="true" weight="0.3296875" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="right" id="Coverage" order="4" sideWeight="0.50057274" side_tool="true" weight="0.3296875" />
+      <window_info anchor="bottom" id="Run with VisualVM" order="13" />
+      <window_info anchor="right" id="Coverage" order="8" sideWeight="0.50057274" side_tool="true" weight="0.3296875" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="SBT Console" order="10" />
+      <window_info anchor="bottom" id="Debug with VisualVM" order="14" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
@@ -696,18 +694,18 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="16" />
+      <option name="time" value="21" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Interfaces/JsonMachine.java" />
-    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Main/DBConnection.java">
+    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataAcessors/PostgresDataAcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="3281">
+          <caret line="197" column="51" selection-start-line="197" selection-start-column="39" selection-end-line="197" selection-end-column="51" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Main/DBConnection.java" />
     <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Implementations/Neo4jAccessor.java" />
     <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Implementations/Neo4jAcessor.java" />
     <entry file="file://$PROJECT_DIR$/README.md" />
@@ -769,16 +767,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataObjects/CityAndBooks.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataObjects/CityWithCords.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -793,7 +781,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/test/java/Interfaces/SingleDataAccessorTest.java" />
     <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataObjects/CityByBook.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -819,16 +806,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="700">
           <caret line="51" selection-start-line="51" selection-end-line="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Interfaces/DataAccessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
@@ -867,13 +844,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="54" column="36" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataAcessors/RedisDataAcessor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -884,22 +854,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/API_PROTOCOL.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/API_PROTOCOL.md" />
     <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataAcessors/MongoDataAcessor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="e#184#185#0" expanded="true" />
-            <element signature="e#211#212#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -912,82 +871,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataObjects/BooksByAuthor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
+        <state relative-caret-position="102">
           <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataObjects/Book.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="153">
           <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/test/java/DataObjects/Json/DataSerializerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataAcessors/Neo4jDataAcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/test/java/Interfaces/ParameterizedDataAccessorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1000">
-          <caret line="26" column="60" lean-forward="true" selection-start-line="26" selection-start-column="60" selection-end-line="26" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Main/SpringBootController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1093">
+        <state relative-caret-position="1139">
           <caret line="73" selection-start-line="73" selection-end-line="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Main/DBConnection.java" />
+    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/test/java/resources/Userstory1.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/test/java/Interfaces/ParameterizedDataAccessorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="115" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Main/DBConnection.java">
+    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/test/java/DataObjects/Json/DataSerializerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataAcessors/PostgresDataAcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="73" />
+        <state relative-caret-position="102">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/test/java/MyStepdefs.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
+        <state relative-caret-position="238">
           <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -995,10 +925,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/test/java/resources/Userstory1.feature">
+    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataAcessors/Neo4jDataAcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" column="113" lean-forward="true" selection-start-line="12" selection-start-column="113" selection-end-line="12" selection-end-column="117" />
+        <state relative-caret-position="267">
+          <caret line="123" column="24" lean-forward="true" selection-start-line="123" selection-start-column="24" selection-end-line="123" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Interfaces/DataAccessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataObjects/CityAndBooks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/Main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="14" column="32" lean-forward="true" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="485">
+          <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/test/java/Interfaces/SingleDataAccessorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="120" column="5" lean-forward="true" selection-start-line="120" selection-start-column="5" selection-end-line="120" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBParadigmsGroup10/src/main/java/DataAcessors/PostgresDataAcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="190" lean-forward="true" selection-start-line="190" selection-end-line="190" />
         </state>
       </provider>
     </entry>
