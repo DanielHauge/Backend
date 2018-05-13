@@ -1,12 +1,12 @@
 package DataObjects;
 
 import Interfaces.DataObject;
-import com.google.gson.Gson;
+import DataObjects.Json.DataSerializer;
 
-public class BooksByAuthor implements DataObject {
+public class BooksByAuthor extends DataSerializer implements DataObject {
 
-    public String authorName;
-    public Book[] books;
+    private final String authorName;
+    public final Book[] books;
 
 
     public BooksByAuthor(String authorName, Book[] books){
@@ -14,8 +14,4 @@ public class BooksByAuthor implements DataObject {
         this.books = books;
     }
 
-    @Override
-    public String SerializeToJson() {
-        return new Gson().toJson(this);
-    }
 }

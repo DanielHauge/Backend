@@ -14,10 +14,10 @@ import java.util.Set;
 
 public class RedisDataAcessor implements DataAccessor {
 
-    Jedis jedis;
+    private final Jedis jedis;
 
-    public RedisDataAcessor(){
-        this.jedis = new Jedis("192.168.33.11");
+    public RedisDataAcessor(String IP){
+        this.jedis = new Jedis(IP);
         System.out.println(jedis.ping());
     }
 
@@ -45,7 +45,7 @@ public class RedisDataAcessor implements DataAccessor {
         Set<String> qres = jedis.smembers("M_city-book:"+cityid);
         ArrayList<BookWithMentions> res = new ArrayList<>();
         for (String book : qres) {
-            String[] split = book.split("-");
+            String[] split = book.split("_");
             String title = jedis.get("book_title:"+split[0]);
             String author = jedis.get("book_author:"+split[0]);
             res.add(new BookWithMentions(title,author, Integer.parseInt(split[1])));
@@ -73,7 +73,7 @@ public class RedisDataAcessor implements DataAccessor {
         Set<String> qres = jedis.smembers("M_book-city:"+bookid);
         ArrayList<CityWithCords> res = new ArrayList<>();
         for (String city : qres) {
-            int cityid = Integer.parseInt(city.split("-")[0]);
+            int cityid = Integer.parseInt(city.split("_")[0]);
             String cityname = jedis.get("city_name:"+cityid);
 
             List<GeoCoordinate> place = jedis.geopos("geospartial", String.valueOf(cityid));
@@ -108,7 +108,7 @@ public class RedisDataAcessor implements DataAccessor {
         Set<String> qres = jedis.smembers("M_book-city:"+bookid);
         ArrayList<CityWithCords> res = new ArrayList<>();
         for (String returned : qres) {
-            String cityid = returned.split("-")[0];
+            String cityid = returned.split("_")[0];
             List<GeoCoordinate> place = jedis.geopos("geospartial", cityid);
             res.add(new CityWithCords(jedis.get("city_name:"+cityid),place.get(0).getLatitude(), place.get(0).getLongitude()));
         }
@@ -131,13 +131,10 @@ public class RedisDataAcessor implements DataAccessor {
                 ArrayList<Book> b = new ArrayList<>();
                 Set<String> res2 = jedis.smembers("M_city-book:"+cityid);
                 for (String bookids : res2) {
-                    String bid = bookids.split("-")[0];
+                    String bid = bookids.split("_")[0];
                     b.add(new Book(Integer.parseInt(bid), jedis.get("book_title:"+bid)));
                 }
                 res.add(new CityAndBooks(jedis.get("city_name:"+cityid), latd, lond, b.toArray(new Book[0])));
-            } else
-            {
-                //System.out.println("Found temmplace! Does not add.");
             }
         }
 
@@ -145,5 +142,10 @@ public class RedisDataAcessor implements DataAccessor {
         jedis.zrem("geospartial", "tempplace");
 
         return new BooksByVicenety(res.toArray(new CityAndBooks[0]));
+    }
+
+    @Override
+    public void close() {
+        jedis.close();
     }
 }

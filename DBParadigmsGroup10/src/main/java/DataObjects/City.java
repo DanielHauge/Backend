@@ -1,13 +1,13 @@
 package DataObjects;
 
 import Interfaces.DataObject;
-import com.google.gson.Gson;
+import DataObjects.Json.DataSerializer;
 
-public class City implements DataObject {
+public class City extends DataSerializer implements DataObject {
 
 
-    public int id;
-    public String cityName;
+    private final int id;
+    private final String cityName;
 
     public City(int id, String name){
         this.id = id;
@@ -15,8 +15,5 @@ public class City implements DataObject {
     }
 
 
-    @Override
-    public String SerializeToJson() {
-        return new Gson().toJson(this);
-    }
+
 }

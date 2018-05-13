@@ -1,9 +1,7 @@
 package Interfaces;
 
-public interface DataObject {
+import DataObjects.Json.JsonSerializer;
 
-
-
-    String SerializeToJson();
+public interface DataObject extends JsonSerializer {
 
 }

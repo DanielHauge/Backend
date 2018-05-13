@@ -1,8 +1,8 @@
 # API Protocol
 
-## 1. Given a city name your application returns all book titles with corresponding authors that mention this city.
+## 1. Given a city name your application returns books book titles with corresponding authors that mention this city.
 
-### Request - get all cities
+### Request - get books cities
 
 Used for the autocomplete feature
 
@@ -30,7 +30,7 @@ Used for the autocomplete feature
 }
 ```
 
-### Request - get all book titles for a city
+### Request - get books book titles for a city
 
 `GET /api/books/bycity/{cityId}`
 
@@ -57,9 +57,9 @@ Used for the autocomplete feature
 ]
 ```
 
-## 2. Given a book title, your application plots all cities mentioned in this book onto a map
+## 2. Given a book title, your application plots books cities mentioned in this book onto a map
 
-### Request - get all book titles and their ids
+### Request - get books book titles and their ids
 
 `GET: /api/books`
 
@@ -83,9 +83,9 @@ Used for the autocomplete feature
 ]
 ```
 
-> We use this to let the user choose from all the books available with an autocomplete feature
+> We use this to let the user choose from books the books available with an autocomplete feature
 
-### Request - Get all cities mentioned in a book with their coordinates
+### Request - Get books cities mentioned in a book with their coordinates
 
 `GET: /api/cities/bybook/{bookId}`
 
@@ -114,9 +114,9 @@ Used for the autocomplete feature
 
 > The response then for a specific book will be plotted onto a map
 
-## 3. Given an author name your application lists all books written by that author and plots all cities mentioned in any of the books onto a map.
+## 3. Given an author name your application lists books books written by that author and plots books cities mentioned in any of the books onto a map.
 
-### Request - get all authors
+### Request - get books authors
 
 `GET: /api/authors`
 
@@ -130,7 +130,7 @@ Used for the autocomplete feature
 ]
 ```
 
-### Request - get all books by an author
+### Request - get books books by an author
 
 `GET: /api/books/byauthor/{authorName}`
 
@@ -153,7 +153,7 @@ Used for the autocomplete feature
 }
 ```
 
-### Request - get all cities mentioned in a book
+### Request - get books cities mentioned in a book
 
 `GET: /api/citiesv/bybook/{bookId}`
 
@@ -184,9 +184,9 @@ Used for the autocomplete feature
 }
 ```
 
-## 4. Given a geolocation, your application lists all books mentioning a city in vicinity of the given geolocation
+## 4. Given a geolocation, your application lists books books mentioning a city in vicinity of the given geolocation
 
-### Request - get all books mentioning the city in vicinity of geolocation
+### Request - get books books mentioning the city in vicinity of geolocation
 
 `GET: /api/books/bylocation/{longitude}/{latitude}`
 

@@ -1,13 +1,13 @@
 package DataObjects;
 
 import Interfaces.DataObject;
-import com.google.gson.Gson;
+import DataObjects.Json.DataSerializer;
 
-public class BookWithMentions implements DataObject {
+public class BookWithMentions extends DataSerializer implements DataObject {
 
-    public String bookTitle;
-    public String author;
-    public int mentionCount;
+    private final String bookTitle;
+    private final String author;
+    private final int mentionCount;
 
     public BookWithMentions(String title, String author, int mentions){
         this.bookTitle = title;
@@ -15,8 +15,4 @@ public class BookWithMentions implements DataObject {
         this.mentionCount = mentions;
     }
 
-    @Override
-    public String SerializeToJson() {
-        return new Gson().toJson(this);
-    }
 }

@@ -27,7 +27,7 @@ public interface DataAccessor {
         // User story 4
         BooksByVicenety GetBooksInVicenety(double lat, double lon, int km);
 
-
+        void close();
 
 
 }

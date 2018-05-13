@@ -43,4 +43,9 @@ public class StubbedDataAccessor implements DataAccessor {
     public BooksByVicenety GetBooksInVicenety(double lat, double lon, int km) {
         return null;
     }
+
+    @Override
+    public void close() {
+
+    }
 }

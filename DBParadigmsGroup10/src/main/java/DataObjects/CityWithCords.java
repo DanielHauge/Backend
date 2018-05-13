@@ -1,13 +1,13 @@
 package DataObjects;
 
 import Interfaces.DataObject;
-import com.google.gson.Gson;
+import DataObjects.Json.DataSerializer;
 
-public class CityWithCords implements DataObject {
+public class CityWithCords extends DataSerializer implements DataObject {
 
-    public String cityName;
-    public double latitude;
-    public double longitude;
+    private final String cityName;
+    private final double latitude;
+    private final double longitude;
 
     public CityWithCords(String name, double lat, double lon){
         this.cityName = name;
@@ -15,8 +15,5 @@ public class CityWithCords implements DataObject {
         this.longitude = lon;
     }
 
-    @Override
-    public String SerializeToJson() {
-        return new Gson().toJson(this);
-    }
+
 }

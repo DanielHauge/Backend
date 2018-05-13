@@ -1,14 +1,14 @@
 package DataObjects;
 
 import Interfaces.DataObject;
-import com.google.gson.Gson;
+import DataObjects.Json.DataSerializer;
 
-public class CityAndBooks implements DataObject {
+public class CityAndBooks extends DataSerializer implements DataObject {
 
-    public String cityName;
-    public double latitude;
-    public double longitude;
-    public Book[] books;
+    private final String cityName;
+    private final double latitude;
+    private final double longitude;
+    private final Book[] books;
 
     public CityAndBooks(String name, double lat, double lon, Book[] b){
         this.cityName = name;
@@ -17,8 +17,4 @@ public class CityAndBooks implements DataObject {
         this.books = b;
     }
 
-    @Override
-    public String SerializeToJson() {
-        return new Gson().toJson(this);
-    }
 }

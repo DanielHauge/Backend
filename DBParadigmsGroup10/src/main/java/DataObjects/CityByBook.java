@@ -1,14 +1,14 @@
 package DataObjects;
 
 import Interfaces.DataObject;
-import com.google.gson.Gson;
+import DataObjects.Json.DataSerializer;
 
-public class CityByBook implements DataObject {
+public class CityByBook extends DataSerializer implements DataObject {
 
 
-    public int bookId;
-    public String bookTitle;
-    public CityWithCords[] cities;
+    private final int bookId;
+    private final String bookTitle;
+    public final CityWithCords[] cities;
 
     public CityByBook(int id, String title, CityWithCords[] cits){
         this.bookId = id;
@@ -16,8 +16,4 @@ public class CityByBook implements DataObject {
         this.cities = cits;
     }
 
-    @Override
-    public String SerializeToJson() {
-        return new Gson().toJson(this);
-    }
 }
