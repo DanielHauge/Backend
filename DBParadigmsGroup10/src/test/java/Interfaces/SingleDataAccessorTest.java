@@ -1,11 +1,14 @@
 package Interfaces;
 
+import DataAcessors.Neo4jDataAcessor;
 import DataAcessors.PostgresDataAcessor;
 import DataAcessors.RedisDataAcessor;
 import DataObjects.*;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.neo4j.driver.v1.AuthTokens;
+import org.neo4j.driver.v1.GraphDatabase;
 
 
 import static org.hamcrest.CoreMatchers.is;
@@ -24,8 +27,9 @@ class SingleDataAccessorTest {
 
     @BeforeAll
     static void setUp() {
-        DA = new RedisDataAcessor(System.getenv("DBIP"));
-        //DA = new PostgresDataAcessor("jdbc:postgresql://"+"192.168.33.11"+":5432/postgres", "postgres", "");
+        //DA = new RedisDataAcessor(System.getenv("DBIP"));
+        DA = new PostgresDataAcessor("jdbc:postgresql://"+"192.168.33.11"+":5432/postgres", "postgres", "");
+        //DA = new Neo4jDataAcessor(GraphDatabase.driver("bolt://"+System.getenv("DBIP")+":7687", AuthTokens.basic("neo4j","class")));
     }
 
 
@@ -42,11 +46,11 @@ class SingleDataAccessorTest {
     @Test
     void getBooksByCity() {
         long time = System.currentTimeMillis();
-        BooksByCity booksByCity = DA.GetBooksByCity(2624341);
+        BooksByCity booksByCity = DA.GetBooksByCity(2618425);
         time = System.currentTimeMillis()-time;
         System.out.println(time+"ms");
         assertThat(time, is(lessThan(Expectedtime)));
-        assertThat(booksByCity.books.length,is(1)); // TEST SENERE FORDI DEN ER NOK FORKERT!
+        assertThat(booksByCity.books.length,is(1840)); // TEST SENERE FORDI DEN ER NOK FORKERT!
     }
 
     @Test
@@ -56,7 +60,7 @@ class SingleDataAccessorTest {
         time = System.currentTimeMillis()-time;
         System.out.println(time+"ms");
         assertThat(time, is(lessThan(Expectedtime)));
-        assertThat(all.AllBooks.length, is(37227));
+        assertThat(all.AllBooks.length, is(37221));
     }
 
     @Test
@@ -66,7 +70,7 @@ class SingleDataAccessorTest {
         time = System.currentTimeMillis()-time;
         System.out.println(time+"ms");
         assertThat(time, is(lessThan(Expectedtime)));
-        assertThat(Manycities.cities.length,is(94));
+        assertThat(Manycities.cities.length,is(14));
     }
 
     @Test
@@ -76,7 +80,7 @@ class SingleDataAccessorTest {
         time = System.currentTimeMillis()-time;
         System.out.println(time+"ms");
         assertThat(time, is(lessThan(Expectedtime)));
-        assertThat(allAuthors.AllAuthors.length,is(14569)); //// TEST SENERE, FORDI DEN ER NOK FORKERT!!!
+        assertThat(allAuthors.AllAuthors.length,is(14788)); //// TEST SENERE, FORDI DEN ER NOK FORKERT!!!
     }
 
     @Test
@@ -96,7 +100,7 @@ class SingleDataAccessorTest {
         time = System.currentTimeMillis()-time;
         System.out.println(time+"ms");
         assertThat(time, is(lessThan(Expectedtime)));
-        assertThat(cityByBook.cities.length, is(94)); /////// TEST SENERE! FORDI DEN ER NOK FORKERT!
+        assertThat(cityByBook.cities.length, is(14)); /////// TEST SENERE! FORDI DEN ER NOK FORKERT!
 
     }
 

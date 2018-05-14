@@ -85,4 +85,10 @@ public class MyStepdefs {
         this.lat = Double.parseDouble(Integer.toString(arg0)+"."+Integer.toString(arg1));
         this.lon = Double.parseDouble(Integer.toString(arg2)+"."+Integer.toString(arg3));
     }
+
+    @Then("^the user will get all books with corresponding authors that is mentioned in that city, which is \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\"$")
+    public void theUserWillGetAllBooksWithCorrespondingAuthorsThatIsMentionedInThatCityWhichIs(String arg0, String arg1, String arg2) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException();
+    }
 }

@@ -86,13 +86,13 @@ class SpringBootController {
         try {
             switch (dbtype) {
                 case "neo4j":
-                    DA = new Neo4jDataAcessor(GraphDatabase.driver("bolt://" + System.getenv("DBIP") + ":7687", AuthTokens.basic("neo4j", "class")));
+                    DA = new Neo4jDataAcessor(GraphDatabase.driver("bolt://" + ip + ":7687", AuthTokens.basic("neo4j", "class")));
                 case "postgres":
-                    DA = new PostgresDataAcessor("jdbc:postgresql://" + System.getenv("DBIP") + ":5432/postgres", "postgres", "");
+                    DA = new PostgresDataAcessor("jdbc:postgresql://" + ip + ":5432/postgres", "postgres", "");
                 case "redis":
-                    DA = new RedisDataAcessor(System.getenv("DBIP"));
+                    DA = new RedisDataAcessor(ip);
                     default:
-                        DA = new RedisDataAcessor(System.getenv("DBIP"));
+                        DA = new RedisDataAcessor(ip);
             }
         } catch (Exception e){return "error";}
 

@@ -31,7 +31,7 @@ public class RedisDataAcessor implements DataAccessor {
             String cityname = "";
             try{
                 cityname = split[1];
-            }catch (Exception e){System.out.println("Found exception");}
+            }catch (Exception e){System.out.println("Found exception"+city);}
 
             cities.add(new City(id, cityname));
         }
