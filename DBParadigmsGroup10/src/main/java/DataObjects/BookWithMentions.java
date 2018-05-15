@@ -5,9 +5,9 @@ import DataObjects.Json.DataSerializer;
 
 public class BookWithMentions extends DataSerializer implements DataObject {
 
-    private final String bookTitle;
-    private final String author;
-    private final int mentionCount;
+    public final String bookTitle;
+    public final String author;
+    public final int mentionCount;
 
     public BookWithMentions(String title, String author, int mentions){
         this.bookTitle = title;

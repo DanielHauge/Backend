@@ -5,7 +5,7 @@ import DataObjects.Json.DataSerializer;
 
 public class BooksByAuthor extends DataSerializer implements DataObject {
 
-    private final String authorName;
+    public final String authorName;
     public final Book[] books;
 
 
