@@ -158,32 +158,14 @@ public class PostgresDataAcessor implements DataAccessor {
         return cityByBook;
     }
 
-    /*
-    select name, latitude, longitude from cities where geodistance(longitude, latitude, 12.47, 55.38) < 30;
-     */
-
-    /*
-    select cities.name, cities.latitude, cities.longitude, books.id, books.title from cities
-    join mentions on (cities.id = mentions.cityid)
-    join books on (mentions.bookid = books.id)
-    where geodistance(latitude, longitude, 52.38, 12.47) < 15;
-     */
-
     @Override
     public BooksByVicenety GetBooksInVicenety(double lat, double lon, int km) {
         BooksByVicenety booksByVicenety = null;
         try {
             ArrayList<CityAndBooks> cityAndBooks = new ArrayList<>();
-            //CityAndBooks[] cityAndBooks = new CityAndBooks[0];
-            Statement stmt = conn.createStatement();
-            /*
-            ResultSet result = stmt.executeQuery("CREATE OR REPLACE FUNCTION public.geodistance(alat double precision, alng double precision, blat double precision, blng double precision)\n" +
-                    "  RETURNS double precision AS\n" + "$BODY$\n" + "SELECT asin(\n" + "  sqrt(\n" +
-                    "    sin(radians($3-$1)/2)^2 +\n" + "    sin(radians($4-$2)/2)^2 *\n" + "    cos(radians($1)) *\n" + "    cos(radians($3))\n" +
-                    "  )\n" + ") * 7926.3352 AS distance;\n" + "$BODY$\n" + "  LANGUAGE sql IMMUTABLE\n" + "  COST 100;");
 
-            while (result.next()) { }
-            */
+            Statement stmt = conn.createStatement();
+
             ResultSet result = stmt.executeQuery("select cities.name, cities.latitude, cities.longitude, books.id, books.title from cities\n" +
                     "    join mentions on (cities.id = mentions.cityid)\n" +
                     "    join books on (mentions.bookid = books.id)\n" +
@@ -199,7 +181,6 @@ public class PostgresDataAcessor implements DataAccessor {
                      ) {
                     if (CaB.cityName.equals(tc.cityName))
                     {
-                        System.out.print("Entered the logic");
                         Book[] tb = new Book[CaB.books.length+1];
                         for (int j = 0; j < CaB.books.length; j++) {
                             tb[j] = CaB.books[j];
@@ -208,28 +189,9 @@ public class PostgresDataAcessor implements DataAccessor {
                         CaB.books = tb;
                         doesExist = true;
                     }
-                    else
-                    {
-                        //System.out.print("'"+tc.cityName + "' Didn't exist cause it wasn't = '" + CaB.cityName + "' for some reason \n");
-                    }
                 }
-                /*
-                for (int i = 0; i < cityAndBooks.size(); i++) {
-                    if (cityAndBooks.get(i).cityName.contains(tc.cityName))
-                    {
-                        Book[] tb = new Book[cityAndBooks.get(i).books.length+1];
-                        for (int j = 0; j < cityAndBooks.get(i).books.length; j++) {
-                            tb[j] = cityAndBooks.get(i).books[j];
-                        }
-                        tb[tb.length] = bc;
-                        cityAndBooks.get(i).books = tb;
-                        doesExist = true;
-                    }
-                }
-                */
                 if (!doesExist)
                 {
-                    System.out.print("'"+tc.cityName + "' Didn't exist\n");
                     cityAndBooks.add(new CityAndBooks(tc.cityName, tc.latitude, tc.longitude,new Book[0]));
                 }
             }
