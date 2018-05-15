@@ -11,6 +11,7 @@ public class Main {
 
     public static void main(String[] args){
 
+        DA = new RedisDataAcessor(System.getenv("DBIP"));
         /*
         if (args[0] == "neo4j"){
             DA = new Neo4jDataAccessor();
@@ -18,7 +19,7 @@ public class Main {
         */
 
         //DA = new RedisDataAcessor(System.getenv("DBIP"));
-        DA = new PostgresDataAcessor("jdbc:postgresql://"+"192.168.33.11"+":5432/postgres", "postgres", "");
+        //DA = new PostgresDataAcessor("jdbc:postgresql://"+"192.168.33.11"+":5432/postgres", "postgres", "");
 
         SpringApplication.run(SpringBootController.class);
     }

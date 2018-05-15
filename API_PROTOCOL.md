@@ -37,7 +37,8 @@ Used for the autocomplete feature
 #### Response
 
 ```json
-[
+{
+"books":[
   {
     "bookTitle": "some book", 
     "author": "James Someone",
@@ -55,6 +56,7 @@ Used for the autocomplete feature
   },
   {..}
 ]
+}
 ```
 
 ## 2. Given a book title, your application plots books cities mentioned in this book onto a map
@@ -66,7 +68,8 @@ Used for the autocomplete feature
 #### Response
 
 ```json
-[
+{
+"AllBooks":[
   {
     "bookId": 12345,
     "bookTitle": "Some book 1"
@@ -81,6 +84,7 @@ Used for the autocomplete feature
   },
   {..}
 ]
+}
 ```
 
 > We use this to let the user choose from books the books available with an autocomplete feature
@@ -92,7 +96,8 @@ Used for the autocomplete feature
 #### Response
 
 ```json
-[
+{
+"cities":[
   {
     "cityName": "Copenhagen",
     "latitude": 1.213312,
@@ -110,6 +115,7 @@ Used for the autocomplete feature
   },
   {..}
 ]
+}
 ```
 
 > The response then for a specific book will be plotted onto a map
@@ -123,11 +129,13 @@ Used for the autocomplete feature
 #### Response
 
 ```json
-[
+{
+"AllAuthors":[
   "Author One",
   "Author Two",
   ...
 ]
+}
 ```
 
 ### Request - get books books by an author
@@ -193,7 +201,8 @@ Used for the autocomplete feature
 #### Response
 
 ```json
-[
+{
+"Vicenety":[
   {
     "cityName": "Copenhagen",
     "latitude": 1.213312,
@@ -227,4 +236,5 @@ Used for the autocomplete feature
   },
   {..}
 ]
+}
 ```
