@@ -63,9 +63,15 @@ public class MyStepdefs {
         this.manyCitiesWithCords = DA.GetCitiesBybook(this.bookid);
     }
 
+<<<<<<< HEAD
     @Then("^the user will get a map with the city \"([^\"]*)\" from the book plotted on that map\\.$")
     public void theUserWillGetAMapWithTheCityFromTheBookPlottedOnThatMap(String arg0) throws Throwable {
         assertTrue(this.manyCitiesWithCords.cities[0].cityName.equals(arg0));
+=======
+    @Then("^the user will get a map with all cities mentioned in the book plotted on that map\\.$")
+    public void theUserWillGetAMapWithAllCitiesMentionedInTheBookPlottedOnThatMap() {
+        assertTrue(((ManyCitiesWithCords)result).cities.length == 13);
+>>>>>>> 22cb5713c0158a467b165ccc70e5601a23a6d2e1
     }
 
     //-------------------------------------------------------------------------------------------------------------
@@ -114,4 +120,12 @@ public class MyStepdefs {
     //-------------------------------------------------------------------------------------------------------------
 
 
+<<<<<<< HEAD
+=======
+    @Then("^the user will get all books with corresponding authors that is mentioned in that city, which is \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\"$")
+    public void theUserWillGetAllBooksWithCorrespondingAuthorsThatIsMentionedInThatCityWhichIs(String arg0, String arg1, String arg2) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+
+    }
+>>>>>>> 22cb5713c0158a467b165ccc70e5601a23a6d2e1
 }
