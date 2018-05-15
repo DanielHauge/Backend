@@ -17,7 +17,7 @@ This api's functionality is to link the frontend with the database. This api wil
 The Api is capable of getting the information which correspond with the end-user queries in the project descriptions.
 
 ### Overview
-- Some architecture design and such.
+![](https://github.com/soft2018spring-gruppe10/Backend/blob/master/Documentation/Pictures/Classdiagram2.png)
 
 ### Maintainability and Testability
 - Low coupling and high cohersion with interfaces and polymorphism, high quality code and low technical dept.
