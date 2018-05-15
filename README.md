@@ -11,15 +11,19 @@ We have chosen to work as agile consultants in a 3 student team. We want to focu
 
 ## API
 ### Functionality:
-- What it can do, and what routes it has, and what data it sends and so on.
+This api's functionality is to link the frontend with the database. This api will do the heavily lifting of business logic and database interactions. It will query database for information tranform the data into a valid form and reduce the amount of information needed for the frotnend. It will send information as json. 
+[![https://gyazo.com/b66a557ce5bf48562d6b2f858d78f0e3](https://i.gyazo.com/b66a557ce5bf48562d6b2f858d78f0e3.png)](https://gyazo.com/b66a557ce5bf48562d6b2f858d78f0e3)
+
+The Api is capable of getting the information which correspond with the end-user queries in the project descriptions.
 
 ### Overview
 - Some architecture design and such.
 
-### Low coupling
+### Maintainability and Testability
 - Low coupling and high cohersion with interfaces and polymorphism, high quality code and low technical dept.
+- Is the code maintainable and testable?
 
-### Tests & Testcases
+### Testing
 - References to tests and testcases.
 
 ### Continious Integration / Delivery / Deployment 
