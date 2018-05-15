@@ -19,9 +19,9 @@ The Api is capable of getting the information which correspond with the end-user
 ### Overview
 ![](https://github.com/soft2018spring-gruppe10/Backend/blob/master/Documentation/Pictures/Classdiagram2.png)
 
-### Maintainability and Testability
-- Low coupling and high cohersion with interfaces and polymorphism, high quality code and low technical dept.
-- Is the code maintainable and testable?
+
+### Code quality
+We have designed the system with high quality in focus. We wanted to be able to maintain and test the code we build. We have taken advantage of interfaces throughout the system. Notably the DataAcessor and the DataObjects, these can be switched out with any implementation of these interfaces. This has resulted in a very decoupled system. To change how the objects are being serialized, we can change the code 1 place and it works automaticly for all dataobjects. If we want to change the format of one of the protocols, we only need change in one place. furthermore, we can change the Database freely because of the DataAcessor interface. It has also caused very low technical dept. This is the outcome of good design, which has surfaces with the use of a testing mindset.
 
 ### Testing
 - References to tests and testcases.
