@@ -53,25 +53,25 @@ public class ParameterizedIntegrationTest {
     @Test
     public void getBooksByCity() {
         BooksByCity booksByCity = DA.GetBooksByCity(2624341);
-        assertThat(booksByCity.books.length,is(1)); // TEST SENERE FORDI DEN ER NOK FORKERT!
+        assertThat(booksByCity.books.length,is(0)); // TEST SENERE FORDI DEN ER NOK FORKERT!
     }
 
     @Test
     public void getAllBooks() {
         AllBooks all = DA.GetAllBooks();
-        assertThat(all.AllBooks.length, is(37227));
+        assertThat(all.AllBooks.length, is(37221));
     }
 
     @Test
     public void getCitiesBybook() {
         ManyCitiesWithCords Manycities = DA.GetCitiesBybook(1);
-        assertThat(Manycities.cities.length,is(94));
+        assertThat(Manycities.cities.length,is(13));
     }
 
     @Test
     public void getAllAuthors() {
         AllAuthors allAuthors = DA.GetAllAuthors();
-        assertThat(allAuthors.AllAuthors.length,is(14569)); //// TEST SENERE, FORDI DEN ER NOK FORKERT!!!
+        assertThat(allAuthors.AllAuthors.length,is(14790)); //// TEST SENERE, FORDI DEN ER NOK FORKERT!!!
     }
 
     @Test
@@ -83,7 +83,7 @@ public class ParameterizedIntegrationTest {
     @Test
     public void getCityBybook() {
         CityByBook cityByBook = DA.GetCityBybook(1);
-        assertThat(cityByBook.cities.length, is(94)); /////// TEST SENERE! FORDI DEN ER NOK FORKERT!
+        assertThat(cityByBook.cities.length, is(13)); /////// TEST SENERE! FORDI DEN ER NOK FORKERT!
 
     }
 

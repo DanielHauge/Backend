@@ -27,8 +27,8 @@ class SingleDataAccessorTest {
 
     @BeforeAll
     static void setUp() {
-        //DA = new RedisDataAcessor(System.getenv("DBIP"));
-        DA = new PostgresDataAcessor("jdbc:postgresql://"+"192.168.33.11"+":5432/postgres", "postgres", "");
+        DA = new RedisDataAcessor(System.getenv("DBIP"));
+        //DA = new PostgresDataAcessor("jdbc:postgresql://"+"192.168.33.11"+":5432/postgres", "postgres", "");
         //DA = new Neo4jDataAcessor(GraphDatabase.driver("bolt://"+System.getenv("DBIP")+":7687", AuthTokens.basic("neo4j","class")));
     }
 
@@ -50,7 +50,7 @@ class SingleDataAccessorTest {
         time = System.currentTimeMillis()-time;
         System.out.println(time+"ms");
         assertThat(time, is(lessThan(Expectedtime)));
-        assertThat(booksByCity.books.length,is(1840)); // TEST SENERE FORDI DEN ER NOK FORKERT!
+        assertThat(booksByCity.books.length,is(1838)); // TEST SENERE FORDI DEN ER NOK FORKERT!
     }
 
     @Test
@@ -70,7 +70,7 @@ class SingleDataAccessorTest {
         time = System.currentTimeMillis()-time;
         System.out.println(time+"ms");
         assertThat(time, is(lessThan(Expectedtime)));
-        assertThat(Manycities.cities.length,is(14));
+        assertThat(Manycities.cities.length,is(13));
     }
 
     @Test
@@ -80,7 +80,7 @@ class SingleDataAccessorTest {
         time = System.currentTimeMillis()-time;
         System.out.println(time+"ms");
         assertThat(time, is(lessThan(Expectedtime)));
-        assertThat(allAuthors.AllAuthors.length,is(14788)); //// TEST SENERE, FORDI DEN ER NOK FORKERT!!!
+        assertThat(allAuthors.AllAuthors.length,is(14790)); //// TEST SENERE, FORDI DEN ER NOK FORKERT!!!
     }
 
     @Test
@@ -100,7 +100,7 @@ class SingleDataAccessorTest {
         time = System.currentTimeMillis()-time;
         System.out.println(time+"ms");
         assertThat(time, is(lessThan(Expectedtime)));
-        assertThat(cityByBook.cities.length, is(14)); /////// TEST SENERE! FORDI DEN ER NOK FORKERT!
+        assertThat(cityByBook.cities.length, is(13)); /////// TEST SENERE! FORDI DEN ER NOK FORKERT!
 
     }
 
