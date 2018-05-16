@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="Interfaces.SingleDataAccessorTest" time="1.333" tests="10" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="Interfaces.SingleDataAccessorTest" time="1.356" tests="10" errors="0" skipped="0" failures="0">
   <properties>
     <property name="idea.version" value="2018.1"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -23,7 +23,7 @@
     <property name="java.runtime.version" value="10+46"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="os.arch" value="amd64"/>
-    <property name="visualvm.id" value="3495183469249"/>
+    <property name="visualvm.id" value="5942933539374"/>
     <property name="java.io.tmpdir" value="C:\Users\Animc\AppData\Local\Temp\"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
@@ -65,14 +65,14 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="getBooksByCity" classname="Interfaces.SingleDataAccessorTest" time="0.651"/>
+  <testcase name="getBooksByCity" classname="Interfaces.SingleDataAccessorTest" time="0.657"/>
   <testcase name="getCityBybook" classname="Interfaces.SingleDataAccessorTest" time="0.01"/>
-  <testcase name="getAllCities" classname="Interfaces.SingleDataAccessorTest" time="0.077"/>
-  <testcase name="getAllBooks" classname="Interfaces.SingleDataAccessorTest" time="0.064"/>
+  <testcase name="getAllCities" classname="Interfaces.SingleDataAccessorTest" time="0.072"/>
+  <testcase name="getAllBooks" classname="Interfaces.SingleDataAccessorTest" time="0.073"/>
   <testcase name="getBookByAuthor" classname="Interfaces.SingleDataAccessorTest" time="0.006"/>
-  <testcase name="getBooksInVicenety1" classname="Interfaces.SingleDataAccessorTest" time="0.36"/>
-  <testcase name="getBooksInVicenety2" classname="Interfaces.SingleDataAccessorTest" time="0.128"/>
+  <testcase name="getBooksInVicenety1" classname="Interfaces.SingleDataAccessorTest" time="0.368"/>
+  <testcase name="getBooksInVicenety2" classname="Interfaces.SingleDataAccessorTest" time="0.127"/>
   <testcase name="getBooksInVicenety3" classname="Interfaces.SingleDataAccessorTest" time="0.003"/>
-  <testcase name="getAllAuthors" classname="Interfaces.SingleDataAccessorTest" time="0.01"/>
-  <testcase name="getCitiesBybook" classname="Interfaces.SingleDataAccessorTest" time="0.007"/>
+  <testcase name="getAllAuthors" classname="Interfaces.SingleDataAccessorTest" time="0.02"/>
+  <testcase name="getCitiesBybook" classname="Interfaces.SingleDataAccessorTest" time="0.005"/>
 </testsuite>
