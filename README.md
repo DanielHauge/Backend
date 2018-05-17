@@ -29,7 +29,7 @@ We have designed the system with high quality in focus. We wanted to be able to 
 ### Continious Integration / Delivery / Deployment 
 We have setup a jenkins server with the following architecture:
 
-https://github.com/soft2018spring-gruppe10/Backend/blob/master/Documentation/Pictures/Deploymentdiagram1.png
+![](https://github.com/soft2018spring-gruppe10/Backend/blob/master/Documentation/Pictures/Deploymentdiagram1.png)
 
 Because of time and money restrictions we do not practise ideal procedures. We are deploying staging to the build server, and are using test database as staging database. Idealy we would like to have a seperate enviroment for the whole staging enviroment, idealy allmost identical to the/a production enviroment. All the containers talk easily together in a custom docker bridge network shared on the droplet. This way, the dns is created and can be accesed by the docker containers name with the ingress network.
 
