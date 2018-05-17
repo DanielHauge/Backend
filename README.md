@@ -42,3 +42,4 @@ However we have 4 jobs
 - 3. build and stage website
 - 4. system test
 
+[![https://gyazo.com/160f0b378c7674364ac563e3dd5bcf54](https://i.gyazo.com/160f0b378c7674364ac563e3dd5bcf54.png)](https://gyazo.com/160f0b378c7674364ac563e3dd5bcf54)
