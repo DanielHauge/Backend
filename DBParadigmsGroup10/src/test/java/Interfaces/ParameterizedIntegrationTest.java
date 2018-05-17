@@ -84,7 +84,6 @@ public class ParameterizedIntegrationTest {
     public void getCityBybook() {
         CityByBook cityByBook = DA.GetCityBybook(1);
         assertThat(cityByBook.cities.length, is(13)); /////// TEST SENERE! FORDI DEN ER NOK FORKERT!
-
     }
 
     @Test
