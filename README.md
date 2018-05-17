@@ -35,11 +35,11 @@ Because of time and money restrictions we do not practise ideal procedures. We a
 
 [![https://gyazo.com/b7c8cdd4c19532aa2dda24ef68a985ea](https://i.gyazo.com/b7c8cdd4c19532aa2dda24ef68a985ea.png)](https://gyazo.com/b7c8cdd4c19532aa2dda24ef68a985ea)
 
-However we have 4 jobs
+We have 4 simple jobs
 
 - 1. Test and build api
 - 2. Stage api
 - 3. build and stage website
-- 4. system test
+- 4. system test (ui-testing)
 
 [![https://gyazo.com/160f0b378c7674364ac563e3dd5bcf54](https://i.gyazo.com/160f0b378c7674364ac563e3dd5bcf54.png)](https://gyazo.com/160f0b378c7674364ac563e3dd5bcf54)
