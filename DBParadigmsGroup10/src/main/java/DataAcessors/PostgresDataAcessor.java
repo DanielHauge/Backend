@@ -192,7 +192,7 @@ public class PostgresDataAcessor implements DataAccessor {
                 }
                 if (!doesExist)
                 {
-                    cityAndBooks.add(new CityAndBooks(tc.cityName, tc.latitude, tc.longitude,new Book[0]));
+                    cityAndBooks.add(new CityAndBooks(tc.cityName, tc.lat, tc.lng,new Book[0]));
                 }
             }
 
