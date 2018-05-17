@@ -103,14 +103,14 @@ public class PostgresDataAcessor implements DataAccessor {
     public AllAuthors GetAllAuthors() {
         AllAuthors allAuthors = null;
         try {
-            ArrayList<String> listofAuthors = new ArrayList<>();
+            ArrayList<Author> listofAuthors = new ArrayList<>();
             Statement stmt = conn.createStatement();
             ResultSet result = stmt.executeQuery("Select distinct author from books;");
             while (result.next())
             {
-                listofAuthors.add(result.getString("author"));
+                listofAuthors.add(new Author(result.getString("author")));
             }
-            allAuthors = new AllAuthors(listofAuthors.toArray(new String[0]));
+            allAuthors = new AllAuthors(listofAuthors.toArray(new Author[0]));
         } catch (SQLException e) {
             e.printStackTrace();
         }

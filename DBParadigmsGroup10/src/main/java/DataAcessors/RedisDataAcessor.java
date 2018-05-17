@@ -87,7 +87,12 @@ public class RedisDataAcessor implements DataAccessor {
     @Override
     public AllAuthors GetAllAuthors() {
         Set<String> qres = jedis.smembers("allauthors");
-        return new AllAuthors(qres.toArray(new String[0]));
+        ArrayList<Author> res = new ArrayList<>();
+        for (String qre : qres) {
+            res.add(new Author(qre));
+        }
+
+        return new AllAuthors(res.toArray(new Author[0]));
     }
 
     @Override

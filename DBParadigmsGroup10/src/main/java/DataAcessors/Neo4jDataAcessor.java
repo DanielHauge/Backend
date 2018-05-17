@@ -71,13 +71,13 @@ public class Neo4jDataAcessor implements DataAccessor {
     public AllAuthors GetAllAuthors() {
         Session session = driver.session();
         StatementResult result = session.run("MATCH (a:book) return DISTINCT a.author as author;");
-        ArrayList<String> res = new ArrayList<>();
+        ArrayList<Author> res = new ArrayList<>();
         while (result.hasNext()){
             Record rec = result.next();
-            res.add(rec.get("author").asString());
+            res.add(new Author(rec.get("author").asString()));
         }
         session.close();
-        return new AllAuthors(res.toArray(new String[0]));
+        return new AllAuthors(res.toArray(new Author[0]));
     }
 
     @Override

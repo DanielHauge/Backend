@@ -5,9 +5,9 @@ import DataObjects.Json.DataSerializer;
 
 public class AllAuthors extends DataSerializer implements DataObject {
 
-    public final String[] AllAuthors;
+    public final Author[] AllAuthors;
 
-    public AllAuthors(String[] a){
+    public AllAuthors(Author[] a){
         this.AllAuthors = a;
     }
 

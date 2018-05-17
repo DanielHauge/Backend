@@ -36,21 +36,21 @@ public class StubbedDataAccessor implements DataAccessor {
 
     @Override
     public AllAuthors GetAllAuthors() {
-        String[] authors = new String[14];
-        authors[0] = "Jefferson Thomas";
-        authors[1] = "Lewis Carroll";
-        authors[2] = "Charles Dodgson";
-        authors[3] = "Central Intelligence Agency";
-        authors[4] = "Herman Melville";
-        authors[5] = "James M. Barrie";
-        authors[6] = "Alexander Hamilton";
-        authors[7] = "Longfellow";
-        authors[8] = "United States";
-        authors[9] = "John Milton";
-        authors[10] = "John Fitzgerald";
-        authors[11] = "Lincoln Abraham";
-        authors[12] = "Founding Fathers";
-        authors[13] = "Henry Patrick";
+        Author[] authors = new Author[14];
+        authors[0] = new Author("Jefferson Thomas");
+        authors[1] = new Author("Lewis Carroll");
+        authors[2] = new Author("Charles Dodgson");
+        authors[3] = new Author("Central Intelligence Agency");
+        authors[4] = new Author("Herman Melville");
+        authors[5] = new Author("James M. Barrie");
+        authors[6] = new Author("Alexander Hamilton");
+        authors[7] = new Author("Longfellow");
+        authors[8] = new Author("United States");
+        authors[9] = new Author("John Milton");
+        authors[10] = new Author("John Fitzgerald");
+        authors[11] = new Author("Lincoln Abraham");
+        authors[12] = new Author("Founding Fathers");
+        authors[13] = new Author("Henry Patrick");
         AllAuthors allAuthors = new AllAuthors(authors);
         return allAuthors;
     }
