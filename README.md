@@ -27,4 +27,18 @@ We have designed the system with high quality in focus. We wanted to be able to 
 - References to tests and testcases.
 
 ### Continious Integration / Delivery / Deployment 
-- How we did Continious integration and pipeline with tests and deployment and so on.
+We have setup a jenkins server with the following architecture:
+
+
+
+Because of time and money restrictions we do not practise ideal procedures. We are deploying staging to the build server, and are using test database as staging database. Idealy we would like to have a seperate enviroment for the whole staging enviroment, idealy allmost identical to the/a production enviroment. All the containers talk easily together in a custom docker bridge network shared on the droplet. This way, the dns is created and can be accesed by the docker containers name with the ingress network.
+
+[![https://gyazo.com/b7c8cdd4c19532aa2dda24ef68a985ea](https://i.gyazo.com/b7c8cdd4c19532aa2dda24ef68a985ea.png)](https://gyazo.com/b7c8cdd4c19532aa2dda24ef68a985ea)
+
+However we have 4 jobs
+
+- 1. Test and build api
+- 2. Stage api
+- 3. build and stage website
+- 4. system test
+
