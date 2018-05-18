@@ -1,5 +1,6 @@
 package DataAcessors;
 
+import Benchmarker.BenchmarkLog;
 import DataObjects.*;
 import Interfaces.DataAccessor;
 
@@ -35,7 +36,7 @@ public class MongoDataAcessor implements DataAccessor {
     }
 
     @Override
-    public CityByBook GetCityBybook(int bookid) {
+    public CityByBook GetCityBybook(int bookid, BenchmarkLog log) {
         return null;
     }
 

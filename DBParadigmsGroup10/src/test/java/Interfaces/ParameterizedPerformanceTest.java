@@ -1,5 +1,7 @@
 package Interfaces;
 
+import Benchmarker.BenchmarkLog;
+import Benchmarker.BenchmarkLogImpl;
 import DataAcessors.RedisDataAcessor;
 import DataObjects.*;
 import org.junit.AfterClass;
@@ -35,6 +37,7 @@ public class ParameterizedPerformanceTest {
 
     private static DataAccessor DA;
     private final long Expectedtime = 2000;
+
 
     @AfterClass
     public static void CrashDown(){
@@ -98,7 +101,7 @@ public class ParameterizedPerformanceTest {
     @Test
     public void getCityBybook() {
         long time = System.currentTimeMillis();
-        DA.GetCityBybook(1);
+        //DA.GetCityBybook(1,);
         time = System.currentTimeMillis()-time;
         System.out.println(time+"ms");
         assertThat(time, is(lessThan(Expectedtime)));

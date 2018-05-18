@@ -2,10 +2,10 @@ package Benchmarker;
 
 public interface BenchmarkTimer {
 
-    void start();
+    void start(String task);
 
-    void stop();
+    void stop(String task);
 
-    BenchmarkDuration getDuration();
+    BenchmarkDuration[] getDurations();
 
 }

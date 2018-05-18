@@ -204,7 +204,7 @@ class DatabaseBenchmarkTest {
         long[] measurements = new long[5];
         for (int i = 4; i>=0; i--){
             long now = System.currentTimeMillis();
-            DA.GetCityBybook(bookids[i]);
+            //DA.GetCityBybook(bookids[i]);
             long after = System.currentTimeMillis()-now;
             measurements[i] = after;
             System.out.println(after+"ms");

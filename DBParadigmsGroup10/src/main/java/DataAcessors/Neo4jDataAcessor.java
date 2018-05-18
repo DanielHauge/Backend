@@ -1,7 +1,10 @@
 package DataAcessors;
 
+import Benchmarker.BenchmarkLog;
+import Benchmarker.enums.Query;
 import DataObjects.*;
 import Interfaces.DataAccessor;
+import Main.Main;
 import org.neo4j.driver.v1.*;
 
 import java.util.ArrayList;
@@ -94,7 +97,7 @@ public class Neo4jDataAcessor implements DataAccessor {
     }
 
     @Override
-    public CityByBook GetCityBybook(int bookid) {
+    public CityByBook GetCityBybook(int bookid, BenchmarkLog log) {
         Session session = driver.session();
         StatementResult result = session.run("MATCH (:book{BookId:"+bookid+"})-[:MENTIONS]-(c:city) return c.name as name, c.latitude as lat, c.longitude as lon;");
         ArrayList<CityWithCords> res = new ArrayList<>();

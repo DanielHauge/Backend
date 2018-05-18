@@ -1,5 +1,9 @@
 package Main;
 
+import Benchmarker.BenchmarkLog;
+import Benchmarker.BenchmarkTimer;
+import Benchmarker.enums.DBMS;
+import Benchmarker.enums.Query;
 import DataAcessors.Neo4jDataAcessor;
 import DataAcessors.PostgresDataAcessor;
 import DataAcessors.RedisDataAcessor;
@@ -14,6 +18,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 import static Main.Main.DA;
+import static Main.Main.Logger;
+import static Main.Main.DB;
 
 @Controller
 @EnableAutoConfiguration
@@ -67,15 +73,25 @@ class SpringBootController {
     @RequestMapping(value = "/api/citiesv/bybook/{bookId}", produces = {"application/json"})
     @ResponseBody
     String CitiesByBookWithExtra(@PathVariable("bookId") int id){
-        DataObject CityByBookWithExtra = DA.GetCityBybook(id);
+        BenchmarkLog log = Logger.CreateNewLog(Query.citybybook, DB);
+        DataObject CityByBookWithExtra = DA.GetCityBybook(id, log);
+        Logger.Savelog(log);
         return CityByBookWithExtra.SerializeToJson();
     }
 
     @RequestMapping(value="/api/books/bylocation/{longitude}/{latitude}", produces = {"application/json"})
     @ResponseBody
     String BooksByLocation(@PathVariable("longitude") double longitude, @PathVariable("latitude") double latitude){
+        BenchmarkLog log = Logger.CreateNewLog(Query.vicenety1, DB);
         DataObject BooksByVicenety = DA.GetBooksInVicenety(latitude, longitude, 20);
+        Logger.Savelog(log);
         return BooksByVicenety.SerializeToJson();
+    }
+
+    @RequestMapping(value="/api/log")
+    @ResponseBody
+    String PrintLog(){
+        return Logger.PrintLog();
     }
 
     @RequestMapping(value = "/api/setdb/{dbtype}/{ip}")
@@ -86,15 +102,19 @@ class SpringBootController {
         try {
             switch (dbtype) {
                 case "neo4j":
+                    DB = DBMS.neo4j;
                     DA = new Neo4jDataAcessor(GraphDatabase.driver("bolt://" + ip + ":7687", AuthTokens.basic("neo4j", "class")));
                     break;
                 case "postgres":
+                    DB = DBMS.postgres;
                     DA = new PostgresDataAcessor("jdbc:postgresql://" + ip + ":5432/postgres", "postgres", "");
                     break;
                 case "redis":
+                    DB = DBMS.redis;
                     DA = new RedisDataAcessor(ip);
                     break;
                     default:
+                        DB = DBMS.redis;
                         DA = new RedisDataAcessor(ip);
                         break;
             }

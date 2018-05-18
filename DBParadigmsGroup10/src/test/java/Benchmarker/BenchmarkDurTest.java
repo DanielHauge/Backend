@@ -1,6 +1,5 @@
 package Benchmarker;
 
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -8,15 +7,14 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 import static org.junit.jupiter.api.Assertions.*;
 
-class BenchmarkDurationTest {
+class BenchmarkDurTest {
 
     BenchmarkDuration BD;
 
     @BeforeEach
     void setUp() {
-        BD = new BenchmarkDurationImpl();
+        BD = new BenchmarkDurationImpl("Test task");
     }
-
 
     @Test
     void getDuration() {
@@ -31,9 +29,23 @@ class BenchmarkDurationTest {
     }
 
     @Test
+    void reset() {
+        BD.addDuration(50);
+        BD.addDuration(16543);
+        BD.removeDuration(321);
+        BD.reset();
+        assertThat(BD.getDuration(), is((long)0));
+    }
+
+    @Test
     void removeDuration() {
         BD.addDuration(150);
         BD.removeDuration(50);
         assertThat((int)BD.getDuration(), is(100));
+    }
+
+    @Test
+    void getTask() {
+        assertThat(BD.getTask(), is("Test task"));
     }
 }

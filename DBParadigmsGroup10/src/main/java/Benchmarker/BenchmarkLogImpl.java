@@ -15,14 +15,27 @@ public class BenchmarkLogImpl implements BenchmarkLog {
         this.timer = timer;
     }
 
-
-
     @Override
     public String PrepareMeForLogging() {
-        System.out.println(dbms.name());
-        System.out.println(q.name());
-        System.out.println(timer.getDuration().getDuration());
-        return "hej";
+        String readyforlogging = "";
+        System.out.println("Database Type:\t"+dbms.name());
+        readyforlogging += "Database Type:\t"+dbms.name()+"\n";
+        System.out.println("Query Type:\t"+q.name());
+        readyforlogging += "Query Type:\t"+q.name()+"\n";
+        System.out.print("Durations: \t");
+        readyforlogging += "Durations: \t";
+        long Fulldur = 0;
+        for (BenchmarkDuration benchmarkDuration : timer.getDurations()) {
+            long dur = benchmarkDuration.getDuration();
+            String task = benchmarkDuration.getTask();
+            System.out.print(task+": "+dur+"\t");
+            readyforlogging += task+": "+dur+"\t";
+        }
+        System.out.print("INALL: "+Fulldur);
+        readyforlogging += "INALL: "+Fulldur;
+        System.out.println();
+        readyforlogging += "\n";
+        return readyforlogging;
     }
 
     @Override

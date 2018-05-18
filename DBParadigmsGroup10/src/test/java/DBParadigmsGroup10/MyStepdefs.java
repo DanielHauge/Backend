@@ -84,7 +84,7 @@ public class MyStepdefs {
     @When("^the user ask for all cities which is mentioned in books by that author$")
     public void theUserAskForAllCitiesWhichIsMentionedInBooksByThatAuthor() throws Throwable {
         this.booksByAuthor = DA.GetBookByAuthor(this.author);
-        this.cityByBook = DA.GetCityBybook(this.booksByAuthor.books[0].bookId);
+        //this.cityByBook = DA.GetCityBybook(this.booksByAuthor.books[0].bookId);
     }
 
     @Then("^the user will get a map with all cities mentioned in the books by \"([^\"]*)\" plotted on that map which includes \"([^\"]*)\"\\.$")

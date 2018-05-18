@@ -6,6 +6,10 @@ public interface BenchmarkDuration {
 
     void addDuration(long time);
 
+    void reset();
+
     void removeDuration(long time);
+
+    String getTask();
 
 }

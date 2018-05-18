@@ -1,5 +1,7 @@
 package DataAcessors;
 
+import Benchmarker.BenchmarkLog;
+import Benchmarker.BenchmarkTimer;
 import DataObjects.*;
 import java.sql.*;
 import java.util.ArrayList;
@@ -136,25 +138,33 @@ public class PostgresDataAcessor implements DataAccessor {
     }
 
     @Override
-    public CityByBook GetCityBybook(int bookid) {
+    public CityByBook GetCityBybook(int bookid, BenchmarkLog log) {
+        BenchmarkTimer timer = log.GetTimer();
+
         CityByBook cityByBook = null;
         String bookTitle = null;
         try {
+            timer.start("Query");
+
             ArrayList<CityWithCords> cityWithCords = new ArrayList<>();
             Statement stmt = conn.createStatement();
             ResultSet result = stmt.executeQuery("select books.id, books.title, cities.name, cities.latitude, cities.longitude from books\n"+
                     "    join mentions on (books.id = mentions.bookid)\n"+
                     "    join cities on (mentions.cityid = cities.id)\n"+
                     "    where books.id = " + bookid + ";");
+            timer.stop("Query");
+            timer.start("Read");
             while (result.next())
             {
                 bookTitle = result.getString("title");
                 cityWithCords.add(new CityWithCords(result.getString("name"), result.getDouble("latitude"), result.getDouble("longitude")));
             }
+
             cityByBook = new CityByBook(bookid,bookTitle, cityWithCords.toArray(new CityWithCords[0]));
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        timer.stop("Read");
         return cityByBook;
     }
 

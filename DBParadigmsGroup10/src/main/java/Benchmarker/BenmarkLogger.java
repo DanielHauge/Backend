@@ -9,6 +9,8 @@ public interface BenmarkLogger {
 
     BenchmarkLog CreateNewLog(Query q, DBMS db);
 
+    String PrintLog();
+
 
 
 }
