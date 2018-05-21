@@ -1,5 +1,6 @@
 package Interfaces;
 
+import DataAcessors.MongoDataAcessor;
 import DataAcessors.Neo4jDataAcessor;
 import DataAcessors.PostgresDataAcessor;
 import DataAcessors.RedisDataAcessor;
@@ -27,9 +28,10 @@ class SingleDataAccessorTest {
 
     @BeforeAll
     static void setUp() {
-        DA = new RedisDataAcessor(System.getenv("DBIP"));
+        //DA = new RedisDataAcessor(System.getenv("DBIP"));
         //DA = new PostgresDataAcessor("jdbc:postgresql://"+"192.168.33.11"+":5432/postgres", "postgres", "");
         //DA = new Neo4jDataAcessor(GraphDatabase.driver("bolt://"+System.getenv("DBIP")+":7687", AuthTokens.basic("neo4j","class")));
+        DA = new MongoDataAcessor(System.getenv("DBIP"));
     }
 
 
@@ -96,11 +98,11 @@ class SingleDataAccessorTest {
     @Test
     void getCityBybook() {
         long time = System.currentTimeMillis();
-        //CityByBook cityByBook = DA.GetCityBybook(1);
+        CityByBook cityByBook = DA.GetCityBybook(1);
         time = System.currentTimeMillis()-time;
         System.out.println(time+"ms");
         assertThat(time, is(lessThan(Expectedtime)));
-        //assertThat(cityByBook.cities.length, is(13)); /////// TEST SENERE! FORDI DEN ER NOK FORKERT!
+        assertThat(cityByBook.cities.length, is(13)); /////// TEST SENERE! FORDI DEN ER NOK FORKERT!
 
     }
 
