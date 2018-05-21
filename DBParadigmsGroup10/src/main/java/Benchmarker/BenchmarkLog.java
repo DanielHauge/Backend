@@ -1,8 +1,10 @@
 package Benchmarker;
 
+import DataObjects.log;
+
 public interface BenchmarkLog {
 
-    String PrepareMeForLogging();
+    log PrepareMeForLogging();
 
     BenchmarkTimer GetTimer();
 

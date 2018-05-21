@@ -67,7 +67,7 @@ public class StubbedDataAccessor implements DataAccessor {
     }
 
     @Override
-    public CityByBook GetCityBybook(int bookid, BenchmarkLog log) {
+    public CityByBook GetCityBybook(int bookid) {
         //3576260
         CityWithCords cityWithCords = new CityWithCords("Falmouth", 17.02741,-61.78136);
         CityByBook cityByBook = new CityByBook(5,"The Hunting of the Snark",new CityWithCords[]{cityWithCords});

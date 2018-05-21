@@ -27,7 +27,7 @@ class BenmarkLoggerTest {
     void setUp() {
         MockitoAnnotations.initMocks(this);
         BL = new BenmarkLoggerImpl(BLF, BDF);
-        given(log.PrepareMeForLogging()).willReturn(anyString());
+        given(log.PrepareMeForLogging()).willReturn(any());
         given(BLF.CreateNewLog(any(), any(), BDF)).willReturn(log);
     }
 

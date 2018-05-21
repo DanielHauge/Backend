@@ -2,11 +2,14 @@ package DataAcessors;
 
 import Benchmarker.BenchmarkLog;
 import Benchmarker.BenchmarkTimer;
+import Benchmarker.enums.DBMS;
+import Benchmarker.enums.Query;
 import DataObjects.*;
 import java.sql.*;
 import java.util.ArrayList;
 
 import Interfaces.DataAccessor;
+import Main.Main;
 
 public class PostgresDataAcessor implements DataAccessor {
 
@@ -25,11 +28,18 @@ public class PostgresDataAcessor implements DataAccessor {
 
     @Override
     public AllCities GetAllCities() {
+        BenchmarkLog log = Main.Logger.CreateNewLog(Query.allcities, DBMS.postgres);
+        BenchmarkTimer timer = log.GetTimer();
+        timer.start("Initialize");
         AllCities allCities = null;
         try {
             ArrayList<City> cityArrayList = new ArrayList<>();
             Statement stmt = conn.createStatement();
+            timer.stop("Initialize");
+            timer.start("Query");
             ResultSet result = stmt.executeQuery("Select id, name from cities;");
+            timer.stop("Query");
+            timer.start("Transforming");
             while (result.next())
             {
                 cityArrayList.add(new City(result.getInt("id"),result.getString("name")));
@@ -39,17 +49,27 @@ public class PostgresDataAcessor implements DataAccessor {
             e.printStackTrace();
         }
 
+        timer.stop("Transforming");
+        Main.Logger.Savelog(log);
+
         return allCities;
     }
 
     @Override
     public BooksByCity GetBooksByCity(int cityid) {
+        BenchmarkLog log = Main.Logger.CreateNewLog(Query.booksbycity, DBMS.postgres);
+        BenchmarkTimer timer = log.GetTimer();
+        timer.start("Initialize");
         BooksByCity booksByCity = null;
 
         try {
             ArrayList<BookWithMentions> bookWithMentions = new ArrayList<>();
             Statement stmt = conn.createStatement();
+            timer.stop("Initialize");
+            timer.start("Query");
             ResultSet result = stmt.executeQuery("select title, author, amount from books join mentions on (books.id = mentions.bookid) where mentions.cityid = " + cityid + ";");
+            timer.stop("Query");
+            timer.start("Transforming");
             while (result.next())
             {
                 bookWithMentions.add(new BookWithMentions(result.getString("title"),result.getString("author"),result.getInt("amount")));
@@ -58,17 +78,25 @@ public class PostgresDataAcessor implements DataAccessor {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
+        timer.stop("Transforming");
+        Main.Logger.Savelog(log);
         return booksByCity;
     }
 
     @Override
     public AllBooks GetAllBooks() {
+        BenchmarkLog log = Main.Logger.CreateNewLog(Query.allbooks, DBMS.postgres);
+        BenchmarkTimer timer = log.GetTimer();
+        timer.start("Initialize");
         AllBooks allBooks = null;
         try {
             ArrayList<Book> bookArrayList = new ArrayList<>();
             Statement stmt = conn.createStatement();
+            timer.stop("Initialize");
+            timer.start("Query");
             ResultSet result = stmt.executeQuery("Select id, title from books;");
+            timer.stop("Query");
+            timer.start("Transforming");
             while (result.next())
             {
                 bookArrayList.add(new Book(result.getInt("id"),result.getString("title")));
@@ -77,19 +105,28 @@ public class PostgresDataAcessor implements DataAccessor {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        timer.stop("Transforming");
+        Main.Logger.Savelog(log);
         return allBooks;
     }
 
     @Override
     public ManyCitiesWithCords GetCitiesBybook(int bookid) {
+        BenchmarkLog log = Main.Logger.CreateNewLog(Query.citiesbybook, DBMS.postgres);
+        BenchmarkTimer timer = log.GetTimer();
+        timer.start("Initialize");
         ManyCitiesWithCords manyCitiesWithCords = null;
         try {
             ArrayList<CityWithCords> cityWithCords = new ArrayList<>();
             Statement stmt = conn.createStatement();
+            timer.stop("Initialize");
+            timer.start("Query");
             ResultSet result = stmt.executeQuery("select cities.name, cities.latitude, cities.longitude from cities\n"+
                     "    join mentions on (cities.id = mentions.cityid)\n"+
                     "    join books on (mentions.bookid = books.id)\n"+
                     "    where books.id = " + bookid + ";");
+            timer.stop("Query");
+            timer.start("Transforming");
             while (result.next())
             {
                 cityWithCords.add(new CityWithCords(result.getString("name"),result.getDouble("latitude"),result.getDouble("longitude")));
@@ -98,16 +135,25 @@ public class PostgresDataAcessor implements DataAccessor {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        timer.stop("Transforming");
+        Main.Logger.Savelog(log);
         return manyCitiesWithCords;
     }
 
     @Override
     public AllAuthors GetAllAuthors() {
+        BenchmarkLog log = Main.Logger.CreateNewLog(Query.allauthors, DBMS.postgres);
+        BenchmarkTimer timer = log.GetTimer();
+        timer.start("Initialize");
         AllAuthors allAuthors = null;
         try {
             ArrayList<Author> listofAuthors = new ArrayList<>();
             Statement stmt = conn.createStatement();
+            timer.stop("Initialize");
+            timer.start("Query");
             ResultSet result = stmt.executeQuery("Select distinct author from books;");
+            timer.stop("Query");
+            timer.start("Transforming");
             while (result.next())
             {
                 listofAuthors.add(new Author(result.getString("author")));
@@ -116,16 +162,25 @@ public class PostgresDataAcessor implements DataAccessor {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        timer.stop("Transforming");
+        Main.Logger.Savelog(log);
         return allAuthors;
     }
 
     @Override
     public BooksByAuthor GetBookByAuthor(String author) {
+        BenchmarkLog log = Main.Logger.CreateNewLog(Query.bookbyauthor, DBMS.postgres);
+        BenchmarkTimer timer = log.GetTimer();
+        timer.start("Initialize");
         BooksByAuthor booksByAuthor = null;
         try {
             ArrayList<Book> bookArrayList = new ArrayList<>();
             Statement stmt = conn.createStatement();
+            timer.stop("Initialize");
+            timer.start("Query");
             ResultSet result = stmt.executeQuery("select * from books where author = '" + author + "';");
+            timer.stop("Query");
+            timer.start("Transforming");
             while (result.next())
             {
                 bookArrayList.add(new Book(result.getInt("id"), result.getString("title")));
@@ -134,26 +189,31 @@ public class PostgresDataAcessor implements DataAccessor {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        timer.start("Transforming");
+        Main.Logger.Savelog(log);
         return booksByAuthor;
     }
 
     @Override
-    public CityByBook GetCityBybook(int bookid, BenchmarkLog log) {
+    public CityByBook GetCityBybook(int bookid) {
+        BenchmarkLog log = Main.Logger.CreateNewLog(Query.citybybook, DBMS.postgres);
         BenchmarkTimer timer = log.GetTimer();
+        timer.start("Initialize");
 
         CityByBook cityByBook = null;
         String bookTitle = null;
         try {
-            timer.start("Query");
 
             ArrayList<CityWithCords> cityWithCords = new ArrayList<>();
             Statement stmt = conn.createStatement();
+            timer.stop("Initialize");
+            timer.start("Query");
             ResultSet result = stmt.executeQuery("select books.id, books.title, cities.name, cities.latitude, cities.longitude from books\n"+
                     "    join mentions on (books.id = mentions.bookid)\n"+
                     "    join cities on (mentions.cityid = cities.id)\n"+
                     "    where books.id = " + bookid + ";");
             timer.stop("Query");
-            timer.start("Read");
+            timer.start("Transforming");
             while (result.next())
             {
                 bookTitle = result.getString("title");
@@ -164,23 +224,30 @@ public class PostgresDataAcessor implements DataAccessor {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        timer.stop("Read");
+        timer.stop("Transforming");
+        Main.Logger.Savelog(log);
         return cityByBook;
     }
 
     @Override
     public BooksByVicenety GetBooksInVicenety(double lat, double lon, int km) {
+        BenchmarkLog log = Main.Logger.CreateNewLog(Query.vicenety1, DBMS.postgres);
+        BenchmarkTimer timer = log.GetTimer();
+        timer.start("Initialize");
         BooksByVicenety booksByVicenety = null;
         try {
             ArrayList<CityAndBooks> cityAndBooks = new ArrayList<>();
 
             Statement stmt = conn.createStatement();
-
+            timer.stop("Initialize");
+            timer.start("Query");
             ResultSet result = stmt.executeQuery("select cities.name, cities.latitude, cities.longitude, books.id, books.title from cities\n" +
                     "    join mentions on (cities.id = mentions.cityid)\n" +
                     "    join books on (mentions.bookid = books.id)\n" +
                     "    where geodistance(latitude, longitude, " + lat + ", " + lon + ") < " + km + ";");
 
+            timer.stop("Query");
+            timer.start("Transforming");
             boolean doesExist = false;
             while (result.next())
             {
@@ -210,6 +277,8 @@ public class PostgresDataAcessor implements DataAccessor {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        timer.stop("Transforming");
+        Main.Logger.Savelog(log);
         return booksByVicenety;
     }
 

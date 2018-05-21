@@ -2,10 +2,14 @@ package Benchmarker;
 
 import Benchmarker.enums.DBMS;
 import Benchmarker.enums.Query;
+import DataObjects.Fulllog;
+import DataObjects.log;
+
+import java.util.ArrayList;
 
 public class BenmarkLoggerImpl implements BenmarkLogger {
 
-    private String wholeLog;
+    private ArrayList<log> logs = new ArrayList<>();
     private BenchmarkLogFactory BLF;
     private BenchmarkDurationFactory BDF;
 
@@ -17,11 +21,11 @@ public class BenmarkLoggerImpl implements BenmarkLogger {
     @Override
     public void Savelog(BenchmarkLog log) {
         System.out.println("Saving log");
-        String save = log.PrepareMeForLogging();
+        log save = log.PrepareMeForLogging();
         System.out.println(save);
 
         //File write and log outwards.
-        wholeLog += save;
+        logs.add(save);
 
     }
 
@@ -32,7 +36,7 @@ public class BenmarkLoggerImpl implements BenmarkLogger {
     }
 
     @Override
-    public String PrintLog() {
-        return wholeLog;
+    public Fulllog PrintLog() {
+        return new Fulllog(logs.toArray(new log[0]));
     }
 }

@@ -19,7 +19,7 @@ public class BenchmarkDurationImpl implements BenchmarkDuration {
 
     @Override
     public void addDuration(long time) {
-        this.end += time;
+        this.end += time-this.end;
     }
 
 
@@ -32,7 +32,7 @@ public class BenchmarkDurationImpl implements BenchmarkDuration {
 
     @Override
     public void removeDuration(long time) {
-        this.end -=time;
+        this.end -=time-this.end;
     }
 
 

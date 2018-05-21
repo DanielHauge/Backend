@@ -73,25 +73,21 @@ class SpringBootController {
     @RequestMapping(value = "/api/citiesv/bybook/{bookId}", produces = {"application/json"})
     @ResponseBody
     String CitiesByBookWithExtra(@PathVariable("bookId") int id){
-        BenchmarkLog log = Logger.CreateNewLog(Query.citybybook, DB);
-        DataObject CityByBookWithExtra = DA.GetCityBybook(id, log);
-        Logger.Savelog(log);
+        DataObject CityByBookWithExtra = DA.GetCityBybook(id);
         return CityByBookWithExtra.SerializeToJson();
     }
 
     @RequestMapping(value="/api/books/bylocation/{longitude}/{latitude}", produces = {"application/json"})
     @ResponseBody
     String BooksByLocation(@PathVariable("longitude") double longitude, @PathVariable("latitude") double latitude){
-        BenchmarkLog log = Logger.CreateNewLog(Query.vicenety1, DB);
         DataObject BooksByVicenety = DA.GetBooksInVicenety(latitude, longitude, 20);
-        Logger.Savelog(log);
         return BooksByVicenety.SerializeToJson();
     }
 
-    @RequestMapping(value="/api/log")
+    @RequestMapping(value="/api/log", produces = {"application/json"})
     @ResponseBody
     String PrintLog(){
-        return Logger.PrintLog();
+        return Logger.PrintLog().SerializeToJson();
     }
 
     @RequestMapping(value = "/api/setdb/{dbtype}/{ip}")

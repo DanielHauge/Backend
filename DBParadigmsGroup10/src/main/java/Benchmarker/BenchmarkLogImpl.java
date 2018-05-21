@@ -2,6 +2,10 @@ package Benchmarker;
 
 import Benchmarker.enums.DBMS;
 import Benchmarker.enums.Query;
+import DataObjects.BMTask;
+import DataObjects.log;
+
+import java.util.ArrayList;
 
 public class BenchmarkLogImpl implements BenchmarkLog {
 
@@ -16,26 +20,22 @@ public class BenchmarkLogImpl implements BenchmarkLog {
     }
 
     @Override
-    public String PrepareMeForLogging() {
-        String readyforlogging = "";
+    public log PrepareMeForLogging() {
         System.out.println("Database Type:\t"+dbms.name());
-        readyforlogging += "Database Type:\t"+dbms.name()+"\n";
         System.out.println("Query Type:\t"+q.name());
-        readyforlogging += "Query Type:\t"+q.name()+"\n";
         System.out.print("Durations: \t");
-        readyforlogging += "Durations: \t";
         long Fulldur = 0;
+        ArrayList<BMTask> tasks = new ArrayList<>();
         for (BenchmarkDuration benchmarkDuration : timer.getDurations()) {
             long dur = benchmarkDuration.getDuration();
             String task = benchmarkDuration.getTask();
             System.out.print(task+": "+dur+"\t");
-            readyforlogging += task+": "+dur+"\t";
+            tasks.add(new BMTask(task, (int)dur));
+            Fulldur += dur;
         }
         System.out.print("INALL: "+Fulldur);
-        readyforlogging += "INALL: "+Fulldur;
         System.out.println();
-        readyforlogging += "\n";
-        return readyforlogging;
+        return new log(dbms.name(), q.name(), tasks.toArray(new BMTask[0]), (int)Fulldur);
     }
 
     @Override

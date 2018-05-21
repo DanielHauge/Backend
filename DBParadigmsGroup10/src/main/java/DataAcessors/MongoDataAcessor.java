@@ -36,7 +36,7 @@ public class MongoDataAcessor implements DataAccessor {
     }
 
     @Override
-    public CityByBook GetCityBybook(int bookid, BenchmarkLog log) {
+    public CityByBook GetCityBybook(int bookid) {
         return null;
     }
 

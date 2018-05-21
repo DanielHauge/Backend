@@ -23,8 +23,10 @@ class BenchmarkDurTest {
 
     @Test
     void addDuration() {
-        BD.addDuration(150);
-        BD.addDuration(50);
+        long time = System.currentTimeMillis();
+        // This is based on getting system.currenttime and such. This works in practise, but is hard to simulate, with strict timing tests.
+        BD.addDuration(time+150);
+        BD.addDuration(time+50+150);
         assertThat((int)BD.getDuration(), is(200));
     }
 
@@ -39,6 +41,7 @@ class BenchmarkDurTest {
 
     @Test
     void removeDuration() {
+        // This is based on getting system.currenttime and such. This works in practise, but is hard to simulate, with strict timing tests.
         BD.addDuration(150);
         BD.removeDuration(50);
         assertThat((int)BD.getDuration(), is(100));

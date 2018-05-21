@@ -2,6 +2,7 @@ package Benchmarker;
 
 import Benchmarker.enums.DBMS;
 import Benchmarker.enums.Query;
+import DataObjects.Fulllog;
 
 public interface BenmarkLogger {
 
@@ -9,7 +10,7 @@ public interface BenmarkLogger {
 
     BenchmarkLog CreateNewLog(Query q, DBMS db);
 
-    String PrintLog();
+    Fulllog PrintLog();
 
 
 
