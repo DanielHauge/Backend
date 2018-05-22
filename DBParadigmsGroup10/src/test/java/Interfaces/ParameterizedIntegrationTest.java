@@ -1,10 +1,14 @@
 package Interfaces;
 
+import Benchmarker.BenchmarkDurationFactoryImpl;
+import Benchmarker.BenchmarkLogFactoryImpl;
+import Benchmarker.BenmarkLoggerImpl;
 import DataAcessors.MongoDataAcessor;
 import DataAcessors.Neo4jDataAcessor;
 import DataAcessors.PostgresDataAcessor;
 import DataAcessors.RedisDataAcessor;
 import DataObjects.*;
+import Main.Main;
 import org.junit.AfterClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -27,8 +31,8 @@ public class ParameterizedIntegrationTest {
         return Arrays.asList(
                 //new RedisDataAcessor(System.getenv("DBIP"))
                 //new Neo4jDataAcessor(GraphDatabase.driver("bolt://"+System.getenv("DBIP")+":7687", AuthTokens.basic("neo4j","class"))),
-                //new PostgresDataAcessor("jdbc:postgresql://"+System.getenv("DBIP")+":5432/postgres", "postgres", "")
-                DA = new MongoDataAcessor(System.getenv("DBIP"))
+                new PostgresDataAcessor("jdbc:postgresql://"+System.getenv("DBIP")+":5432/postgres", "postgres", "")
+                //DA = new MongoDataAcessor(System.getenv("DBIP"))
         );
     }
 
@@ -37,6 +41,7 @@ public class ParameterizedIntegrationTest {
 
     public ParameterizedIntegrationTest(DataAccessor dataAccessor){
         this.DA = dataAccessor;
+        Main.Logger = new BenmarkLoggerImpl(new BenchmarkLogFactoryImpl(), new BenchmarkDurationFactoryImpl());
     }
 
     private static DataAccessor DA;
@@ -85,7 +90,7 @@ public class ParameterizedIntegrationTest {
     @Test
     public void getCityBybook() {
         CityByBook cityByBook = DA.GetCityBybook(1);
-        assertThat(cityByBook.cities.length, is(13)); /////// TEST SENERE! FORDI DEN ER NOK FORKERT!
+        assertThat(cityByBook.cities.length, is(14)); /////// TEST SENERE! FORDI DEN ER NOK FORKERT!
     }
 
     @Test

@@ -252,7 +252,7 @@ public class PostgresDataAcessor implements DataAccessor {
             ResultSet result = stmt.executeQuery("select cities.name, cities.latitude, cities.longitude, books.id, books.title from cities\n" +
                     "    join mentions on (cities.id = mentions.cityid)\n" +
                     "    join books on (mentions.bookid = books.id)\n" +
-                    "    where earth_box(ll_to_earth(52.38, 11.47), 50000) @> ll_to_earth(latitude, longitude)\n" +
+                    "    where earth_box(ll_to_earth(" + lat + ", " + lon + "), " + km + "000) @> ll_to_earth(latitude, longitude)\n" +
                     "    and earth_distance(ll_to_earth(" + lat + ", " + lon + "), ll_to_earth(latitude, longitude)) < " + km + "000;");
 
             timer.stop("Query");

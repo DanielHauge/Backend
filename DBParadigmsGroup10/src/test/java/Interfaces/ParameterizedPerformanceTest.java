@@ -1,9 +1,9 @@
 package Interfaces;
 
-import Benchmarker.BenchmarkLog;
-import Benchmarker.BenchmarkLogImpl;
+import Benchmarker.*;
 import DataAcessors.RedisDataAcessor;
 import DataObjects.*;
+import Main.Main;
 import org.junit.AfterClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -33,6 +33,7 @@ public class ParameterizedPerformanceTest {
 
     public ParameterizedPerformanceTest(DataAccessor dataAccessor){
         this.DA = dataAccessor;
+        Main.Logger = new BenmarkLoggerImpl(new BenchmarkLogFactoryImpl(), new BenchmarkDurationFactoryImpl());
     }
 
     private static DataAccessor DA;
