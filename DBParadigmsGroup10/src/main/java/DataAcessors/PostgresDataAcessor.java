@@ -178,7 +178,7 @@ public class PostgresDataAcessor implements DataAccessor {
             Statement stmt = conn.createStatement();
             timer.stop("Initialize");
             timer.start("Query");
-            ResultSet result = stmt.executeQuery("select * from books where author = '" + author + "';");
+            ResultSet result = stmt.executeQuery("select * from books where author like '%" + author + "%';");
             timer.stop("Query");
             timer.start("Transforming");
             while (result.next())
@@ -241,10 +241,19 @@ public class PostgresDataAcessor implements DataAccessor {
             Statement stmt = conn.createStatement();
             timer.stop("Initialize");
             timer.start("Query");
+            /*
+            select cities.name, cities.latitude, cities.longitude, books.id, books.title from cities
+            join mentions on (cities.id = mentions.cityid)
+            join books on (mentions.bookid = books.id)
+            where earth_box(ll_to_earth(52.38, 11.47), 50000) @> ll_to_earth(latitude, longitude)
+            and earth_distance(ll_to_earth(52.38, 11.47), ll_to_earth(latitude, longitude)) < 50000;
+             */
+
             ResultSet result = stmt.executeQuery("select cities.name, cities.latitude, cities.longitude, books.id, books.title from cities\n" +
                     "    join mentions on (cities.id = mentions.cityid)\n" +
                     "    join books on (mentions.bookid = books.id)\n" +
-                    "    where geodistance(latitude, longitude, " + lat + ", " + lon + ") < " + km + ";");
+                    "    where earth_box(ll_to_earth(52.38, 11.47), 50000) @> ll_to_earth(latitude, longitude)\n" +
+                    "    and earth_distance(ll_to_earth(" + lat + ", " + lon + "), ll_to_earth(latitude, longitude)) < " + km + "000;");
 
             timer.stop("Query");
             timer.start("Transforming");
