@@ -1,9 +1,13 @@
 package Interfaces;
 
+import Benchmarker.BenchmarkDurationFactoryImpl;
+import Benchmarker.BenchmarkLogFactoryImpl;
+import Benchmarker.BenmarkLoggerImpl;
 import DataAcessors.Neo4jDataAcessor;
 import DataAcessors.PostgresDataAcessor;
 import DataAcessors.RedisDataAcessor;
 import DataObjects.*;
+import Main.Main;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -42,6 +46,7 @@ class DatabaseBenchmarkTest {
         cityids = new int[]{2618425, 2800866, 1819729, 3587266, 2950159};
         cords = new double[][]{ {49.89999975254307, 2.3000022768974304 }, {28.538340619838415, -81.37923806905746}, {33.4483793942478,-112.07404106855392 }, {40.76078125849779,-111.8910500407219}, {49.89999975254307,2.3000022768974304}  };
         authors = new String[]{"William Shakspeare", "Charles Darwin", "Jane Austen", "Isaac Newton", "Larry Evans"};
+        Main.Logger = new BenmarkLoggerImpl(new BenchmarkLogFactoryImpl(), new BenchmarkDurationFactoryImpl());
     }
 
 
@@ -51,7 +56,7 @@ class DatabaseBenchmarkTest {
         long[] measurements = new long[5];
         for (int i = 4; i>=0; i--){
             long now = System.currentTimeMillis();
-            DA.GetAllCities();
+            DataObject DO = DA.GetAllCities();
             long after = System.currentTimeMillis()-now;
             measurements[i] = after;
             System.out.println(after+"ms");
@@ -78,7 +83,7 @@ class DatabaseBenchmarkTest {
         long[] measurements = new long[5];
         for (int i = 4; i>=0; i--){
             long now = System.currentTimeMillis();
-            DA.GetBooksByCity(cityids[i]);
+            DataObject DO = DA.GetBooksByCity(cityids[i]);
             long after = System.currentTimeMillis()-now;
             measurements[i] = after;
             System.out.println(after+"ms");
@@ -104,7 +109,7 @@ class DatabaseBenchmarkTest {
         long[] measurements = new long[5];
         for (int i = 4; i>=0; i--){
             long now = System.currentTimeMillis();
-            DA.GetAllBooks();
+            DataObject DO = DA.GetAllBooks();
             long after = System.currentTimeMillis()-now;
             measurements[i] = after;
             System.out.println(after+"ms");
@@ -129,7 +134,7 @@ class DatabaseBenchmarkTest {
         long[] measurements = new long[5];
         for (int i = 4; i>=0; i--){
             long now = System.currentTimeMillis();
-            DA.GetCitiesBybook(bookids[i]);
+            DataObject DO = DA.GetCitiesBybook(bookids[i]);
             long after = System.currentTimeMillis()-now;
             measurements[i] = after;
             System.out.println(after+"ms");
@@ -154,7 +159,7 @@ class DatabaseBenchmarkTest {
         long[] measurements = new long[5];
         for (int i = 4; i>=0; i--){
             long now = System.currentTimeMillis();
-            DA.GetAllAuthors();
+            DataObject DO = DA.GetAllAuthors();
             long after = System.currentTimeMillis()-now;
             measurements[i] = after;
             System.out.println(after+"ms");
@@ -179,7 +184,7 @@ class DatabaseBenchmarkTest {
         long[] measurements = new long[5];
         for (int i = 4; i>=0; i--){
             long now = System.currentTimeMillis();
-            DA.GetBookByAuthor(authors[i]);
+            DataObject DO = DA.GetBookByAuthor(authors[i]);
             long after = System.currentTimeMillis()-now;
             measurements[i] = after;
             System.out.println(after+"ms");
@@ -204,7 +209,7 @@ class DatabaseBenchmarkTest {
         long[] measurements = new long[5];
         for (int i = 4; i>=0; i--){
             long now = System.currentTimeMillis();
-            //DA.GetCityBybook(bookids[i]);
+            DataObject DO = DA.GetCityBybook(bookids[i]);
             long after = System.currentTimeMillis()-now;
             measurements[i] = after;
             System.out.println(after+"ms");
@@ -229,7 +234,7 @@ class DatabaseBenchmarkTest {
         long[] measurements = new long[5];
         for (int i = 4; i>=0; i--){
             long now = System.currentTimeMillis();
-            DA.GetBooksInVicenety(cords[i][0], cords[i][1], 100);
+            DataObject DO = DA.GetBooksInVicenety(cords[i][0], cords[i][1], 100);
             long after = System.currentTimeMillis()-now;
             measurements[i] = after;
             System.out.println(after+"ms");
@@ -252,7 +257,7 @@ class DatabaseBenchmarkTest {
         long[] measurements = new long[5];
         for (int i = 4; i>=0; i--){
             long now = System.currentTimeMillis();
-            DA.GetBooksInVicenety(cords[i][0], cords[i][1], 50);
+            DataObject DO = DA.GetBooksInVicenety(cords[i][0], cords[i][1], 50);
             long after = System.currentTimeMillis()-now;
             measurements[i] = after;
             System.out.println(after+"ms");
@@ -276,7 +281,7 @@ class DatabaseBenchmarkTest {
         long[] measurements = new long[5];
         for (int i = 4; i>=0; i--){
             long now = System.currentTimeMillis();
-            DA.GetBooksInVicenety(cords[i][0], cords[i][1], 20);
+            DataObject DO = DA.GetBooksInVicenety(cords[i][0], cords[i][1], 20);
             long after = System.currentTimeMillis()-now;
             measurements[i] = after;
             System.out.println(after+"ms");
