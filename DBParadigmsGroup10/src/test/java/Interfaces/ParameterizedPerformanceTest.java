@@ -1,6 +1,7 @@
 package Interfaces;
 
 import Benchmarker.*;
+import DataAcessors.Neo4jDataAcessor;
 import DataAcessors.RedisDataAcessor;
 import DataObjects.*;
 import Main.Main;
@@ -8,6 +9,8 @@ import org.junit.AfterClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+import org.neo4j.driver.v1.AuthTokens;
+import org.neo4j.driver.v1.GraphDatabase;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -22,8 +25,8 @@ public class ParameterizedPerformanceTest {
     @Parameterized.Parameters
     public static Collection input() {
         return Arrays.asList(
-                new RedisDataAcessor(System.getenv("DBIP"))
-                //new Neo4jDataAcessor(GraphDatabase.driver("bolt://"+System.getenv("DBIP")+":7687", AuthTokens.basic("neo4j","class"))),
+                //new RedisDataAcessor(System.getenv("DBIP"))
+                new Neo4jDataAcessor(GraphDatabase.driver("bolt://"+System.getenv("DBIP")+":7687", AuthTokens.basic("neo4j","class")))
                 //new PostgresDataAcessor("jdbc:postgresql://"+System.getenv("DBIP")+":5432/postgres", "postgres", "")
         );
     }

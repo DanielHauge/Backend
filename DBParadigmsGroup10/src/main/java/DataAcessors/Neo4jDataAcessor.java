@@ -89,7 +89,7 @@ public class Neo4jDataAcessor implements DataAccessor {
         timer.start("Query");
 
         Session session = driver.session();
-        StatementResult result = session.run("MATCH (:book{BookId:"+bookid+"})-[:MENTIONS]-(c:city) return c.name as name, c.latitude as lat, c.longitude as lon;");
+        StatementResult result = session.run("MATCH (:book{BookId:"+bookid+"})-[:MENTIONS]-(c:city) return c.name as name, c.location.latitude as lat, c.location.longitude as lon;");
         timer.stop("Query");
         timer.start("Tranforming");
         ArrayList<CityWithCords> res = new ArrayList<>();
@@ -118,7 +118,6 @@ public class Neo4jDataAcessor implements DataAccessor {
             Record rec = result.next();
             res.add(new Author(rec.get("author").asString()));
         }
-
         session.close();
         timer.stop("Tranforming");
         Main.Logger.Savelog(log);
@@ -132,7 +131,7 @@ public class Neo4jDataAcessor implements DataAccessor {
         timer.start("Query");
 
         Session session = driver.session();
-        StatementResult result = session.run("MATCH (a:book{author:\"William Shakespeare\"}) return a.title as title, a.BookId as id;");
+        StatementResult result = session.run("MATCH (a:book) where a.author CONTAINS '" + author + "' return a.title as title, a.BookId as id");
         timer.stop("Query");
         timer.start("Tranforming");
         ArrayList<Book> res = new ArrayList<>();
@@ -153,7 +152,7 @@ public class Neo4jDataAcessor implements DataAccessor {
         timer.start("PreQuery");
 
         Session session = driver.session();
-        StatementResult result = session.run("MATCH (:book{BookId:"+bookid+"})-[:MENTIONS]-(c:city) return c.name as name, c.latitude as lat, c.longitude as lon;");
+        StatementResult result = session.run("MATCH (:book{BookId:"+bookid+"})-[:MENTIONS]-(c:city) return c.name as name, c.location.latitude as lat, c.location.longitude as lon;");
         timer.stop("PreQuery");
         timer.start("Transform-Query");
         ArrayList<CityWithCords> res = new ArrayList<>();
@@ -175,8 +174,92 @@ public class Neo4jDataAcessor implements DataAccessor {
         return new CityByBook(bookid, title, res.toArray(new CityWithCords[0]));
     }
 
+    /*
+    MATCH (c:city)-[:MENTIONS]-(b:book)
+WITH c, b, distance(point({latitude:52.38, longitude:11.47}), point({latitude:c.latitude, longitude:c.longitude}))
+as dist WHERE dist <= 50000
+RETURN c.name as name, c.latitude as lat, c.longitude as lon, b.BookId as id, b.title as title;
+     */
+
+    /*
+    MATCH(c:city)-[:MENTIONS]-(b:book)
+where distance(point({latitude:52.38, longitude:11.47}), c.location) <= 50000
+RETURN c.name as name, c.latitude as lat, c.longitude as lon, b.BookId as id, b.title as title;
+     */
+/*
+StatementResult result = session.run("MATCH(c:city)-[:MENTIONS]-(b:book)\n" +
+                "where distance(point({latitude:" + lat + ", longitude:" + lon + "}), point({latitude:c.latitude, longitude:c.longitude})) <= " + km + "000\n" +
+                "RETURN c.name as name, c.latitude as lat, c.longitude as lon, b.BookId as id, b.title as title;");
+ */
+
     @Override
     public BooksByVicenety GetBooksInVicenety(double lat, double lon, int km) {
+        BenchmarkLog log = Main.Logger.CreateNewLog(Query.vicenety1, DBMS.neo4j);
+        BenchmarkTimer timer = log.GetTimer();
+        BooksByVicenety booksByVicenety = null;
+        timer.start("Query");
+
+        Session session = driver.session();
+        StatementResult result = session.run("MATCH(c:city)-[:MENTIONS]-(b:book)\n" +
+                "where distance(point({latitude:" + lat + ", longitude:" + lon + "}), c.location) <= " + km + "000\n" +
+                "RETURN c.name as name, c.location.latitude as lat, c.location.longitude as lon, b.BookId as id, b.title as title;");
+        timer.stop("Query");
+        timer.start("Transform-query");
+        ArrayList<CityAndBooks> cityAndBooks = new ArrayList<>();
+        boolean doesExist = false;
+        while (result.hasNext())
+        {
+            Record record = result.next();
+            //CityAndBooks tempCity = new CityAndBooks(record.get("name").asString(), record.get("lat").asDouble(), record.get("lon").asDouble(), new Book[] {new Book(record.get("id").asInt(),record.get("title").asString())});
+            CityWithCords tc = new CityWithCords(record.get("name").asString(), record.get("lat").asDouble(), record.get("lon").asDouble());
+            Book bc = new Book(record.get("id").asInt(),record.get("title").asString());
+            doesExist = false;
+            /*
+            if (cityAndBooks.size() == 0)
+            {
+                cityAndBooks.add(new CityAndBooks(tempCity.cityName, tempCity.latitude, tempCity.longitude , tempCity.books));
+            }
+            if (!cityAndBooks.contains(tempCity))
+            {
+                Book[] tb = new Book[cityAndBooks.indexOf(tempCity.books.length + 1) + 1];
+                for (int i = 0; i < tempCity.books.length; i++) {
+                    tb[i] = cityAndBooks.get(cityAndBooks.indexOf(tempCity.books)).books[i];
+                }
+                tb[tb.length-1] = tempCity.books[0];
+                cityAndBooks.get(cityAndBooks.indexOf(tempCity.books.length)).books = tb;
+                doesExist = true;
+            }
+            if (!doesExist)
+            {
+                cityAndBooks.add(new CityAndBooks(tempCity.cityName, tempCity.latitude, tempCity.longitude , tempCity.books));
+            }
+            */
+
+            for (CityAndBooks CaB: cityAndBooks
+                    ) {
+                if (CaB.cityName.equals(tc.cityName))
+                {
+                    Book[] tb = new Book[CaB.books.length+1];
+                    for (int j = 0; j < CaB.books.length; j++) {
+                        tb[j] = CaB.books[j];
+                    }
+                    tb[tb.length-1] = bc;
+                    CaB.books = tb;
+                    doesExist = true;
+                }
+            }
+            if (!doesExist)
+            {
+                cityAndBooks.add(new CityAndBooks(tc.cityName, tc.lat, tc.lng,new Book[0]));
+            }
+
+        }
+        booksByVicenety = new BooksByVicenety(cityAndBooks.toArray(new CityAndBooks[0]));
+        session.close();
+        timer.stop("Transform-query");
+        Main.Logger.Savelog(log);
+        return booksByVicenety;
+                /*
         BenchmarkLog log = Main.Logger.CreateNewLog(Query.vicenety1, DBMS.neo4j);
         BenchmarkTimer timer = log.GetTimer();
         timer.start("Query");
@@ -203,6 +286,7 @@ public class Neo4jDataAcessor implements DataAccessor {
         timer.stop("Transform-query");
         Main.Logger.Savelog(log);
         return new BooksByVicenety(res.toArray(new CityAndBooks[0]));
+         */
     }
 
     @Override
