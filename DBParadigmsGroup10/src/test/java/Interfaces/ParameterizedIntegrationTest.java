@@ -30,15 +30,12 @@ public class ParameterizedIntegrationTest {
     public static Collection input() {
         return Arrays.asList(
                 //new RedisDataAcessor(System.getenv("DBIP"))
-<<<<<<< HEAD
                 new Neo4jDataAcessor(GraphDatabase.driver("bolt://"+System.getenv("DBIP")+":7687", AuthTokens.basic("neo4j","class")))
                 //new PostgresDataAcessor("jdbc:postgresql://"+System.getenv("DBIP")+":5432/postgres", "postgres", "")
                 //DA = new MongoDataAcessor(System.getenv("DBIP"))
-=======
                 //new Neo4jDataAcessor(GraphDatabase.driver("bolt://"+System.getenv("DBIP")+":7687", AuthTokens.basic("neo4j","class"))),
                 //new PostgresDataAcessor("jdbc:postgresql://"+System.getenv("DBIP")+":5432/postgres", "postgres", "")
-                DA = new MongoDataAcessor(System.getenv("DBIP"))
->>>>>>> 0e11894957832111b885529b1255aee520103ba8
+                //DA = new MongoDataAcessor(System.getenv("DBIP"))
         );
     }
 
