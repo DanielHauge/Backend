@@ -16,6 +16,7 @@ import com.mongodb.client.model.Projections;
 import com.mongodb.client.model.geojson.Geometry;
 import com.mongodb.client.model.geojson.Point;
 import com.mongodb.client.model.geojson.Position;
+import org.bson.BSON;
 import org.bson.Document;
 
 import java.lang.reflect.Array;
@@ -79,7 +80,7 @@ public class MongoDataAcessor implements DataAccessor {
             while (cursor.hasNext()) {
                 Document doc = cursor.next();
                 ArrayList<Document> Inner = (ArrayList<Document>) doc.get("book");
-                res.add(new BookWithMentions(Inner.get(0).getString("Title"), Inner.get(0).getString("Author"), doc.getInteger("Amount")));
+                res.add(new BookWithMentions(String.valueOf(Inner.get(0).get("Title")), String.valueOf(Inner.get(0).get("Author")), doc.getInteger("Amount")));
             }} finally {cursor.close();
         }
 
@@ -122,7 +123,7 @@ public class MongoDataAcessor implements DataAccessor {
                 Document doc = cursor.next();
                 Document city = ((ArrayList<Document>) doc.get("city")).get(0);
                 ArrayList<Double> coords = (ArrayList<Double>) ((Document) city.get("location")).get("coordinates");
-                res.add(new CityWithCords(city.getString("Name"), coords.get(0), coords.get(1)));
+                res.add(new CityWithCords(String.valueOf(city.get("Name")), coords.get(0), coords.get(1)));
 
             }} finally {cursor.close();
         }
@@ -205,6 +206,7 @@ public class MongoDataAcessor implements DataAccessor {
         MongoCollection<Document> cities = db.getCollection("cities");
         MongoCursor<Document> cursor = cities.aggregate(
                 Arrays.asList(
+
                         Aggregates.match(Filters.nearSphere("location", refPoint, 20000.0, 0.0)),
                         Aggregates.lookup("mentions", "Cityid", "Cityid", "Ments"),
                         Aggregates.lookup("books", "Ments.Bookid", "Bookid", "Books"),
@@ -214,8 +216,6 @@ public class MongoDataAcessor implements DataAccessor {
                         ))
                 )
         ).iterator();
-
-
 
         try {
             while (cursor.hasNext()) {
