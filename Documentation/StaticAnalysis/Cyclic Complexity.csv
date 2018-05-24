@@ -1,4 +1,4 @@
-Complexity metrics,to, 24 maj 2018 14:01:10 CEST
+Complexity metrics,to, 24 maj 2018 14:01:10 CEST, #
 Method,ev(G),iv(G),v(G)
  -.- , Essential Cyclomatic complexity, Design complexity, Cyclomatic Complexity
 "Benchmarker.BenchmarkDurationFactoryImpl.CreateNewDuration(String)",1,1,1
