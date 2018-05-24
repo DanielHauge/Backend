@@ -1,0 +1,166 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: StubbedDataAccessor</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">DataAcessors</a> ]
+</div>
+
+<h1>Coverage Summary for Class: StubbedDataAccessor (DataAcessors)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">StubbedDataAccessor</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    50%
+  </span>
+  <span class="absValue">
+    (5/ 10)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    36.1%
+  </span>
+  <span class="absValue">
+    (13/ 36)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package DataAcessors;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import DataObjects.*;
+<i>4</i>&nbsp;import Interfaces.DataAccessor;
+<i>5</i>&nbsp;
+<b class="fc"><i>6</i>&nbsp;public class StubbedDataAccessor implements DataAccessor {</b>
+<i>7</i>&nbsp;
+<i>8</i>&nbsp;    @Override
+<i>9</i>&nbsp;    public AllCities GetAllCities() {
+<b class="nc"><i>10</i>&nbsp;        City city = new City(3576260,&quot;Falmouth&quot;);</b>
+<b class="nc"><i>11</i>&nbsp;        return new AllCities(new City[]{city});</b>
+<i>12</i>&nbsp;    }
+<i>13</i>&nbsp;
+<i>14</i>&nbsp;    @Override
+<i>15</i>&nbsp;    public BooksByCity GetBooksByCity(int cityid) {
+<i>16</i>&nbsp;        //cityid = 3576260;
+<b class="fc"><i>17</i>&nbsp;        BookWithMentions bookWithMentions = new BookWithMentions(&quot;The Hunting of the Snark&quot;,&quot;Lewis Carroll&quot;,1);</b>
+<b class="fc"><i>18</i>&nbsp;        return new BooksByCity(new BookWithMentions[]{bookWithMentions});</b>
+<i>19</i>&nbsp;    }
+<i>20</i>&nbsp;
+<i>21</i>&nbsp;    @Override
+<i>22</i>&nbsp;    public AllBooks GetAllBooks() {
+<b class="nc"><i>23</i>&nbsp;        Book book = new Book(5,&quot;The Hunting of the Snark&quot;);</b>
+<b class="nc"><i>24</i>&nbsp;        return new AllBooks(new Book[]{book});</b>
+<i>25</i>&nbsp;    }
+<i>26</i>&nbsp;
+<i>27</i>&nbsp;    @Override
+<i>28</i>&nbsp;    public ManyCitiesWithCords GetCitiesBybook(int bookid) {
+<b class="fc"><i>29</i>&nbsp;        CityWithCords cityWithCords = new CityWithCords(&quot;Falmouth&quot;,17.02741,-61.78136);</b>
+<b class="fc"><i>30</i>&nbsp;        return new ManyCitiesWithCords(new CityWithCords[]{cityWithCords});</b>
+<i>31</i>&nbsp;    }
+<i>32</i>&nbsp;
+<i>33</i>&nbsp;    @Override
+<i>34</i>&nbsp;    public AllAuthors GetAllAuthors() {
+<b class="nc"><i>35</i>&nbsp;        Author[] authors = new Author[14];</b>
+<b class="nc"><i>36</i>&nbsp;        authors[0] = new Author(&quot;Jefferson Thomas&quot;);</b>
+<b class="nc"><i>37</i>&nbsp;        authors[1] = new Author(&quot;Lewis Carroll&quot;);</b>
+<b class="nc"><i>38</i>&nbsp;        authors[2] = new Author(&quot;Charles Dodgson&quot;);</b>
+<b class="nc"><i>39</i>&nbsp;        authors[3] = new Author(&quot;Central Intelligence Agency&quot;);</b>
+<b class="nc"><i>40</i>&nbsp;        authors[4] = new Author(&quot;Herman Melville&quot;);</b>
+<b class="nc"><i>41</i>&nbsp;        authors[5] = new Author(&quot;James M. Barrie&quot;);</b>
+<b class="nc"><i>42</i>&nbsp;        authors[6] = new Author(&quot;Alexander Hamilton&quot;);</b>
+<b class="nc"><i>43</i>&nbsp;        authors[7] = new Author(&quot;Longfellow&quot;);</b>
+<b class="nc"><i>44</i>&nbsp;        authors[8] = new Author(&quot;United States&quot;);</b>
+<b class="nc"><i>45</i>&nbsp;        authors[9] = new Author(&quot;John Milton&quot;);</b>
+<b class="nc"><i>46</i>&nbsp;        authors[10] = new Author(&quot;John Fitzgerald&quot;);</b>
+<b class="nc"><i>47</i>&nbsp;        authors[11] = new Author(&quot;Lincoln Abraham&quot;);</b>
+<b class="nc"><i>48</i>&nbsp;        authors[12] = new Author(&quot;Founding Fathers&quot;);</b>
+<b class="nc"><i>49</i>&nbsp;        authors[13] = new Author(&quot;Henry Patrick&quot;);</b>
+<b class="nc"><i>50</i>&nbsp;        return new AllAuthors(authors);</b>
+<i>51</i>&nbsp;    }
+<i>52</i>&nbsp;
+<i>53</i>&nbsp;    @Override
+<i>54</i>&nbsp;    public BooksByAuthor GetBookByAuthor(String author) {
+<b class="fc"><i>55</i>&nbsp;        author = &quot;Lewis Carroll&quot;;</b>
+<b class="fc"><i>56</i>&nbsp;        Book book = new Book(5,&quot;The Hunting of the Snark&quot;);</b>
+<b class="fc"><i>57</i>&nbsp;        Book book1 = new Book(4,&quot;Through the Looking-Glass&quot;);</b>
+<b class="fc"><i>58</i>&nbsp;        Book book2 = new Book(3,&quot;Alice&#39;s Adventures in Wonderland&quot;);</b>
+<b class="fc"><i>59</i>&nbsp;        return new BooksByAuthor(author,new Book[]{book,book1,book2});</b>
+<i>60</i>&nbsp;    }
+<i>61</i>&nbsp;
+<i>62</i>&nbsp;    @Override
+<i>63</i>&nbsp;    public CityByBook GetCityBybook(int bookid) {
+<i>64</i>&nbsp;        //3576260
+<b class="nc"><i>65</i>&nbsp;        CityWithCords cityWithCords = new CityWithCords(&quot;Falmouth&quot;, 17.02741,-61.78136);</b>
+<b class="nc"><i>66</i>&nbsp;        return new CityByBook(5,&quot;The Hunting of the Snark&quot;,new CityWithCords[]{cityWithCords});</b>
+<i>67</i>&nbsp;    }
+<i>68</i>&nbsp;
+<i>69</i>&nbsp;    @Override
+<i>70</i>&nbsp;    public BooksByVicenety GetBooksInVicenety(double lat, double lon, int km) {
+<i>71</i>&nbsp;        //lat 17.02741
+<i>72</i>&nbsp;        //lon -61.78136
+<i>73</i>&nbsp;        // range 10
+<b class="fc"><i>74</i>&nbsp;        Book book = new Book(5,&quot;The Hunting of the Snark&quot;);</b>
+<b class="fc"><i>75</i>&nbsp;        CityAndBooks cityAndBooks = new CityAndBooks(&quot;Falmouth&quot;,17.02741,-61.78136,new Book[]{book});</b>
+<b class="fc"><i>76</i>&nbsp;        return new BooksByVicenety(new CityAndBooks[]{cityAndBooks});</b>
+<i>77</i>&nbsp;    }
+<i>78</i>&nbsp;
+<i>79</i>&nbsp;    @Override
+<i>80</i>&nbsp;    public void close() {
+<i>81</i>&nbsp;
+<b class="nc"><i>82</i>&nbsp;    }</b>
+<i>83</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2018-05-24 15:10</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,205 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: SpringBootController</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">Main</a> ]
+</div>
+
+<h1>Coverage Summary for Class: SpringBootController (Main)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">SpringBootController</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 11)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 36)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package Main;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import Benchmarker.enums.DBMS;
+<i>4</i>&nbsp;import DataAcessors.Neo4jDataAcessor;
+<i>5</i>&nbsp;import DataAcessors.PostgresDataAcessor;
+<i>6</i>&nbsp;import DataAcessors.RedisDataAcessor;
+<i>7</i>&nbsp;import Interfaces.DataObject;
+<i>8</i>&nbsp;import org.neo4j.driver.v1.AuthTokens;
+<i>9</i>&nbsp;import org.neo4j.driver.v1.GraphDatabase;
+<i>10</i>&nbsp;import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+<i>11</i>&nbsp;import org.springframework.stereotype.Controller;
+<i>12</i>&nbsp;import org.springframework.web.bind.annotation.PathVariable;
+<i>13</i>&nbsp;import org.springframework.web.bind.annotation.RequestMapping;
+<i>14</i>&nbsp;import org.springframework.web.bind.annotation.ResponseBody;
+<i>15</i>&nbsp;
+<i>16</i>&nbsp;import static Main.Main.DA;
+<i>17</i>&nbsp;import static Main.Main.Logger;
+<i>18</i>&nbsp;import static Main.Main.DB;
+<i>19</i>&nbsp;
+<i>20</i>&nbsp;@Controller
+<i>21</i>&nbsp;@EnableAutoConfiguration
+<b class="nc"><i>22</i>&nbsp;class SpringBootController {</b>
+<i>23</i>&nbsp;
+<i>24</i>&nbsp;
+<i>25</i>&nbsp;    @RequestMapping(value=&quot;/api/cities&quot;, produces = {&quot;application/json&quot;})
+<i>26</i>&nbsp;    @ResponseBody
+<i>27</i>&nbsp;    String AllCities(){
+<b class="nc"><i>28</i>&nbsp;        long now = System.currentTimeMillis();</b>
+<b class="nc"><i>29</i>&nbsp;        DataObject result = DA.GetAllCities();</b>
+<b class="nc"><i>30</i>&nbsp;        System.out.println(System.currentTimeMillis()-now);</b>
+<b class="nc"><i>31</i>&nbsp;        return result.SerializeToJson();</b>
+<i>32</i>&nbsp;    }
+<i>33</i>&nbsp;
+<i>34</i>&nbsp;    @RequestMapping(value=&quot;/api/books/bycity/{CityId}&quot;, produces = {&quot;application/json&quot;})
+<i>35</i>&nbsp;    @ResponseBody
+<i>36</i>&nbsp;    String ByCity(@PathVariable(&quot;CityId&quot;) int id){
+<b class="nc"><i>37</i>&nbsp;        DataObject result = DA.GetBooksByCity(id);</b>
+<b class="nc"><i>38</i>&nbsp;        return result.SerializeToJson();</b>
+<i>39</i>&nbsp;    }
+<i>40</i>&nbsp;
+<i>41</i>&nbsp;    @RequestMapping(value=&quot;/api/books&quot;, produces = {&quot;application/json&quot;})
+<i>42</i>&nbsp;    @ResponseBody
+<i>43</i>&nbsp;    String AllBooks(){
+<b class="nc"><i>44</i>&nbsp;        DataObject allbooks = DA.GetAllBooks();</b>
+<b class="nc"><i>45</i>&nbsp;        return allbooks.SerializeToJson();</b>
+<i>46</i>&nbsp;    }
+<i>47</i>&nbsp;
+<i>48</i>&nbsp;    @RequestMapping(value=&quot;/api/cities/bybook/{bookId}&quot;, produces = {&quot;application/json&quot;})
+<i>49</i>&nbsp;    @ResponseBody
+<i>50</i>&nbsp;    String CitiesByBook(@PathVariable(&quot;bookId&quot;) int bookId){
+<b class="nc"><i>51</i>&nbsp;        DataObject CityBybook = DA.GetCitiesBybook(bookId);</b>
+<b class="nc"><i>52</i>&nbsp;        return CityBybook.SerializeToJson();</b>
+<i>53</i>&nbsp;    }
+<i>54</i>&nbsp;
+<i>55</i>&nbsp;    @RequestMapping(value=&quot;/api/authors&quot;, produces = {&quot;application/json&quot;})
+<i>56</i>&nbsp;    @ResponseBody
+<i>57</i>&nbsp;    String allauthors(){
+<b class="nc"><i>58</i>&nbsp;        DataObject Authors = DA.GetAllAuthors();</b>
+<b class="nc"><i>59</i>&nbsp;        return Authors.SerializeToJson();</b>
+<i>60</i>&nbsp;    }
+<i>61</i>&nbsp;
+<i>62</i>&nbsp;    @RequestMapping(value = &quot;/api/books/byauthor/{authorName}&quot;, produces = {&quot;application/json&quot;})
+<i>63</i>&nbsp;    @ResponseBody
+<i>64</i>&nbsp;    String BooksByauthor(@PathVariable(&quot;authorName&quot;) String author){
+<b class="nc"><i>65</i>&nbsp;        DataObject BooksByAuthor = DA.GetBookByAuthor(author);</b>
+<b class="nc"><i>66</i>&nbsp;        return BooksByAuthor.SerializeToJson();</b>
+<i>67</i>&nbsp;    }
+<i>68</i>&nbsp;
+<i>69</i>&nbsp;    @RequestMapping(value = &quot;/api/citiesv/bybook/{bookId}&quot;, produces = {&quot;application/json&quot;})
+<i>70</i>&nbsp;    @ResponseBody
+<i>71</i>&nbsp;    String CitiesByBookWithExtra(@PathVariable(&quot;bookId&quot;) int id){
+<b class="nc"><i>72</i>&nbsp;        DataObject CityByBookWithExtra = DA.GetCityBybook(id);</b>
+<b class="nc"><i>73</i>&nbsp;        return CityByBookWithExtra.SerializeToJson();</b>
+<i>74</i>&nbsp;    }
+<i>75</i>&nbsp;
+<i>76</i>&nbsp;    @RequestMapping(value=&quot;/api/books/bylocation/{longitude}/{latitude}&quot;, produces = {&quot;application/json&quot;})
+<i>77</i>&nbsp;    @ResponseBody
+<i>78</i>&nbsp;    String BooksByLocation(@PathVariable(&quot;longitude&quot;) double longitude, @PathVariable(&quot;latitude&quot;) double latitude){
+<b class="nc"><i>79</i>&nbsp;        DataObject BooksByVicenety = DA.GetBooksInVicenety(latitude, longitude, 20);</b>
+<b class="nc"><i>80</i>&nbsp;        return BooksByVicenety.SerializeToJson();</b>
+<i>81</i>&nbsp;    }
+<i>82</i>&nbsp;
+<i>83</i>&nbsp;    @RequestMapping(value=&quot;/api/log&quot;, produces = {&quot;application/json&quot;})
+<i>84</i>&nbsp;    @ResponseBody
+<i>85</i>&nbsp;    String PrintLog(){
+<b class="nc"><i>86</i>&nbsp;        return Logger.PrintLog().SerializeToJson();</b>
+<i>87</i>&nbsp;    }
+<i>88</i>&nbsp;
+<i>89</i>&nbsp;    @RequestMapping(value = &quot;/api/setdb/{dbtype}/{ip}&quot;)
+<i>90</i>&nbsp;    @ResponseBody
+<i>91</i>&nbsp;    String SetDB(@PathVariable(&quot;dbtype&quot;) String dbtype, @PathVariable(&quot;ip&quot;) String ip){
+<b class="nc"><i>92</i>&nbsp;        DA.close();</b>
+<b class="nc"><i>93</i>&nbsp;        String reply = &quot;succes&quot;;</b>
+<i>94</i>&nbsp;        try {
+<b class="nc"><i>95</i>&nbsp;            switch (dbtype) {</b>
+<i>96</i>&nbsp;                case &quot;neo4j&quot;:
+<b class="nc"><i>97</i>&nbsp;                    DB = DBMS.neo4j;</b>
+<b class="nc"><i>98</i>&nbsp;                    DA = new Neo4jDataAcessor(GraphDatabase.driver(&quot;bolt://&quot; + ip + &quot;:7687&quot;, AuthTokens.basic(&quot;neo4j&quot;, &quot;class&quot;)));</b>
+<b class="nc"><i>99</i>&nbsp;                    break;</b>
+<i>100</i>&nbsp;                case &quot;postgres&quot;:
+<b class="nc"><i>101</i>&nbsp;                    DB = DBMS.postgres;</b>
+<b class="nc"><i>102</i>&nbsp;                    DA = new PostgresDataAcessor(&quot;jdbc:postgresql://&quot; + ip + &quot;:5432/postgres&quot;, &quot;postgres&quot;, &quot;&quot;);</b>
+<b class="nc"><i>103</i>&nbsp;                    break;</b>
+<i>104</i>&nbsp;                case &quot;redis&quot;:
+<b class="nc"><i>105</i>&nbsp;                    DB = DBMS.redis;</b>
+<b class="nc"><i>106</i>&nbsp;                    DA = new RedisDataAcessor(ip);</b>
+<b class="nc"><i>107</i>&nbsp;                    break;</b>
+<i>108</i>&nbsp;                    default:
+<b class="nc"><i>109</i>&nbsp;                        DB = DBMS.redis;</b>
+<b class="nc"><i>110</i>&nbsp;                        DA = new RedisDataAcessor(ip);</b>
+<i>111</i>&nbsp;                        break;
+<i>112</i>&nbsp;            }
+<b class="nc"><i>113</i>&nbsp;        } catch (Exception e){return &quot;error&quot;;}</b>
+<i>114</i>&nbsp;
+<b class="nc"><i>115</i>&nbsp;        return reply;</b>
+<i>116</i>&nbsp;
+<i>117</i>&nbsp;    }
+<i>118</i>&nbsp;
+<i>119</i>&nbsp;
+<i>120</i>&nbsp;
+<i>121</i>&nbsp;
+<i>122</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2018-05-24 15:10</div>
+</div>
+</body>
+</html>
