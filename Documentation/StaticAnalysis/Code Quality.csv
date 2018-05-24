@@ -1,4 +1,4 @@
-MOOD metrics,to, 24 maj 2018 14:14:53 CEST, , , , , 
+MOOD metrics,to, 24 maj 2018 14:14:53 CEST, , , , 
 Project,AHF,AIF,CF,MHF,MIF,PF
 #, Attribute hiding factor, Attribute inheritance factor, Coupling factor, Method hiding factor, Method inhereitance factor, Polymorphisms factor
 "project","52,31%","0,95%","19,53%","22,35%","8,04%","79,49%"
