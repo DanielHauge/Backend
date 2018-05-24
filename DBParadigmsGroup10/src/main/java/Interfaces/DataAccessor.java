@@ -1,6 +1,5 @@
 package Interfaces;
 
-import Benchmarker.BenchmarkLog;
 import DataObjects.*;
 
 public interface DataAccessor {

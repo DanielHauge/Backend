@@ -1,15 +1,10 @@
 package Interfaces;
 
 import DataAcessors.MongoDataAcessor;
-import DataAcessors.Neo4jDataAcessor;
-import DataAcessors.PostgresDataAcessor;
-import DataAcessors.RedisDataAcessor;
 import DataObjects.*;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.neo4j.driver.v1.AuthTokens;
-import org.neo4j.driver.v1.GraphDatabase;
 
 
 import static org.hamcrest.CoreMatchers.is;

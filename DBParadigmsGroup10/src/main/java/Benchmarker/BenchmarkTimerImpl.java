@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class BenchmarkTimerImpl implements BenchmarkTimer {
 
-    ArrayList<BenchmarkDuration> BD;
-    BenchmarkDurationFactory BDF;
+    final ArrayList<BenchmarkDuration> BD;
+    final BenchmarkDurationFactory BDF;
 
     public BenchmarkTimerImpl(BenchmarkDurationFactory BDF){
         this.BDF = BDF;

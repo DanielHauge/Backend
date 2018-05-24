@@ -1,18 +1,13 @@
 package DBParadigmsGroup10;
 
-import DataAcessors.RedisDataAcessor;
 import DataAcessors.StubbedDataAccessor;
 import DataObjects.*;
 import Interfaces.DataAccessor;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import org.junit.Test;
 
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.assertTrue;
 
 
@@ -30,7 +25,7 @@ public class MyStepdefs {
     String author;
     double lat;
     double lon;
-    DataAccessor DA = new StubbedDataAccessor();
+    final DataAccessor DA = new StubbedDataAccessor();
     Object result;
 
     //-------------------------------------------------------------------------------------------------------------

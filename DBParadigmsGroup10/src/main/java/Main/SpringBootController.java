@@ -1,9 +1,6 @@
 package Main;
 
-import Benchmarker.BenchmarkLog;
-import Benchmarker.BenchmarkTimer;
 import Benchmarker.enums.DBMS;
-import Benchmarker.enums.Query;
 import DataAcessors.Neo4jDataAcessor;
 import DataAcessors.PostgresDataAcessor;
 import DataAcessors.RedisDataAcessor;
@@ -15,7 +12,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.ResponseStatus;
 
 import static Main.Main.DA;
 import static Main.Main.Logger;

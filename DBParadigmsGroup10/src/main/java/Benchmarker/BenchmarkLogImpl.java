@@ -9,9 +9,9 @@ import java.util.ArrayList;
 
 public class BenchmarkLogImpl implements BenchmarkLog {
 
-    private DBMS dbms;
-    private Query q;
-    private BenchmarkTimer timer;
+    private final DBMS dbms;
+    private final Query q;
+    private final BenchmarkTimer timer;
 
     public BenchmarkLogImpl(DBMS dbms, Query q, BenchmarkTimer timer){
         this.dbms = dbms;

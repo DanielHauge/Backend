@@ -4,22 +4,12 @@ import Benchmarker.BenchmarkDurationFactoryImpl;
 import Benchmarker.BenchmarkLogFactoryImpl;
 import Benchmarker.BenmarkLoggerImpl;
 import DataAcessors.MongoDataAcessor;
-import DataAcessors.Neo4jDataAcessor;
-import DataAcessors.PostgresDataAcessor;
-import DataAcessors.RedisDataAcessor;
-import DataObjects.*;
 import Main.Main;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.neo4j.driver.v1.AuthTokens;
-import org.neo4j.driver.v1.GraphDatabase;
 
 import java.util.Arrays;
-
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 class DatabaseBenchmarkTest {
 

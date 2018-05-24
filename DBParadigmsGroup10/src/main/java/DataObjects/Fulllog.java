@@ -5,7 +5,7 @@ import Interfaces.DataObject;
 
 public class Fulllog extends DataSerializer implements DataObject {
 
-    public log[] logs;
+    public final log[] logs;
 
     public Fulllog(log[] l){
         this.logs = l;

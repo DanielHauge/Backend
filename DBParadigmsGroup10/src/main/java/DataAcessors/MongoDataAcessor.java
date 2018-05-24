@@ -1,39 +1,27 @@
 package DataAcessors;
 
-import Benchmarker.BenchmarkLog;
 import DataObjects.*;
 import Interfaces.DataAccessor;
 
 import com.mongodb.MongoClient;
-import com.mongodb.MongoClientURI;
-import com.mongodb.ServerAddress;
 
 import com.mongodb.client.*;
 
 import com.mongodb.client.model.Aggregates;
 import com.mongodb.client.model.Filters;
 import com.mongodb.client.model.Projections;
-import com.mongodb.client.model.geojson.Geometry;
 import com.mongodb.client.model.geojson.Point;
 import com.mongodb.client.model.geojson.Position;
-import org.bson.BSON;
 import org.bson.Document;
 
-import java.lang.reflect.Array;
 import java.util.*;
 
-import com.mongodb.Block;
-
 import static com.mongodb.client.model.Filters.*;
-import com.mongodb.client.result.DeleteResult;
-import static com.mongodb.client.model.Updates.*;
-import com.mongodb.client.result.UpdateResult;
-import redis.clients.jedis.ZParams;
 
 
 public class MongoDataAcessor implements DataAccessor {
 
-    private MongoDatabase db;
+    private final MongoDatabase db;
 
     public MongoDataAcessor(String hostname){
         //Use hostname instead in the end.
@@ -146,9 +134,7 @@ public class MongoDataAcessor implements DataAccessor {
                 authors.add(doc.getString("Author"));
             }} finally {cursor.close();
         }
-        authors.forEach(s -> {
-            allauthors.add(new Author(s));
-        });
+        authors.forEach(s -> allauthors.add(new Author(s)));
 
         return new AllAuthors(allauthors.toArray(new Author[0]));
     }
@@ -223,9 +209,7 @@ public class MongoDataAcessor implements DataAccessor {
                 ArrayList<Book> allbooks = new ArrayList<>();
                 ArrayList<Double> coords = (ArrayList<Double>) ((Document)doc.get("location")).get("coordinates");
                 ArrayList<Document> books = (ArrayList<Document>) doc.get("Books");
-                books.forEach(b -> {
-                    allbooks.add(new Book(b.getInteger("Bookid"), b.getString("Title")));
-                });
+                books.forEach(b -> allbooks.add(new Book(b.getInteger("Bookid"), b.getString("Title"))));
                 res.add(new CityAndBooks(doc.getString("Name"), coords.get(0), coords.get(1), allbooks.toArray(new Book[0])));
             }} finally {cursor.close();
         }

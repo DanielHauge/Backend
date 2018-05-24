@@ -2,7 +2,7 @@ package Benchmarker;
 
 public class BenchmarkDurationImpl implements BenchmarkDuration {
 
-    String task;
+    final String task;
     long start;
     long end;
 

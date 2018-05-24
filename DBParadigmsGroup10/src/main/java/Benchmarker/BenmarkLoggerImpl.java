@@ -9,9 +9,9 @@ import java.util.ArrayList;
 
 public class BenmarkLoggerImpl implements BenmarkLogger {
 
-    private ArrayList<log> logs = new ArrayList<>();
-    private BenchmarkLogFactory BLF;
-    private BenchmarkDurationFactory BDF;
+    private final ArrayList<log> logs = new ArrayList<>();
+    private final BenchmarkLogFactory BLF;
+    private final BenchmarkDurationFactory BDF;
 
     public BenmarkLoggerImpl(BenchmarkLogFactory BLF, BenchmarkDurationFactory BDF){
         this.BLF = BLF;

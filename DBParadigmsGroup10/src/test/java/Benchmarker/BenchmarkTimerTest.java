@@ -4,14 +4,10 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.mockito.Spy;
 
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.BDDMockito.given;
-import static org.mockito.Matchers.any;
 import static org.mockito.Matchers.anyLong;
-import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.verify;
 import static org.hamcrest.Matchers.*;
 
@@ -23,7 +19,7 @@ class BenchmarkTimerTest {
 
     @Mock BenchmarkDuration bd;
 
-    String hej1 = "hejsa";
+    final String hej1 = "hejsa";
 
     BenchmarkTimer sut;
 

@@ -1,6 +1,5 @@
 package DataAcessors;
 
-import Benchmarker.BenchmarkLog;
 import DataObjects.*;
 import Interfaces.DataAccessor;
 
@@ -9,30 +8,26 @@ public class StubbedDataAccessor implements DataAccessor {
     @Override
     public AllCities GetAllCities() {
         City city = new City(3576260,"Falmouth");
-        AllCities allCities = new AllCities(new City[]{city});
-        return allCities;
+        return new AllCities(new City[]{city});
     }
 
     @Override
     public BooksByCity GetBooksByCity(int cityid) {
         //cityid = 3576260;
         BookWithMentions bookWithMentions = new BookWithMentions("The Hunting of the Snark","Lewis Carroll",1);
-        BooksByCity booksByCity = new BooksByCity(new BookWithMentions[]{bookWithMentions});
-        return booksByCity;
+        return new BooksByCity(new BookWithMentions[]{bookWithMentions});
     }
 
     @Override
     public AllBooks GetAllBooks() {
         Book book = new Book(5,"The Hunting of the Snark");
-        AllBooks allBooks = new AllBooks(new Book[]{book});
-        return allBooks;
+        return new AllBooks(new Book[]{book});
     }
 
     @Override
     public ManyCitiesWithCords GetCitiesBybook(int bookid) {
         CityWithCords cityWithCords = new CityWithCords("Falmouth",17.02741,-61.78136);
-        ManyCitiesWithCords manyCitiesWithCords = new ManyCitiesWithCords(new CityWithCords[]{cityWithCords});
-        return manyCitiesWithCords;
+        return new ManyCitiesWithCords(new CityWithCords[]{cityWithCords});
     }
 
     @Override
@@ -52,8 +47,7 @@ public class StubbedDataAccessor implements DataAccessor {
         authors[11] = new Author("Lincoln Abraham");
         authors[12] = new Author("Founding Fathers");
         authors[13] = new Author("Henry Patrick");
-        AllAuthors allAuthors = new AllAuthors(authors);
-        return allAuthors;
+        return new AllAuthors(authors);
     }
 
     @Override
@@ -62,16 +56,14 @@ public class StubbedDataAccessor implements DataAccessor {
         Book book = new Book(5,"The Hunting of the Snark");
         Book book1 = new Book(4,"Through the Looking-Glass");
         Book book2 = new Book(3,"Alice's Adventures in Wonderland");
-        BooksByAuthor booksByAuthor = new BooksByAuthor(author,new Book[]{book,book1,book2});
-        return booksByAuthor;
+        return new BooksByAuthor(author,new Book[]{book,book1,book2});
     }
 
     @Override
     public CityByBook GetCityBybook(int bookid) {
         //3576260
         CityWithCords cityWithCords = new CityWithCords("Falmouth", 17.02741,-61.78136);
-        CityByBook cityByBook = new CityByBook(5,"The Hunting of the Snark",new CityWithCords[]{cityWithCords});
-        return cityByBook;
+        return new CityByBook(5,"The Hunting of the Snark",new CityWithCords[]{cityWithCords});
     }
 
     @Override
@@ -81,8 +73,7 @@ public class StubbedDataAccessor implements DataAccessor {
         // range 10
         Book book = new Book(5,"The Hunting of the Snark");
         CityAndBooks cityAndBooks = new CityAndBooks("Falmouth",17.02741,-61.78136,new Book[]{book});
-        BooksByVicenety booksByVicenety = new BooksByVicenety(new CityAndBooks[]{cityAndBooks});
-        return booksByVicenety;
+        return new BooksByVicenety(new CityAndBooks[]{cityAndBooks});
     }
 
     @Override

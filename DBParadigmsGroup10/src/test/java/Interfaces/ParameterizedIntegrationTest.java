@@ -3,10 +3,7 @@ package Interfaces;
 import Benchmarker.BenchmarkDurationFactoryImpl;
 import Benchmarker.BenchmarkLogFactoryImpl;
 import Benchmarker.BenmarkLoggerImpl;
-import DataAcessors.MongoDataAcessor;
 import DataAcessors.Neo4jDataAcessor;
-import DataAcessors.PostgresDataAcessor;
-import DataAcessors.RedisDataAcessor;
 import DataObjects.*;
 import Main.Main;
 import org.junit.AfterClass;
@@ -21,7 +18,6 @@ import java.util.Collection;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.lessThan;
 
 @RunWith(value = Parameterized.class)
 public class ParameterizedIntegrationTest {

@@ -2,8 +2,6 @@ package Interfaces;
 
 import Benchmarker.*;
 import DataAcessors.Neo4jDataAcessor;
-import DataAcessors.RedisDataAcessor;
-import DataObjects.*;
 import Main.Main;
 import org.junit.AfterClass;
 import org.junit.Test;
