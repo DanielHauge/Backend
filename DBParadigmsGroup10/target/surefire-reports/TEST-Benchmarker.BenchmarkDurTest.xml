@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="Interfaces.SingleDataAccessorTest" time="0.001" tests="10" errors="10" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="Benchmarker.BenchmarkDurTest" time="0.001" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="idea.version" value="2018.1"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -63,56 +63,9 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="getBooksByCity" classname="Interfaces.SingleDataAccessorTest" time="0">
-    <error type="java.lang.NullPointerException">java.lang.NullPointerException
-	at Interfaces.SingleDataAccessorTest.getBooksByCity(SingleDataAccessorTest.java:48)
-</error>
-    <system-out><![CDATA[PONG
-]]></system-out>
-  </testcase>
-  <testcase name="getCityBybook" classname="Interfaces.SingleDataAccessorTest" time="0">
-    <error type="java.lang.NullPointerException">java.lang.NullPointerException
-	at Interfaces.SingleDataAccessorTest.getCityBybook(SingleDataAccessorTest.java:98)
-</error>
-  </testcase>
-  <testcase name="getAllCities" classname="Interfaces.SingleDataAccessorTest" time="0">
-    <error type="java.lang.NullPointerException">java.lang.NullPointerException
-	at Interfaces.SingleDataAccessorTest.getAllCities(SingleDataAccessorTest.java:38)
-</error>
-  </testcase>
-  <testcase name="getAllBooks" classname="Interfaces.SingleDataAccessorTest" time="0">
-    <error type="java.lang.NullPointerException">java.lang.NullPointerException
-	at Interfaces.SingleDataAccessorTest.getAllBooks(SingleDataAccessorTest.java:58)
-</error>
-  </testcase>
-  <testcase name="getBookByAuthor" classname="Interfaces.SingleDataAccessorTest" time="0">
-    <error type="java.lang.NullPointerException">java.lang.NullPointerException
-	at Interfaces.SingleDataAccessorTest.getBookByAuthor(SingleDataAccessorTest.java:88)
-</error>
-  </testcase>
-  <testcase name="getBooksInVicenety1" classname="Interfaces.SingleDataAccessorTest" time="0">
-    <error type="java.lang.NullPointerException">java.lang.NullPointerException
-	at Interfaces.SingleDataAccessorTest.getBooksInVicenety1(SingleDataAccessorTest.java:109)
-</error>
-  </testcase>
-  <testcase name="getBooksInVicenety2" classname="Interfaces.SingleDataAccessorTest" time="0">
-    <error type="java.lang.NullPointerException">java.lang.NullPointerException
-	at Interfaces.SingleDataAccessorTest.getBooksInVicenety2(SingleDataAccessorTest.java:119)
-</error>
-  </testcase>
-  <testcase name="getBooksInVicenety3" classname="Interfaces.SingleDataAccessorTest" time="0">
-    <error type="java.lang.NullPointerException">java.lang.NullPointerException
-	at Interfaces.SingleDataAccessorTest.getBooksInVicenety3(SingleDataAccessorTest.java:129)
-</error>
-  </testcase>
-  <testcase name="getAllAuthors" classname="Interfaces.SingleDataAccessorTest" time="0">
-    <error type="java.lang.NullPointerException">java.lang.NullPointerException
-	at Interfaces.SingleDataAccessorTest.getAllAuthors(SingleDataAccessorTest.java:78)
-</error>
-  </testcase>
-  <testcase name="getCitiesBybook" classname="Interfaces.SingleDataAccessorTest" time="0">
-    <error type="java.lang.NullPointerException">java.lang.NullPointerException
-	at Interfaces.SingleDataAccessorTest.getCitiesBybook(SingleDataAccessorTest.java:68)
-</error>
-  </testcase>
+  <testcase name="getTask" classname="Benchmarker.BenchmarkDurTest" time="0"/>
+  <testcase name="getDuration" classname="Benchmarker.BenchmarkDurTest" time="0"/>
+  <testcase name="reset" classname="Benchmarker.BenchmarkDurTest" time="0"/>
+  <testcase name="removeDuration" classname="Benchmarker.BenchmarkDurTest" time="0"/>
+  <testcase name="addDuration" classname="Benchmarker.BenchmarkDurTest" time="0"/>
 </testsuite>

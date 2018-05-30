@@ -1,4 +1,44 @@
 -------------------------------------------------------------------------------
 Test set: Interfaces.SingleDataAccessorTest
 -------------------------------------------------------------------------------
-Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.356 sec - in Interfaces.SingleDataAccessorTest
+Tests run: 10, Failures: 0, Errors: 10, Skipped: 0, Time elapsed: 0.001 sec <<< FAILURE! - in Interfaces.SingleDataAccessorTest
+getBooksByCity  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException
+	at Interfaces.SingleDataAccessorTest.getBooksByCity(SingleDataAccessorTest.java:48)
+
+getCityBybook  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException
+	at Interfaces.SingleDataAccessorTest.getCityBybook(SingleDataAccessorTest.java:98)
+
+getAllCities  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException
+	at Interfaces.SingleDataAccessorTest.getAllCities(SingleDataAccessorTest.java:38)
+
+getAllBooks  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException
+	at Interfaces.SingleDataAccessorTest.getAllBooks(SingleDataAccessorTest.java:58)
+
+getBookByAuthor  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException
+	at Interfaces.SingleDataAccessorTest.getBookByAuthor(SingleDataAccessorTest.java:88)
+
+getBooksInVicenety1  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException
+	at Interfaces.SingleDataAccessorTest.getBooksInVicenety1(SingleDataAccessorTest.java:109)
+
+getBooksInVicenety2  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException
+	at Interfaces.SingleDataAccessorTest.getBooksInVicenety2(SingleDataAccessorTest.java:119)
+
+getBooksInVicenety3  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException
+	at Interfaces.SingleDataAccessorTest.getBooksInVicenety3(SingleDataAccessorTest.java:129)
+
+getAllAuthors  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException
+	at Interfaces.SingleDataAccessorTest.getAllAuthors(SingleDataAccessorTest.java:78)
+
+getCitiesBybook  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException
+	at Interfaces.SingleDataAccessorTest.getCitiesBybook(SingleDataAccessorTest.java:68)
+

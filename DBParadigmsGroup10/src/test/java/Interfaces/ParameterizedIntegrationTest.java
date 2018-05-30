@@ -28,7 +28,7 @@ public class ParameterizedIntegrationTest {
     @Parameterized.Parameters
     public static Collection input() {
         return Arrays.asList(
-                new RedisDataAcessor("redis")
+                new RedisDataAcessor(System.getenv("DBIP"))
                 //new Neo4jDataAcessor(GraphDatabase.driver("bolt://"+System.getenv("DBIP")+":7687", AuthTokens.basic("neo4j","class"))),
                 //new PostgresDataAcessor("jdbc:postgresql://"+System.getenv("DBIP")+":5432/postgres", "postgres", "")
                 //new MongoDataAcessor(System.getenv("DBIP"))

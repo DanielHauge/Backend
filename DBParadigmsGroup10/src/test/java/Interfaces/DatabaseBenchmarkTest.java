@@ -30,7 +30,7 @@ class DatabaseBenchmarkTest {
 
     @BeforeAll
     static void setUp() {
-        DA = new RedisDataAcessor("redis");
+        DA = new RedisDataAcessor(System.getenv("DBIP"));
         //DA = new PostgresDataAcessor("jdbc:postgresql://"+"192.168.33.11"+":5432/postgres", "postgres", "");
         //DA = new Neo4jDataAcessor(GraphDatabase.driver("bolt://"+System.getenv("DBIP")+":7687", AuthTokens.basic("neo4j","class")));
         //DA = new Neo4jDataAcessor(GraphDatabase.driver("bolt://"+System.getenv("DBIP")+":7687", AuthTokens.basic("neo4j","class")));

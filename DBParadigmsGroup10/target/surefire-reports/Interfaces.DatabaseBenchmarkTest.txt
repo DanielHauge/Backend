@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: Interfaces.DatabaseBenchmarkTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.297 sec <<< FAILURE! - in Interfaces.DatabaseBenchmarkTest
+Interfaces.DatabaseBenchmarkTest  Time elapsed: 2.297 sec  <<< ERROR!
+redis.clients.jedis.exceptions.JedisConnectionException: java.net.UnknownHostException: redis
+	at Interfaces.DatabaseBenchmarkTest.setUp(DatabaseBenchmarkTest.java:33)
+Caused by: java.net.UnknownHostException: redis
+	at Interfaces.DatabaseBenchmarkTest.setUp(DatabaseBenchmarkTest.java:33)
+
