@@ -16,8 +16,10 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 public class WebInitializer extends SpringBootServletInitializer {
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        Main.DA = new PostgresDataAcessor("jdbc:postgresql://"+"192.168.33.11"+":5432/postgres", "postgres", "");
-        Main.DB = DBMS.postgres;
+        //Main.DA = new PostgresDataAcessor("jdbc:postgresql://"+"192.168.33.11"+":5432/postgres", "postgres", "");
+        Main.DB = DBMS.redis;
+        Main.DA = new RedisDataAcessor(System.getenv("DBIP"));
+
         Main.Logger = new BenmarkLoggerImpl(new BenchmarkLogFactoryImpl(), new BenchmarkDurationFactoryImpl());
         return application.sources(Main.class);
     }

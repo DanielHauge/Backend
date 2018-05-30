@@ -5,6 +5,7 @@ import Benchmarker.BenchmarkLogFactoryImpl;
 import Benchmarker.BenmarkLoggerImpl;
 import Benchmarker.enums.DBMS;
 import DataAcessors.PostgresDataAcessor;
+import DataAcessors.RedisDataAcessor;
 import Interfaces.DataAccessor;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -23,9 +24,9 @@ public class Main {
 
     public static void main(String[] args){
 
-        //DA = new RedisDataAcessor(System.getenv("DBIP"));
-        DB = DBMS.postgres;
-        DA = new PostgresDataAcessor("jdbc:postgresql://"+"192.168.33.11"+":5432/postgres", "postgres", "");
+        DA = new RedisDataAcessor(System.getenv("DBIP"));
+        DB = DBMS.redis;
+        //DA = new PostgresDataAcessor("jdbc:postgresql://"+"192.168.33.11"+":5432/postgres", "postgres", "");
         //DA = new Neo4jDataAcessor(GraphDatabase.driver("bolt://" + System.getenv("DBIP") + ":7687", AuthTokens.basic("neo4j", "class")));
 
         Logger = new BenmarkLoggerImpl(new BenchmarkLogFactoryImpl(), new BenchmarkDurationFactoryImpl());

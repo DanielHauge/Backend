@@ -89,7 +89,7 @@ class SpringBootController {
     @RequestMapping(value = "/api/setdb/{dbtype}/{ip}")
     @ResponseBody
     String SetDB(@PathVariable("dbtype") String dbtype, @PathVariable("ip") String ip){
-        DA.close();
+        if (DA!=null){DA.close();}
         String reply = "succes";
         try {
             switch (dbtype) {
